@@ -25,3 +25,11 @@ filters.forEach((btn) => {
     });
   });
 });
+
+// Open links to other websites in a new tab
+document.querySelectorAll('a[href]').forEach((a) => {
+  if (a.hostname && a.hostname !== location.hostname) {
+    a.target = '_blank';
+    a.rel = 'noopener';
+  }
+});
