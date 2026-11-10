@@ -335,3 +335,23 @@ p { margin: 0 0 1em; }
 .site-foot__inst a:hover { opacity:.8; transform: translateY(-1px); }
 
 .person__now { font-size: var(--step--1); color: #006E75; margin-top: .25rem; }
+
+/* ---------- team v4: PI featured, members as cards, alumni compact ---------- */
+.people--pi { display: block; }
+.people--pi .person { grid-template-columns: 15rem minmax(0, 1fr); gap: 2.2rem; padding: 1.6rem; border-radius: 28px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--turquoise) 14%, white), color-mix(in srgb, var(--yellow) 22%, white)); }
+.people--pi .person__avatar { width: 15rem; height: 15rem; max-width: 15rem; border-radius: 22px; }
+.people--pi .person__avatar img { filter: none; }
+.people--pi .person__name { font-size: var(--step-2, 1.6rem); }
+.people--pi .person__role { font-size: 1rem; }
+@media (max-width: 640px) { .people--pi .person { grid-template-columns: 1fr; } .people--pi .person__avatar { width: 100%; height: auto; max-width: 15rem; } }
+
+.people--alumni { grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)) !important; gap: 1rem 1.5rem !important; }
+.people--alumni .person { display: grid; grid-template-columns: 4.5rem minmax(0, 1fr); gap: .9rem; align-items: center; }
+.people--alumni .person__avatar { width: 4.5rem; height: 4.5rem; max-width: 4.5rem; margin: 0; border-radius: 14px; font-size: 1.4rem; }
+.people--alumni .person__avatar img { filter: grayscale(1); opacity: .9; }
+.people--alumni .person__name { font-size: .95rem; }
+.people--alumni .person__role { font-size: .8rem; }
+.people--alumni .person__links { margin-top: .3rem !important; }
+.people--alumni .person__links a { font-size: .72rem; }
+.people--alumni li .person__avatar { background: color-mix(in srgb, var(--line) 80%, white) !important; color: var(--ink-soft); }
