@@ -69,10 +69,13 @@ members:
 alumni:
   - name: René Andrade
     type: intern
+    years: '2025'
   - name: Juan Ponce
     type: intern
+    years: '2025'
   - name: Julia Reina
     type: intern
+    years: '2025'
   - name: Nicolás Martínez
     type: msc
     years: '2025'
