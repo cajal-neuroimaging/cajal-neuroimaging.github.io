@@ -1,7 +1,7 @@
 <li class="news-card">
   <a class="news-card__link" href="{{ post.url | relative_url }}">
     <div class="news-card__thumb">{% if post.image %}<img src="{{ post.image | relative_url }}" alt="" loading="lazy">{% endif %}</div>
-    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date_label | default: post.date | date: "%-d %B %Y" }}</time>
+    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{% if post.date_label %}{{ post.date_label }}{% else %}{{ post.date | date: "%-d %B %Y" }}{% endif %}</time>
     <h3>{{ post.title }}</h3>
   </a>
 </li>

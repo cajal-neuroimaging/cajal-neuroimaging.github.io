@@ -1,7 +1,7 @@
 ---
 title: "CajalXmas Meeting"
 date: 2024-12-18
-date_label: "18-19/12/2024"
+date_label: "18–19 December 2024"
 ---
 
 Presentation of different posters made by the students of the Neuroimaging group of Instituto Cajal.
