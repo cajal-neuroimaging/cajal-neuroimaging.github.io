@@ -1,4 +1,4 @@
-<li class="person">
+<li class="person{% if p.type %} person--{{ p.type }}{% endif %}">
   <span class="person__avatar" aria-hidden="true">{% if p.photo %}<img src="{{ '/assets/img/team/' | append: p.photo | relative_url }}" alt="" loading="lazy">{% else %}{{ p.name | slice: 0 }}{% endif %}</span>
   <div>
     <p class="person__name">{% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</p>

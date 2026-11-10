@@ -371,3 +371,20 @@ p { margin: 0 0 1em; }
 .people--alumni { grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr)) !important; }
 .people--alumni .person { grid-template-columns: 5.5rem minmax(0, 1fr); align-items: start; }
 .people--alumni .person__avatar { width: 5.5rem; height: 5.5rem; max-width: 5.5rem; }
+
+/* team v6: colour = category (line and photo background) */
+.person--phd    { --cat: #00C2CB; }
+.person--msc    { --cat: #7FE0D4; }
+.person--bsc    { --cat: #FFD54F; }
+.person--intern { --cat: #FF9A76; }
+.person--intl   { --cat: #FF5D8F; }
+.team-legend { list-style: none; padding: 0; margin: 1rem 0 0; display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; font-size: var(--step--1); color: var(--ink-soft); }
+.team-legend li { display: flex; align-items: center; gap: .45rem; }
+.team-legend li::before { content: ""; width: 1.4rem; height: .5rem; border-radius: 3px; background: var(--cat); }
+/* members: vertical cards with a coloured top line */
+.people:not(.people--pi):not(.people--alumni) .person { background: var(--surface); border: 1px solid var(--line); border-top: 5px solid var(--cat, var(--line)); border-radius: 16px; padding: .9rem; }
+.people:not(.people--pi):not(.people--alumni) .person__avatar { max-width: none; }
+/* alumni: horizontal cards with a coloured left line */
+.people--alumni .person, .people--alumni .person:nth-child(n) { border-left: 5px solid var(--cat, var(--line)) !important; }
+/* photo background shows the category */
+.people .person[class*="person--"] .person__avatar { background: color-mix(in srgb, var(--cat) 38%, white) !important; }

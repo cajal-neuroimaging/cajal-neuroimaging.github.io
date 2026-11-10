@@ -1,4 +1,5 @@
 # Team members. To add someone, copy a block. "photo" is optional (file in assets/img/team/).
+# type: phd | msc (MSc thesis) | bsc (BSc thesis) | intern (curricular internship) | intl (international internship)
 # Alumni can add "now:" with their current position, e.g. now: PhD student, University of X
 
 pi:
@@ -13,6 +14,7 @@ pi:
 
 members:
   - name: Cristina Díaz Montilla
+    type: phd
     photo: cristina-diaz-montilla.png
     linkedin: https://www.linkedin.com/in/cristina-d%C3%ADaz-montilla
     orcid: https://orcid.org/0000-0003-4622-0626
@@ -21,101 +23,131 @@ members:
     role: Predoc in Neuroscience
     affiliation: Universidad Autónoma de Madrid (UAM)
   - name: Daniel Martin Diez
+    type: bsc
     photo: daniel-martin-diez.png
     linkedin: https://www.linkedin.com/in/danielmartindiez04/
     role: BSc Biology
     affiliation: Universidad Complutense de Madrid (UCM)
   - name: Quincy dos Santos Brandao
+    type: intl
     role: MSc Biomedical Sciences
     affiliation: Erasmus, The Netherlands
   - name: León Sobrio García
+    type: bsc
     photo: leon-sobrio-garcia.png
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
   - name: Natalia López de la Cruz
+    type: bsc
     photo: natalia-lopez-de-la-cruz.png
     linkedin: https://www.linkedin.com/in/natalia-lopez-de-la-cruz-ab1496330/
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
   - name: Xiomara Mendieta
+    type: intern
     photo: xiomara-mendieta.png
     role: MSc Neuroscience and Neuropsychology
     affiliation: Universidad Rey Juan Carlos (URJC)
   - name: Adriana Brande
+    type: bsc
   - name: Irem Koçak
+    type: intl
   - name: Carlota Juárez
+    type: intern
 
 alumni:
   - name: Marta Navarro Bernad
+    type: msc
     photo: marta-navarro-bernad.png
     linkedin: https://www.linkedin.com/in/marta-n-0a0ab9274/
     orcid: https://orcid.org/0009-0007-5089-6369
     role: MSc Neuroscience and Neuropsychology
     affiliation: Universidad Rey Juan Carlos (URJC)
   - name: Nicolás Martínez
+    type: msc
     role: MSc Advanced Therapies in Biomedicine
     affiliation: Universidad Francisco de Vitoria (UFV)
   - name: Rodrigo Quispe Ávila
+    type: bsc
   - name: René Andrade
+    type: intern
   - name: Lucía Escribano Marín
+    type: intern
   - name: Juan Ponce
+    type: intern
   - name: Julia Reina
+    type: intern
   - name: Álvaro Mozas Robles
+    type: msc
     photo: alvaro-mozas-robles.png
     role: MSc Advanced Therapies in Biomedicine
     affiliation: Universidad Francisco de Vitoria (UFV)
   - name: Cristina Salinas Fernández
+    type: bsc
     photo: cristina-salinas-fernandez.png
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
   - name: Raúl García Luengo
+    type: bsc
     photo: raul-garcia-luengo.png
     linkedin: https://www.linkedin.com/in/raulgarcialuengo/
     orcid: https://orcid.org/0009-0000-5514-9070
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
   - name: Beyzanur Demirkaya
+    type: intl
     role: MSc Psychology
   - name: Fulya Ayvaz
+    type: intl
     photo: fulya-ayvaz.png
     role: MSc Medicine
   - name: Vittoria Acciai
+    type: intl
     linkedin: https://www.linkedin.com/in/vittoria-acciai-a58007287/
     role: MSc Liberal Arts and Sciences, Cognitive Neuroscience
     affiliation: Tilburg University
   - name: Paula Sierra Martinez
+    type: intern
     role: BSc Biology
     affiliation: Universidad Autónoma de Madrid (UAM)
   - name: Patricia Rupérez Ferrández
+    type: intern
     photo: patricia-ruperez-ferrandez.png
     linkedin: https://www.linkedin.com/in/patricia-ruperez
     orcid: https://orcid.org/0009-0004-8158-5916
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
   - name: Mercedes Martín del Campo
+    type: intern
     photo: mercedes-martin-del-campo.png
     role: BSc Psychology
     affiliation: Universidad Autónoma de Madrid (UAM)
   - name: Arturo Salas Hernández
+    type: intern
     photo: arturo-salas-hernandez.png
     orcid: https://orcid.org/0009-0006-0847-304X
     role: BSc Psychology
     affiliation: Universidad Nacional de Educación a Distancia (UNED)
   - name: Antonio Caulin Atiezar
+    type: intern
     photo: antonio-caulin-atiezar.png
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
   - name: Patricia García Cabrera
+    type: bsc
     linkedin: https://www.linkedin.com/in/patricia-garcia-4211b4242/
     role: BSc Biomedicine
     affiliation: Universidad Francisco de Vitoria (UFV)
   - name: Oriol Niso Galán
+    type: bsc
     role: BSc Telecommunications Engineering
     affiliation: Universidad Autónoma de Madrid (UAM)
   - name: Ruben Cruz Acevedo
+    type: intern
     role: BSc Psychology
     affiliation: Universidad Autónoma de Madrid (UAM)
   - name: Fiona Ye Rojo Acero
+    type: intern
     photo: fiona-ye-rojo-acero.png
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
