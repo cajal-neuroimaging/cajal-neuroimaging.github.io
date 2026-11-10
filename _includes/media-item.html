@@ -1,0 +1,8 @@
+<li class="media-item media-item--{{ item.type }}" data-type="{{ item.type }}">
+  <div class="media-item__thumb">{% if item.image %}<img src="{{ '/assets/img/media/' | append: item.image | relative_url }}" alt="" loading="lazy">{% endif %}</div>
+  <div class="media-item__body">
+    <p class="media-item__outlet">{{ item.outlet }}</p>
+    <p class="media-item__title">{{ item.title }}{% if item.url %} <a href="{{ item.url }}">({% if item.type == 'press' %}read{% elsif item.type == 'tv' %}watch{% else %}listen{% endif %})</a>{% endif %}</p>
+    <p class="media-item__meta">{% if item.type == 'tv' %}TV{% elsif item.type == 'radio' %}Radio and podcasts{% else %}Press{% endif %}, <time datetime="{{ item.date }}">{{ item.date | date: "%-d %b %Y" }}</time></p>
+  </div>
+</li>

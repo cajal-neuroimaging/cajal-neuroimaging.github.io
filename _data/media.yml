@@ -1,0 +1,150 @@
+# Media appearances. type: press | tv | radio
+# date: YYYY-MM-DD. Newest first.
+
+- type: press
+  outlet: El Correo
+  date: 2026-09-09
+  image: 2026-09-09-el-correo.jpg
+  title: Consulted as an expert on "Un estudio pionero desvela qué ocurre en el cerebro durante la menopausia"
+  url: https://www.elcorreo.com/sociedad/ciencia/estudio-pionero-desvela-ocurre-cerebro-menopausia-20260908002146-nt.html
+- type: press
+  outlet: CSIC
+  date: 2026-04-01
+  image: 2026-04-01-csic.jpg
+  title: "Un macroestudio internacional revela que distintos análisis sobre los mismos datos arrojan resultados científicos diferentes"
+  url: https://www.csic.es/es/actualidad-del-csic/un-macroestudio-internacional-revela-que-distintos-analisis-sobre-los-mismos-datos-arrojan-resultados-cientificos-diferentes
+- type: press
+  outlet: elDiario.es
+  date: 2026-04-01
+  image: 2026-04-01-eldiario-es.jpg
+  title: "Un macroestudio muestra que los científicos sociales llegan a conclusiones diferentes a partir de los mismos datos. Nature study co-authored by Guiomar Niso"
+  url: https://www.eldiario.es/sociedad/macroestudio-muestra-cientificos-llegan-conclusiones-diferentes-partir-datos_1_13108613.html
+- type: press
+  outlet: CSIC
+  date: 2026-03-05
+  image: 2026-03-05-csic.jpg
+  title: "El CSIC presenta once nuevos informes de la colección «Ciencia para las Políticas Públicas», including the report on neuroageing and artificial intelligence"
+  url: https://www.csic.es/es/actualidad-del-csic/el-csic-presenta-once-nuevos-informes-de-la-coleccion-ciencia-para-las-politicas-publicas
+- type: tv
+  outlet: Información TV
+  date: 2025-11-06
+  image: 2025-11-06-informaci-n-tv.jpg
+  title: "Avances de la IA en el sector salud: personalización"
+  url: https://www.informacion.es/videos/informaciontv/2025/11/06/avances-ia-sector-salud-personalizacion-123427016.html
+- type: radio
+  outlet: STEM Lab Bizkaia (podcast)
+  date: 2025-11-28
+  image: 2025-11-28-stem-lab-bizkaia-podcast.jpg
+  title: "El secreto mejor guardado del cerebro. Interview"
+  url: https://youtu.be/P5ZB8g6m-EI
+- type: radio
+  outlet: Radio Euskadi
+  date: 2025-11-21
+  image: 2025-11-21-radio-euskadi.jpg
+  title: "La mecánica del caracol. Guiomar Niso, neurocientífica: «La ciencia debe ser abierta y reproducible»"
+  url: https://www.eitb.eus/es/nahieran/radio/radio-euskadi/la-mecanica-del-caracol/496670/
+- type: press
+  outlet: Información
+  date: 2025-10-04
+  image: 2025-10-04-informaci-n.jpg
+  title: "La IA nos permite avanzar hacia una medicina personalizada y preventiva. Interview, IV European Forum on Artificial Intelligence"
+  url: https://www.informacion.es/economia/2025/10/04/ia-permite-avanzar-medicina-personalizada-122242260.html
+- type: press
+  outlet: IEEE Spectrum
+  date: 2025-06-15
+  image: 2025-06-15-ieee-spectrum.jpg
+  title: "Can a Brain-Sensing Headband for Consumers Be a Research Tool? Interviewed by G. Uyeno"
+  url: https://spectrum.ieee.org/muse-headband
+- type: press
+  outlet: Muy Interesante
+  date: 2025-04-17
+  image: 2025-04-17-muy-interesante.jpg
+  title: "¿Puede la inteligencia artificial superar a los humanos prediciendo los resultados científicos?"
+  url: https://muyinteresante.okdiario.com/fundacion/categoria-ciencia-e-innovacion/resultados-cientificos-maquinas-inteligencia-artificial.html
+- type: press
+  outlet: elDiario.es
+  date: 2024-07-17
+  image: 2024-07-17-eldiario-es.jpg
+  title: Consulted as an expert on "Descubren el efecto de los hongos alucinógenos en el cerebro"
+  url: https://www.eldiario.es/sociedad/psilocibina-hongos-alucinogenos-cerebro-borra-individualidad_1_11529346.html
+- type: press
+  outlet: Academia Joven de España
+  date: 2024-02-28
+  image: 2024-02-28-academia-joven-de-espa-a.jpg
+  title: "La académica Guiomar Niso colabora como experta con la Oficina C del Congreso de los Diputados"
+  url: https://academiajoven.es/noticias/
+- type: radio
+  outlet: Radio Canal UNED
+  date: 2023-06-04
+  image: 2023-06-04-radio-canal-uned.jpg
+  title: "La investigación científica desde la Academia Joven de España: los estudios del cerebro humano a través de la neuroimagen"
+  url: https://canal.uned.es/video/647081106ff5a77f2b785e82
+- type: press
+  outlet: La Vanguardia
+  date: 2022-11-04
+  title: "Una veintena de expertas en tecnología e innovación se reúnen en Bilbao en la conferencia Leaders in Tech"
+  url: https://www.lavanguardia.com/local/paisvasco/20221104/8594524/veintena-expertas-tecnologia-e-innovacion-reunen-bilbao-conferencia-leaders-in-tech.html
+- type: press
+  outlet: Universidad Politécnica de Madrid
+  date: 2022-06-10
+  image: 2022-06-10-universidad-polit-cnica-.jpg
+  title: "Guiomar Niso, premio «Ada Byron joven»"
+  url: https://www.upm.es/UPM?prefmt=articulo&fmt=detail&id=8841378e9bc41810VgnVCM10000009c7648a____
+- type: press
+  outlet: Universidad de Deusto
+  date: 2022-06-03
+  image: 2022-06-03-universidad-de-deusto.jpg
+  title: The Junior Ada Byron Award goes to Julia Guiomar Niso
+  url: https://www.deusto.es/en/home/campus-life/news-events/news/lourdes-verdesmontenegro-researcher-at-iaacsic-wins-the-ada-byron-award-from-the-university-of-deusto/noticia
+- type: tv
+  outlet: Telemadrid
+  date: 2018-12-09
+  image: 2018-12-09-telemadrid.jpg
+  title: "Telenoticias Fin de Semana. Buscan financiación para predecir las enfermedades asociadas a la vejez"
+  url: https://www.telemadrid.es/programas/telenoticias-fin-de-semana/Buscan-financiacion-predecir-enfermades-asociadas-2-2074912521--20181209040740.html
+- type: tv
+  outlet: Telecinco
+  date: 2018-11-22
+  image: 2018-11-22-telecinco.jpg
+  title: "Informativos Telecinco. Se busca dinero para salvar vidas. Razón: la Ciencia"
+  url: https://www.telecinco.es/informativos/sociedad/cientificos-investigadores-medicos-proyectos-dinero-financiacion-alzheimer-cancer-pancreas_2_2663355124.html
+- type: press
+  outlet: ABC
+  date: 2018-11-22
+  image: 2018-11-22-abc.jpg
+  title: "Se busca dinero para salvar vidas. Razón: la Ciencia"
+  url: https://www.abc.es/espana/abci-busca-dinero-para-salvar-vidas-razon-ciencia-201811221636_video.html
+- type: radio
+  outlet: Vostok 6
+  date: 2018-07-31
+  image: 2018-07-31-vostok-6.jpg
+  title: "El podcast de las pioneras. Episode #4: Guiomar Niso"
+  url: https://www.podiumpodcast.com/podcasts/vostok-6-podium-os/
+- type: press
+  outlet: El País
+  date: 2018-02-11
+  image: 2018-02-11-el-pa-s.jpg
+  title: "El techo de cristal en los laboratorios. Interview and video"
+  url: https://elpais.com/elpais/2018/02/08/ciencia/1518108051_555486.html
+- type: radio
+  outlet: RTVE, Radio Exterior de España
+  date: 2017-05-11
+  image: 2017-05-11-rtve-radio-exterior-de-e.jpg
+  title: "Salimos por el mundo. AXA financia tres proyectos españoles. Interview"
+  url: http://www.rtve.es/a/4016864/
+- type: press
+  outlet: Revista UPM (N.32)
+  date: 2015-12-14
+  image: 2015-12-14-revista-upm-n-32.jpg
+  title: "Este será el siglo del cerebro. Interview"
+  url: http://www.upm.es/sfs/Rectorado/Gabinete%20del%20Rector/Revista%20UPM/Historico/NUMERO_32_VER.pdf
+- type: press
+  outlet: El País
+  date: 2015-03-09
+  image: 2015-03-09-el-pa-s.jpg
+  title: Universitarios españoles que cambian el mundo
+  url: http://economia.elpais.com/economia/2015/03/09/actualidad/1425914481_606276.html
+- type: radio
+  outlet: RNE, Radio Nacional de España
+  date: 2014-07-16
+  title: "España Vuelta y Vuelta. Investigadores españoles en el extranjero"

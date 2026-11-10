@@ -1,0 +1,16 @@
+---
+layout: page
+title: Media
+slug: media
+permalink: /media/
+lede: Interviews and press coverage of the group and its members.
+---
+<div class="filters" role="group" aria-label="Filter by type">
+  <button type="button" data-filter="all" aria-pressed="true">All</button>
+  <button type="button" data-filter="press" aria-pressed="false">Press</button>
+  <button type="button" data-filter="tv" aria-pressed="false">TV</button>
+  <button type="button" data-filter="radio" aria-pressed="false">Radio and podcasts</button>
+</div>
+<ul class="media-list" id="media-list">
+  {% for item in site.data.media %}{% include media-item.html %}{% endfor %}
+</ul>
