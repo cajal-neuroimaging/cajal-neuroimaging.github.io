@@ -129,12 +129,12 @@ p { margin: 0 0 1em; }
 .pubs { list-style: none; margin: 0; padding: 0; max-width: 62rem; }
 .pub { padding-block: 1.1rem; border-bottom: 1px solid var(--line); }
 .pub p { margin: 0; }
-.pub__title { font: 600 var(--step-1)/1.3 var(--display); }
-.pub__title a { color: var(--ink); text-decoration: none; }
-.pub__title a:hover { color: var(--turquoise-ink); text-decoration: underline; }
-.pub__authors { color: var(--ink-soft); font-size: var(--step--1); margin-top: .35rem; }
+.pub__title { font: 600 1.125rem/1.35 var(--display); }
+
+.pub__authors { color: var(--ink-soft); font-size: 1rem; margin-top: .25rem; }
 .pub__authors strong { color: var(--ink); }
-.pub__venue { font-size: var(--step--1); margin-top: .15rem; }
+.pub__venue { font-size: 1rem; margin-top: .1rem; }
+.pub__venue a { white-space: nowrap; }
 .year-group { display: grid; grid-template-columns: 7rem minmax(0, 1fr); gap: 1.5rem; padding-block: 1.5rem; border-top: 1px solid var(--line); }
 .year-group__year { font: 300 var(--step-3)/1 var(--display); color: var(--turquoise-ink); letter-spacing: -0.02em; position: sticky; top: 1rem; align-self: start; }
 .year-group .pub:first-child { padding-top: 0; }
@@ -154,6 +154,20 @@ p { margin: 0 0 1em; }
 .cv-list .yr { font-weight: 600; color: var(--turquoise-ink); font-variant-numeric: tabular-nums; }
 .cv-section:nth-of-type(5n+2) .yr { color: var(--salmon-ink); }
 .cv-section:nth-of-type(5n+3) .yr { color: var(--pink-ink); }
+
+.cv-block { display: grid; grid-template-columns: 14rem minmax(0, 1fr); gap: 1.5rem 3rem; padding-block: 2.25rem; border-top: 1px solid var(--line); }
+.cv-block h2 { font-size: var(--step-2); font-weight: 300; position: sticky; top: 1rem; align-self: start; padding-left: .9rem; border-left: 4px solid var(--turquoise); }
+.cv-block--2 h2 { border-left-color: var(--mint); }
+.cv-block--3 h2 { border-left-color: var(--yellow); }
+.cv-block--4 h2 { border-left-color: var(--salmon); }
+.cv-block--5 h2 { border-left-color: var(--pink); }
+.cv-entries { list-style: none; margin: 0; padding: 0; max-width: 46rem; }
+.cv-entries li { padding-block: .8rem; }
+.cv-entries li + li { border-top: 1px dashed var(--line); }
+.cv-entries p { margin: 0; }
+.cv-entry__text { font-size: var(--step-1); font-weight: 400; line-height: 1.4; }
+.cv-entry__link { font-size: var(--step-0); font-weight: 600; white-space: nowrap; }
+.cv-entry__date { font-size: var(--step--1); color: var(--ink-soft); margin-top: .2rem !important; }
 
 /* initiatives */
 .init-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 30rem), 1fr)); gap: 0 3rem; }
@@ -178,11 +192,10 @@ p { margin: 0 0 1em; }
 .media-item--radio .media-item__thumb { background: color-mix(in srgb, var(--pink) 16%, white); border-top-color: var(--pink); }
 .media-item__thumb img { width: 100%; height: 100%; object-fit: cover; }
 .media-item p { margin: 0; }
-.media-item__meta { font-size: var(--step--1); color: var(--ink-soft); }
-.media-item__type { font-weight: 600; color: var(--ink); margin-right: .3rem; }
-.media-item__title { font-weight: 600; line-height: 1.35; margin-top: .3rem; }
-.media-item__title a { color: var(--ink); text-decoration-color: var(--line); }
-.media-item__title a:hover { color: var(--turquoise-ink); text-decoration-color: currentColor; }
+.media-item__outlet { font: 600 var(--step-1)/1.2 var(--display); color: var(--ink); }
+.media-item__title { margin-top: .3rem; line-height: 1.4; }
+.media-item__title a { font-weight: 600; white-space: nowrap; }
+.media-item__meta { font-size: var(--step--1); color: var(--ink-soft); margin-top: .35rem !important; }
 
 /* contact */
 .contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 3rem; }
@@ -204,7 +217,8 @@ p { margin: 0 0 1em; }
 @media (max-width: 860px) {
   .hero__grid, .about, .contact { grid-template-columns: 1fr; }
   .hero__photo { max-width: 20rem; }
-  .cv-section, .year-group { grid-template-columns: 1fr; gap: .8rem; }
+  .cv-section, .year-group, .cv-block { grid-template-columns: 1fr; gap: .8rem; }
+  .cv-block h2 { position: static; }
   .cv-section h2, .year-group__year { position: static; }
   .cv-list li { grid-template-columns: 1fr; gap: .1rem; }
 }
