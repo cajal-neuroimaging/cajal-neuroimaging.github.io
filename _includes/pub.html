@@ -1,5 +1,5 @@
 <li class="pub">
   <p class="pub__title">{{ pub.title }}</p>
   {% if pub.authors %}<p class="pub__authors">{{ pub.authors | replace: 'Niso, G.', '<strong>Niso, G.</strong>' }}</p>{% endif %}
-  <p class="pub__venue"><em>{{ pub.venue }}</em> ({{ pub.year }}). <a href="https://doi.org/{{ pub.doi }}">doi:{{ pub.doi }}</a></p>
+  <p class="pub__venue">{% if pub.venue != nil and pub.venue != '' %}<em>{{ pub.venue }}</em> {% endif %}({{ pub.year }}).{% if pub.doi %} <a href="https://doi.org/{{ pub.doi }}">doi:{{ pub.doi }}</a>{% endif %}{% if pub.preprint %} {% if pub.preprint_url %}<a href="{{ pub.preprint_url }}">{{ pub.preprint }}</a>{% else %}{{ pub.preprint }}{% endif %}.{% endif %}{% if pub.resource %} {{ pub.resource.name }}: <a href="{{ pub.resource.url }}">{{ pub.resource.url | remove: 'https://' | remove: 'http://' }}</a>{% endif %}</p>
 </li>

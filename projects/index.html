@@ -3,13 +3,29 @@ layout: page
 title: Projects
 slug: projects
 permalink: /projects/
+lede: Our research projects, and the open science initiatives we lead or contribute to.
 ---
+<h2 class="block-title">Research projects</h2>
 <ul class="init-list">
   <li class="init init--text">
     <div>
       <h2><a href="{{ '/projects/alzheimer/' | relative_url }}">Proyecto Alzheimer</a></h2>
-      <span class="init__role">Recruiting participants</span>
       <p>Early alterations in brain oscillatory activity as indicators of Alzheimer's disease, studied with EEG over two years. Information for participants, in Spanish.</p>
+      <p class="init__role">Recruiting participants.</p>
     </div>
   </li>
+</ul>
+
+<h2 class="block-title">Open science initiatives</h2>
+<ul class="init-list">
+  {% for i in site.data.initiatives %}
+  <li class="init">
+    <a class="init__logo" href="{{ i.url }}" tabindex="-1" aria-hidden="true">{% if i.logo %}<img src="{{ '/assets/img/logos/' | append: i.logo | relative_url }}" alt="" loading="lazy">{% else %}<span class="init__logo-text">{{ i.short }}</span>{% endif %}</a>
+    <div>
+      <h2><a href="{{ i.url }}">{{ i.name }}</a></h2>
+      <p>{{ i.text }}</p>
+      {% if i.role %}<p class="init__role">Guiomar Niso: {{ i.role }}.</p>{% endif %}
+    </div>
+  </li>
+  {% endfor %}
 </ul>

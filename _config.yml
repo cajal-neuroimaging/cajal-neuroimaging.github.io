@@ -19,18 +19,14 @@ group:
 nav:
   - title: Research
     url: /research/
+  - title: Projects
+    url: /projects/
   - title: Team
     url: /team/
   - title: Publications
     url: /publications/
-  - title: Initiatives
-    url: /initiatives/
-  - title: Projects
-    url: /projects/
   - title: News
     url: /news/
-  - title: Media
-    url: /media/
   - title: Contact
     url: /contact/
 

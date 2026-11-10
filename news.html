@@ -3,13 +3,34 @@ layout: page
 title: News
 slug: news
 permalink: /news/
+lede: Group news, and press, TV and radio appearances.
 ---
-{% assign by_year = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
-{% for g in by_year %}
-<section class="year-group">
-  <h2 class="year-group__year">{{ g.name }}</h2>
-  <ul class="news-grid news-grid--list">
-    {% for post in g.items %}{% include news-card.html %}{% endfor %}
-  </ul>
-</section>
-{% endfor %}
+<div class="filters" role="group" aria-label="Filter by type">
+  <button type="button" data-filter="all" aria-pressed="true">All</button>
+  <button type="button" data-filter="news" aria-pressed="false">Group news</button>
+  <button type="button" data-filter="press" aria-pressed="false">Press</button>
+  <button type="button" data-filter="tv" aria-pressed="false">TV</button>
+  <button type="button" data-filter="radio" aria-pressed="false">Radio and podcasts</button>
+</div>
+<ul class="news-grid news-grid--list" id="feed">
+  {% for post in site.posts %}
+  <li class="news-card" data-type="news" data-date="{{ post.date | date: '%Y-%m-%d' }}">
+    <a class="news-card__link" href="{{ post.url | relative_url }}">
+      <div class="news-card__thumb">{% if post.image %}<img src="{{ post.image | relative_url }}" alt="" loading="lazy">{% endif %}</div>
+      <p class="news-card__kind">Group news</p>
+      <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{% if post.date_label %}{{ post.date_label }}{% else %}{{ post.date | date: "%-d %B %Y" }}{% endif %}</time>
+      <h3>{{ post.title }}</h3>
+    </a>
+  </li>
+  {% endfor %}
+  {% for item in site.data.media %}
+  <li class="news-card news-card--{{ item.type }}" data-type="{{ item.type }}" data-date="{{ item.date }}">
+    <a class="news-card__link" href="{{ item.url | default: '#' }}">
+      <div class="news-card__thumb">{% if item.image %}<img src="{{ '/assets/img/media/' | append: item.image | relative_url }}" alt="" loading="lazy">{% endif %}</div>
+      <p class="news-card__kind">{% if item.type == 'tv' %}TV{% elsif item.type == 'radio' %}Radio{% else %}Press{% endif %}: <strong>{{ item.outlet }}</strong></p>
+      <time datetime="{{ item.date }}">{{ item.date | date: "%-d %B %Y" }}</time>
+      <h3>{{ item.title }}</h3>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

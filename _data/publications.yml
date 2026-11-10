@@ -1,98 +1,211 @@
-# Group publications, newest first. "doi" or "url" links the title.
+# Group publications, newest first.
+# Fields: authors, year, title, venue, doi (optional), preprint + preprint_url (optional), resource (optional).
 
-- year: 2025
+- authors: Parra‐Díaz, P., Valls‐Carbó, A., Niso, G., ... & Delgado, R. T.
+  year: 2026
+  title: 'Interictal electric source imaging with open‐source software and routine low‐density electroencephalography: A systematic comparison of four inverse methods in drug‐resistant epilepsy'
+  venue: Epilepsia
+  doi: 10.1002/epi.70481
+- authors: Cesnaite, E., Algermissen, J., Vinding, M. C., ... Niso, G., ... & Busch, N.
+  year: 2026
+  title: 'Many pipelines, one dataset: Analytic flexibility and its impact in EEG research (Version posted online May 7, 2026)'
+  preprint: 'Preprint (2026): MetaArXiv'
+  preprint_url: https://doi.org/10.31222/osf.io/wvx48_v2
+- authors: Stern, E., Niso, G., & Capilla, A.
+  year: 2026
+  title: 'sBOSC: A Method for Source‐Level Identification of Neural Oscillations in Electromagnetic Brain Signals'
+  venue: Psychophysiology, 63(6), e70345
+  doi: 10.1111/psyp.70345
+  preprint: 'Preprint (2025): bioRxiv, 2025-07'
+- authors: Aczél, B., Szászi, B., Clelland, H. T., ... Niso, G., ... & Nosek, B. A.
+  year: 2026
   title: Investigating the analytical robustness of the social and behavioural sciences
-  venue: Nature, 652(8108), 135–142
+  venue: Nature, 652(8108), 135-142
   doi: 10.1038/s41586-025-09844-9
-- year: 2025
+- authors: Šoškić A., Ković V., Algermissen J., ... Niso, G., ... & Styles S. J.
+  year: 2025
+  title: 'ARTEM-IS for ERP: Agreed Reporting Template for EEG Methodology - International Standard for documenting studies on Event-Related Potentials'
+  venue: Psychophysiology, 62(12), e70187
+  doi: 10.1111/psyp.70187
+  preprint: Preprint (2022)
+  preprint_url: https://psyarxiv.com/mq5sy
+- authors: Bouchard, A. E., Wong, D., Bogner, W., ... Niso, G., ... & Mikkelsen, M.
+  year: 2025
   title: MRS-BIDS, an extension to the Brain Imaging Data Structure for magnetic resonance spectroscopy
   venue: Scientific Data, 12(1), 1384
   doi: 10.1038/s41597-025-05543-2
-- year: 2025
-  authors: Luke R., Oostenveld R., Cockx H., Niso, G., Shader M.J., …, Pollonini L.
-  title: "NIRS-BIDS: Brain Imaging Data Structure Extended to Near-Infrared Spectroscopy"
-  venue: Scientific Data, 12(1), 159
+- authors: Luke R., Oostenveld R., Cockx H., Niso, G., ... & Pollonini L.
+  year: 2025
+  title: 'NIRS-BIDS: Brain Imaging Data Structure Extended to Near-Infrared Spectroscopy'
+  venue: Scientific Data, 12 (1), 159
   doi: 10.1038/s41597-024-04136-9
-- year: 2024
+  preprint: OSF Preprint (2023)
+  preprint_url: https://osf.io/7nmcp
+- authors: Luo, X., Rechardt, A., Sun, G., ... Niso, G., ... & Love, B. C.
+  year: 2025
   title: Large language models surpass human experts in predicting neuroscience results
-  venue: Nature Human Behaviour
+  venue: Nature Human Behaviour, 9(2), 305–315
   doi: 10.1038/s41562-024-02046-9
-- year: 2024
+  preprint: Preprint (2024)
+  preprint_url: https://arxiv.org/abs/2403.03230
+- authors: Mushtaq, F., Welke, D., Gallagher, A., ... Niso, G., ... & Valdes-Sosa, P.
+  year: 2024
   title: One hundred years of EEG for brain and behaviour research
-  venue: Nature Human Behaviour
+  venue: Nature Human Behaviour, 8 (8)
   doi: 10.1038/s41562-024-01941-5
-- year: 2024
-  title: "brainlife.io: a decentralized and open-source cloud platform to support neuroscience research"
-  venue: Nature Methods, 21(5), 809–813
+- authors: Hayashi, S., Caron, B. A., Heinsfeld, A. S., ... Niso, G., ... & Pestilli, F.
+  year: 2024
+  title: 'brainlife.io: a decentralized and open-source cloud platform to support neuroscience research'
+  venue: Nature Methods, 21(5), 809-813
   doi: 10.1038/s41592-024-02237-2
-- year: 2024
-  title: The past, present, and future of the Brain Imaging Data Structure (BIDS)
-  venue: Imaging Neuroscience, 2, 1–19
+- authors: Poldrack, R. A., Markiewicz, C. J., Appelhoff, S., ... Niso, G., ... & Gorgolewski, K. J.
+  year: 2024
+  title: The past, present, and future of the brain imaging data structure (BIDS)
+  venue: Imaging Neuroscience, 2, 1-19
   doi: 10.1162/imag_a_00103
-- year: 2024
-  authors: Levitas, D., Hayashi, S., Vinci-Booher, S., Heinsfeld, A., Bhatia, D., Lee, N., Galassi, A., Niso, G. & Pestilli, F.
-  title: "ezBIDS: Guided standardization of neuroimaging data interoperable with major data archives and platforms"
+- authors: Levitas, D., Hayashi, S., Vinci-Booher, S., ... Niso, G. & Pestilli, F.
+  year: 2024
+  title: 'ezBIDS: Guided standardization of neuroimaging data interoperable with major data archives and platforms'
   venue: Scientific Data, 11(1), 179
   doi: 10.1038/s41597-024-02959-0
-- year: 2023
-  authors: Niso, G., Romero E., Moreau, J.T., Araujo A. & Krol, L.
-  title: "Wireless EEG: A Survey of Systems and Studies"
+- authors: Niso, G., Romero E., Moreau, J.T., ... & Krol, L.
+  year: 2023
+  title: 'Wireless EEG: A Survey of Systems and Studies'
   venue: NeuroImage, 119774
   doi: 10.1016/j.neuroimage.2022.119774
-- year: 2023
-  title: Proceedings of the OHBM Brainhack 2021
-  venue: Aperture Neuro, 3, 1–20
-  doi: 10.52294/258801b4-a9a9-4d30-a468-c43646391211
-- year: 2022
-  title: "Open and reproducible neuroimaging: from study inception to publication"
+- authors: Nikolaidis, A., Manchini, M., Auer, T., ... Niso, G., ... & Lyons, P.
+  year: 2023
+  title: 'Proceedings of the OHBM Brainhack 2021. Aperture Neuro, 3, 1-20. doi: https:/​/​doi.org/​10.52294/​258801b4-a9a9-4d30-a468-c43646391211'
+- authors: Niso, G., Botvinik-Nezer, R., Appelhoff, S., ... & Rieger, J.W.
+  year: 2022
+  title: 'Open and reproducible neuroimaging: from study inception to publication'
   venue: NeuroImage, 119623
   doi: 10.1016/j.neuroimage.2022.119623
-- year: 2022
+- authors: Govaart, G., Schettino, A., Helbling, S., ... Niso, G., ... & Paul, M.
+  year: 2022
   title: EEG ERP preregistration template
   venue: MetaArXiv
   doi: 10.31222/osf.io/4nvpt
-- year: 2022
-  title: "Microscopy-BIDS: an extension to the Brain Imaging Data Structure for Microscopy Data"
+- authors: Bourget, M. H., Kamentsky, L., Ghosh, S. S., ... Niso, G., ... & Cohen-Adad, J.
+  year: 2022
+  title: 'Microscopy-BIDS: an extension to the Brain Imaging Data Structure for Microscopy Data'
   venue: Frontiers in Neuroscience, 377
   doi: 10.3389/fnins.2022.871228
-- year: 2021
-  title: "#EEGManyLabs: Investigating the replicability of influential EEG experiments"
-  venue: Cortex, 144, 213–229
-  doi: 10.1016/j.cortex.2021.03.013
-- year: 2021
-  title: Centering inclusivity in the design of online conferences. An OHBM–Open Science perspective
-  venue: GigaScience, 10(8), giab051
-  doi: 10.1093/gigascience/giab051
-- year: 2021
-  authors: Niso, G., Tjepkema-Cloostermans, M. C., Lenders, M. W., & de Vos, C. C.
+- authors: Niso, G., Krol, L., Combrisson, E., ... & Chaumon, M.
+  year: 2022
+  title: 'Good Scientific Practice in EEG and MEG Research: Progress and Perspectives'
+  venue: NeuroImage, 119056
+  doi: 10.1016/j.neuroimage.2022.119056
+  preprint: Preprint (2021). OSF Preprints
+  preprint_url: https://doi.org/10.31219/osf.io/n2ryp
+- authors: Norgaard, M., Matheson, G. J., Hansen, H.D., ... Niso, G., ... & Ganz, M.
+  year: 2022
+  title: PET-BIDS, an extension to the brain imaging data structure for positron emission tomography
+  venue: Scientific Data, 9(1), 1-7
+  doi: 10.1038/s41597-022-01164-1
+  preprint: Preprint (2021). bioRxiv
+  preprint_url: https://doi.org/10.1101/2021.06.16.448390
+- authors: Niso, G., Tjepkema-Cloostermans, M. C., Lenders, M. W., & de Vos, C. C.
+  year: 2021
   title: Modulation of the Somatosensory Evoked Potential by Attention and Spinal Cord Stimulation
   venue: Frontiers in Neurology, 1311
   doi: 10.3389/fneur.2021.694310
-- year: 2019
-  authors: Tadel F., Bock E., Niso, G., Mosher J.C., Cousineau, M., Pantazis D., Leahy R.M., Baillet S.
-  title: "MEG/EEG group analysis: the Brainstorm workflow"
-  venue: Frontiers in Neuroscience, 13, 76
-  doi: 10.3389/fnins.2019.00076
-- year: 2019
-  authors: Müller F. / Niso, G., Samiee S., Ptito M., Baillet S., Kupers R.
+- authors: Levitis, E., Van Praag, C. D. G., Gau, R., ... Niso, G., ... & Maumet, C.
+  year: 2021
+  title: Centering inclusivity in the design of online conferences—An OHBM–Open Science perspective
+  venue: GigaScience, 10(8), giab051
+  doi: 10.1093/gigascience/giab051
+  preprint: Preprint (2021). PsyArxiv
+  preprint_url: https://doi.org/10.31234/osf.io/vj5tu
+- authors: Pavlov, Y., Adamian, N., Appelhoff, S., ... Niso, G., ... & Mushtaq, F.
+  year: 2021
+  title: '#EEGManyLabs: Investigating the replicability of influential EEG experiments'
+  venue: Cortex, 144, 213-229
+  doi: 10.1016/j.cortex.2021.03.013
+- authors: Müller F.* / Niso, G.*, Samiee S., Ptito M., ... & Kupers R.
+  year: 2019
   title: A thalamocortical pathway for fast rerouting of tactile information to occipital cortex in congenital blindness
-  venue: Nature Communications, 10(1), 5154
+  venue: Nature Communications 10(1), 5154
   doi: 10.1038/s41467-019-13173-7
-- year: 2019
-  authors: Xifra-Porxas A., Niso, G., Larivière S., Kassinopoulos M., Baillet S., Mitsis G.D., Boudrias M.H.
+- authors: Xifra-Porxas A., Niso, G., Larivière S., ... & Boudrias M.H.
+  year: 2019
   title: Older adults exhibit a more pronounced modulation of beta oscillations when performing sustained and dynamic handgrips
-  venue: NeuroImage, 201, 116037
+  venue: NeuroImage 201, 116037
   doi: 10.1016/j.neuroimage.2019.116037
-- year: 2019
+- authors: Chholak, P., Niso, G., Maksimenko, V.A., ... & Pisarchik, A.N.
+  year: 2019
   title: Visual and kinesthetic modes affect motor imagery classification in untrained subjects
-  venue: Scientific Reports, 9(1), 9838
+  venue: Scientific Reports 9(1), 9838
   doi: 10.1038/s41598-019-46310-9
-- year: 2019
-  authors: Larivière S., Xifra-Porxas A., Kassinopoulos M., Niso, G., Baillet S., Mitsis G.D., Boudrias M.H.
+- authors: Larivière S., Xifra-Porxas A., Kassinopoulos M., Niso, G., ... & Boudrias M.H.
+  year: 2019
   title: Functional and effective reorganization of the aging brain during unimanual and bimanual hand movements
-  venue: Human Brain Mapping, 40(10), 3027–3040
+  venue: Human Brain Mapping, 40(10), 3027-3040
   doi: 10.1002/hbm.24578
-- year: 2019
+- authors: Niso, G., Tadel F., Bock E., ... & Baillet S.
+  year: 2019
   title: Brainstorm pipeline analysis of resting-state data from the Open MEG Archive
-  venue: Frontiers in Neuroscience, 13, 284
+  venue: Frontiers in Neuroscience 13, 284
   doi: 10.3389/fnins.2019.00284
+- authors: Tadel F., Bock E., Niso, G., ... & Baillet S.
+  year: 2019
+  title: 'MEG/EEG group analysis: the Brainstorm workflow'
+  venue: Frontiers in Neuroscience 13, 76
+  doi: 10.3389/fnins.2019.00076
+- authors: Niso, G., Gorgolewski K.J., Bock E., ... & Baillet S.
+  year: 2018
+  title: 'MEG-BIDS: an extension to the Brain Imaging Data Structure for magnetoencephalography'
+  venue: Scientific Data 5, 180110
+  doi: 10.1038/sdata.2018.110
+  preprint: Preprint (2017). bioRxiv 172684
+  preprint_url: https://doi.org/10.1101/172684
+- authors: Soriano M.C., Niso, G., Clements J., ... & Pereda E.
+  year: 2017
+  title: Automated detection of epileptic biomarkers in resting-state interictal MEG data
+  venue: Frontiers in Neuroinformatics 11, 43
+  doi: 10.3389/fninf.2017.00043
+- authors: Niso, G., Rogers C., Moreau J.T., ... & Baillet S.
+  year: 2016
+  title: 'OMEGA: The Open MEG Archive'
+  venue: NeuroImage 124, 1182-1187
+  doi: 10.1016/j.neuroimage.2015.04.028
+  resource:
+    name: OMEGA
+    url: https://omega.bic.mni.mcgill.ca
+- authors: Das S., Glatard T., MacIntyre L.C., ... Niso, G., ... & Evans A.C.
+  year: 2016
+  title: The MNI data-sharing and processing ecosystem
+  venue: NeuroImage 124, 1188-1195
+  doi: 10.1016/j.neuroimage.2015.08.076
+- authors: Carrasco S., Niso, G., Canuet L., ... & Gudín M.
+  year: 2016
+  title: 'Praxis induced seizures in a juvenile myoclonic epilepsy patient: MEG and EEG coregistration study'
+  venue: Epilepsy & Behavior Case Reports 5, 1-5
+  doi: 10.1016/j.ebcr.2015.10.002
+- authors: Niso, G., Carrasco S., Gudín M., ... & Pereda E.
+  year: 2015
+  title: What graph theory actually tells us about resting state interictal MEG epileptic activity
+  venue: 'NeuroImage: Clinical 8, 503-515,'
+  doi: 10.1016/j.nicl.2015.05.008
+- authors: Ariza P., Solesio-Jofre E., Martinez-Huartos J., ... Niso, G., ... & Buldú J.M.
+  year: 2015
+  title: Evaluating the effect of ageing on interference resolution with time-varying complex networks analysis
+  venue: Frontiers in Human Neuroscience, 9, 255
+  doi: 10.3389/fnhum.2015.00255
+- authors: Lopez M.E., Aurtenetxe S., Pereda E., ... Niso, G., ... & Bajo R.
+  year: 2014
+  title: 'Cognitive reserve is associated with the functional organization of brain in healthy aging: A MEG Study'
+  venue: Frontiers in Aging Neuroscience 6, 125.
+  doi: 10.3389/fnagi.2014.00125
+- authors: Niso, G., Bruña R., Pereda E., ... & del-Pozo F.
+  year: 2013
+  title: 'HERMES: towards an integrated toolbox to characterize functional and effective brain connectivity'
+  venue: Neuroinformatics 11 (4), 405-434
+  doi: 10.1007/s12021-013-9186-1
+  resource:
+    name: HERMES
+    url: http://hermes.ctb.upm.es
+- authors: Niso, G.
+  year: 2013
+  title: Functional and effective connectivity in MEG. Application to the study of epilepsy
+  venue: PhD Thesis in Biomedical Engineering. Center for Biomedical Technology, Universidad Politécnica de Madrid

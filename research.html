@@ -15,26 +15,4 @@ lede: We study the human brain with complementary neuroimaging techniques, follo
 </section>
 {% endfor %}
 
-<h2 class="block-title">Open science initiatives</h2>
-<ul class="init-list">
-  {% for i in site.data.initiatives %}
-  <li class="init">
-    <a class="init__logo" href="{{ i.url }}" tabindex="-1" aria-hidden="true"><img src="{{ '/assets/img/logos/' | append: i.logo | relative_url }}" alt="" loading="lazy"></a>
-    <div>
-      <h2><a href="{{ i.url }}">{{ i.name }}</a></h2>
-      <p>{{ i.text }}</p>
-      {% if i.role %}<p class="init__role">Guiomar Niso: {{ i.role }}.</p>{% endif %}
-    </div>
-  </li>
-  {% endfor %}
-</ul>
-
-<h2 class="block-title">Other tools and projects we contribute to</h2>
-<p class="chips">
-  <a href="https://neuroimage.usc.edu/brainstorm/">Brainstorm</a>
-  <a href="https://mne.tools/">MNE-Python</a>
-  <a href="https://openneuro.org/">OpenNeuro</a>
-  <a href="https://doi.org/10.1111/psyp.70187">ARTEM-IS</a>
-  <a href="https://www.eegmanypipelines.org/">EEGManyPipelines</a>
-  <a href="https://doi.org/10.1038/s41586-025-09844-9">Multi100</a>
-</p>
+<p class="block-title-link"><a class="btn" href="{{ '/projects/' | relative_url }}">See the projects and open science initiatives we lead and contribute to</a></p>

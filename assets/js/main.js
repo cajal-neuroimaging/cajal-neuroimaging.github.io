@@ -33,3 +33,18 @@ document.querySelectorAll('a[href]').forEach((a) => {
     a.rel = 'noopener';
   }
 });
+
+// News page: one feed sorted by date, with filters
+const feed = document.getElementById('feed');
+if (feed) {
+  [...feed.children]
+    .sort((a, b) => b.dataset.date.localeCompare(a.dataset.date))
+    .forEach((li) => feed.appendChild(li));
+  const btns = document.querySelectorAll('.filters button');
+  btns.forEach((btn) => btn.addEventListener('click', () => {
+    btns.forEach((b) => b.setAttribute('aria-pressed', b === btn));
+    [...feed.children].forEach((li) => {
+      li.hidden = btn.dataset.filter !== 'all' && li.dataset.type !== btn.dataset.filter;
+    });
+  }));
+}

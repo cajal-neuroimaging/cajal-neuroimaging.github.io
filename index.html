@@ -52,11 +52,11 @@ slug: home
   <div class="wrap">
     <div class="section__head">
       <h2>Open science</h2>
-      <a class="section__more" href="{{ '/initiatives/' | relative_url }}">All initiatives</a>
+      <a class="section__more" href="{{ '/projects/' | relative_url }}">All projects</a>
     </div>
     <ul class="logo-row">
       {% for i in site.data.initiatives %}
-      <li><a href="{{ i.url }}" title="{{ i.name }}"><img src="{{ '/assets/img/logos/' | append: i.logo | relative_url }}" alt="{{ i.short }}" loading="lazy"></a></li>
+      {% if i.logo %}<li><a href="{{ i.url }}" title="{{ i.name }}"><img src="{{ '/assets/img/logos/' | append: i.logo | relative_url }}" alt="{{ i.short }}" loading="lazy"></a></li>{% endif %}
       {% endfor %}
     </ul>
   </div>

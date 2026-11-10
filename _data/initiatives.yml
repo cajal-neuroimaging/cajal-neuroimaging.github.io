@@ -51,3 +51,32 @@
   logo: eegmanylabs.png
   url: https://eegmanylabs.org/
   text: Large international collaborations on the replicability and analytical robustness of science, including #EEGManyLabs (2023 BNA Team Credibility Prize), EEGManyPipelines and Multi100 (published in Nature, 2026).
+- name: Brainstorm
+  short: Brainstorm
+  logo: brainstorm.png
+  url: https://neuroimage.usc.edu/brainstorm/
+  text: Open-source application for the analysis of MEG, EEG, fNIRS, ECoG and other electrophysiology recordings, with a graphical interface that requires no programming.
+- name: MNE-Python
+  short: MNE-Python
+  logo: mne-python.png
+  url: https://mne.tools/
+  text: Open-source Python package for exploring, visualizing and analysing human neurophysiological data such as MEG, EEG, sEEG, ECoG and NIRS.
+- name: OpenNeuro
+  short: OpenNeuro
+  logo: openneuro.png
+  url: https://openneuro.org/
+  text: Free and open platform for sharing neuroimaging data organized with the BIDS standard. We contribute several datasets.
+- name: "ARTEM-IS: Agreed Reporting Template for EEG Methodology – International Standard"
+  short: ARTEM-IS
+  logo: artemis.png
+  url: https://artemis.incf.org/
+  text: Web application that helps researchers document EEG and ERP methods in detail, producing a human-readable report and a machine-readable JSON summary.
+- name: EEGManyPipelines
+  short: EEGManyPipelines
+  logo: eegmanypipelines.png
+  url: https://www.eegmanypipelines.org/
+  text: Many-analyst project in which independent teams analysed the same EEG dataset to measure how analysis choices affect results.
+- name: Multi100
+  short: Multi100
+  url: https://doi.org/10.1038/s41586-025-09844-9
+  text: Crowd initiative in which independent analysts reanalysed 100 published studies in the social and behavioural sciences to test how robust their findings are to analytical choices. Published in Nature (2026).
