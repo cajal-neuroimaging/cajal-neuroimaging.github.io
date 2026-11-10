@@ -391,3 +391,11 @@ p { margin: 0 0 1em; }
 .team-filters { margin: 2.5rem 0 0 !important; }
 .team-legend { margin: 1rem 0 2.5rem !important; }
 .person__years { font-weight: 600; color: var(--ink); }
+
+/* compact footer */
+.site-foot { padding-block: 1.6rem !important; }
+.site-foot__inner { align-items: center; gap: 1rem 2rem !important; }
+.site-foot__name { margin-bottom: .25rem !important; }
+.site-foot p { margin: 0; }
+.site-foot__inst img { height: 2.1rem !important; }
+.site-foot__inst a { padding: .4rem .7rem !important; }
