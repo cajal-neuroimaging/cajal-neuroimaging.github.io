@@ -49,7 +49,8 @@ members:
     role: MSc Neuroscience and Neuropsychology
     affiliation: Universidad Rey Juan Carlos (URJC)
   - name: Adriana Brande
-    type: bsc
+    type: intern
+    role: JAE Intro fellow (CSIC)
   - name: Irem Koçak
     type: intl
   - name: Carlota Juárez
@@ -61,14 +62,12 @@ alumni:
     photo: marta-navarro-bernad.png
     linkedin: https://www.linkedin.com/in/marta-n-0a0ab9274/
     orcid: https://orcid.org/0009-0007-5089-6369
-    role: MSc Neuroscience and Neuropsychology
+    role: MSc Neuroscience and Neuropsychology. JAE Intro fellow (CSIC)
     affiliation: Universidad Rey Juan Carlos (URJC)
   - name: Nicolás Martínez
     type: msc
     role: MSc Advanced Therapies in Biomedicine
     affiliation: Universidad Francisco de Vitoria (UFV)
-  - name: Rodrigo Quispe Ávila
-    type: bsc
   - name: René Andrade
     type: intern
   - name: Lucía Escribano Marín
@@ -134,7 +133,7 @@ alumni:
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
   - name: Patricia García Cabrera
-    type: bsc
+    type: intern
     linkedin: https://www.linkedin.com/in/patricia-garcia-4211b4242/
     role: BSc Biomedicine
     affiliation: Universidad Francisco de Vitoria (UFV)
