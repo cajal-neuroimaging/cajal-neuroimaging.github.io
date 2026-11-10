@@ -329,3 +329,7 @@ p { margin: 0 0 1em; }
 .people li:nth-child(5n+5) .person__avatar { background: color-mix(in srgb, var(--turquoise) 40%, white) !important; }
 .person__avatar img { object-fit: cover; object-position: bottom; }
 .people--alumni .person__avatar { background: color-mix(in srgb, var(--line) 70%, white) !important; }
+
+/* footer institution logos are links */
+.site-foot__inst a { display:inline-block; transition: opacity .15s, transform .15s; }
+.site-foot__inst a:hover { opacity:.8; transform: translateY(-1px); }
