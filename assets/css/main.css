@@ -388,3 +388,5 @@ p { margin: 0 0 1em; }
 .people--alumni .person, .people--alumni .person:nth-child(n) { border-left: 5px solid var(--cat, var(--line)) !important; }
 /* photo background shows the category */
 .people .person[class*="person--"] .person__avatar { background: color-mix(in srgb, var(--cat) 38%, white) !important; }
+.team-filters { margin: 2.5rem 0 0 !important; }
+.team-legend { margin: 1rem 0 2.5rem !important; }
