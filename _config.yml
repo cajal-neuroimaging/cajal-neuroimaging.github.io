@@ -21,10 +21,10 @@ nav:
     url: /research/
   - title: Projects
     url: /projects/
-  - title: Team
-    url: /team/
   - title: Publications
     url: /publications/
+  - title: Team
+    url: /team/
   - title: News
     url: /news/
   - title: Contact
