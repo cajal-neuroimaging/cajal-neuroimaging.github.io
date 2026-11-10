@@ -453,3 +453,12 @@ p { margin: 0 0 1em; }
 .ad-timeline__when { display: block; font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #006E75; }
 .ad-timeline strong { display: block; margin: .1rem 0 .2rem; color: var(--ink); }
 .ad-timeline p { margin: 0; }
+
+.init--project { grid-template-columns: minmax(0, 22rem) minmax(0, 1fr) !important; align-items: center; }
+.init__cover img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 16px; display: block; }
+@media (max-width: 640px) { .init--project { grid-template-columns: 1fr !important; } }
+.ad-funding img { width: 100%; max-width: 30rem; height: auto; display: block; margin-bottom: .5rem; }
+.init-list:has(.init--project) { max-width: 52rem; }
+.init--project { grid-template-columns: 20rem minmax(0, 1fr) !important; }
+.init--project .init__cover img { aspect-ratio: 1; }
+.init--project { grid-template-columns: 14rem minmax(0, 1fr) !important; }
