@@ -67,6 +67,29 @@ members:
     type: intern
 
 alumni:
+  - name: René Andrade
+    type: intern
+  - name: Juan Ponce
+    type: intern
+  - name: Julia Reina
+    type: intern
+  - name: Nicolás Martínez
+    type: msc
+    years: '2025'
+    role: MSc Advanced Therapies in Biomedicine
+    affiliation: Universidad Francisco de Vitoria (UFV)
+  - name: Lucía Escribano Marín
+    type: intern
+    years: '2025'
+    role: BSc Biomedical Sciences
+    affiliation: Universidad de Cantabria (UC)
+  - name: Arturo Salas Hernández
+    type: intern
+    years: '2025'
+    photo: arturo-salas-hernandez.png
+    role: BSc Psychology
+    affiliation: Universidad Nacional de Educación a Distancia (UNED)
+    orcid: https://orcid.org/0009-0006-0847-304X
   - name: Marta Navarro Bernad
     type: msc
     years: '2024'
@@ -75,22 +98,6 @@ alumni:
     affiliation: Universidad Rey Juan Carlos (URJC)
     linkedin: https://www.linkedin.com/in/marta-n-0a0ab9274/
     orcid: https://orcid.org/0009-0007-5089-6369
-  - name: Nicolás Martínez
-    type: msc
-    years: '2025'
-    role: MSc Advanced Therapies in Biomedicine
-    affiliation: Universidad Francisco de Vitoria (UFV)
-  - name: René Andrade
-    type: intern
-  - name: Lucía Escribano Marín
-    type: intern
-    years: '2025'
-    role: BSc Biomedical Sciences
-    affiliation: Universidad de Cantabria (UC)
-  - name: Juan Ponce
-    type: intern
-  - name: Julia Reina
-    type: intern
   - name: Álvaro Mozas Robles
     type: msc
     years: '2024'
@@ -147,13 +154,6 @@ alumni:
     photo: mercedes-martin-del-campo.png
     role: BSc Psychology
     affiliation: Universidad Autónoma de Madrid (UAM)
-  - name: Arturo Salas Hernández
-    type: intern
-    years: '2025'
-    photo: arturo-salas-hernandez.png
-    role: BSc Psychology
-    affiliation: Universidad Nacional de Educación a Distancia (UNED)
-    orcid: https://orcid.org/0009-0006-0847-304X
   - name: Antonio Caulín Atiénzar
     type: intern
     years: '2024'
