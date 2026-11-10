@@ -333,3 +333,5 @@ p { margin: 0 0 1em; }
 /* footer institution logos are links */
 .site-foot__inst a { display:inline-block; transition: opacity .15s, transform .15s; }
 .site-foot__inst a:hover { opacity:.8; transform: translateY(-1px); }
+
+.person__now { font-size: var(--step--1); color: #006E75; margin-top: .25rem; }

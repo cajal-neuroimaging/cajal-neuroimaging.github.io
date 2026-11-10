@@ -3,6 +3,7 @@
   <div>
     <p class="person__name">{% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</p>
     <p class="person__role">{{ p.role }}{% if p.affiliation %}<br>{{ p.affiliation }}{% endif %}</p>
+    {% if p.now %}<p class="person__now">Now: {{ p.now }}</p>{% endif %}
     {% if p.linkedin or p.orcid or p.scholar or p.github or p.x or p.bluesky %}
     <p class="person__links">
       {% if p.linkedin %}<a href="{{ p.linkedin }}" title="LinkedIn">LinkedIn</a>{% endif %}

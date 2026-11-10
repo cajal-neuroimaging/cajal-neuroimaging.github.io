@@ -1,4 +1,5 @@
 # Team members. To add someone, copy a block. "photo" is optional (file in assets/img/team/).
+# Alumni can add "now:" with their current position, e.g. now: PhD student, University of X
 
 pi:
   name: Guiomar Niso
