@@ -34,17 +34,37 @@ document.querySelectorAll('a[href]').forEach((a) => {
   }
 });
 
-// News page: one feed sorted by date, with filters
+// News page: one feed sorted by date and grouped by year, with filters
 const feed = document.getElementById('feed');
 if (feed) {
-  [...feed.children]
-    .sort((a, b) => b.dataset.date.localeCompare(a.dataset.date))
-    .forEach((li) => feed.appendChild(li));
+  const items = [...feed.children].sort((a, b) => b.dataset.date.localeCompare(a.dataset.date));
+  const wrap = document.createElement('div');
+  let year = null, list = null;
+  items.forEach((li) => {
+    const y = li.dataset.date.slice(0, 4);
+    if (y !== year) {
+      year = y;
+      const sec = document.createElement('section');
+      sec.className = 'year-group';
+      sec.innerHTML = '<h2 class="year-group__year">' + y + '</h2>';
+      list = document.createElement('ul');
+      list.className = 'news-grid news-grid--year';
+      sec.appendChild(list);
+      wrap.appendChild(sec);
+    }
+    list.appendChild(li);
+  });
+  feed.replaceWith(wrap);
   const btns = document.querySelectorAll('.filters button');
   btns.forEach((btn) => btn.addEventListener('click', () => {
     btns.forEach((b) => b.setAttribute('aria-pressed', b === btn));
-    [...feed.children].forEach((li) => {
-      li.hidden = btn.dataset.filter !== 'all' && li.dataset.type !== btn.dataset.filter;
+    wrap.querySelectorAll('.year-group').forEach((sec) => {
+      let shown = 0;
+      sec.querySelectorAll('.news-card').forEach((li) => {
+        li.hidden = btn.dataset.filter !== 'all' && li.dataset.type !== btn.dataset.filter;
+        if (!li.hidden) shown++;
+      });
+      sec.hidden = shown === 0;
     });
   }));
 }
