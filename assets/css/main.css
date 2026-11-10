@@ -462,3 +462,11 @@ p { margin: 0 0 1em; }
 .init--project { grid-template-columns: 20rem minmax(0, 1fr) !important; }
 .init--project .init__cover img { aspect-ratio: 1; }
 .init--project { grid-template-columns: 14rem minmax(0, 1fr) !important; }
+
+/* Home: brain rhythms canvas */
+.rhythms { position: relative; margin: clamp(2rem, 5vw, 3.5rem) 0 0; border-block: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--surface), color-mix(in srgb, var(--mint) 8%, var(--surface))); }
+.rhythms__canvas { display: block; width: 100%; height: clamp(170px, 20vw, 240px); }
+.rhythms__labels { position: absolute; inset: 0 auto 0 var(--gutter); list-style: none; margin: 0; padding: 0; pointer-events: none; }
+.rhythms__labels li { position: absolute; top: calc((var(--i) + .5) * 20%); transform: translateY(-50%); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); white-space: nowrap; }
+.rhythms__labels b { font: 600 1rem var(--display); color: var(--ink); margin-right: .3rem; text-transform: none; letter-spacing: 0; }

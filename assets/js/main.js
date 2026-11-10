@@ -9,9 +9,58 @@ if (toggle && nav) {
 }
 
 // Draw the brain-rhythm traces once, unless the visitor prefers less motion
-const signal = document.querySelector('.signal');
-if (signal && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  signal.classList.add('is-drawing');
+// Home: five brain rhythms flowing slowly, drawn on a canvas
+const rhythms = document.querySelector('.rhythms__canvas');
+if (rhythms) {
+  const ctx = rhythms.getContext('2d');
+  const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // delta, theta, alpha, beta, gamma: cycles across the width, amplitude, colour
+  const bands = [
+    { f: 3,  a: .34, c: '#00C2CB' },
+    { f: 7,  a: .30, c: '#45CFC3' },
+    { f: 12, a: .27, c: '#E8B923' },
+    { f: 24, a: .20, c: '#FF9A76' },
+    { f: 48, a: .14, c: '#FF5D8F' },
+  ];
+  let w = 0, h = 0, t = 0, visible = true, last = 0;
+  const resize = () => {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = rhythms.clientWidth; h = rhythms.clientHeight;
+    rhythms.width = w * dpr; rhythms.height = h * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  };
+  const draw = () => {
+    ctx.clearRect(0, 0, w, h);
+    const lane = h / bands.length, x0 = Math.min(150, w * .16);
+    bands.forEach((b, i) => {
+      const mid = lane * (i + .5), amp = lane * .38 * (b.a / .34);
+      // faint baseline
+      ctx.strokeStyle = 'rgba(18,51,59,.06)'; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(x0, mid); ctx.lineTo(w, mid); ctx.stroke();
+      const grad = ctx.createLinearGradient(x0, 0, w, 0);
+      grad.addColorStop(0, b.c + '00'); grad.addColorStop(.12, b.c); grad.addColorStop(.88, b.c); grad.addColorStop(1, b.c + '00');
+      ctx.strokeStyle = grad; ctx.lineWidth = 1.6; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+      ctx.beginPath();
+      for (let x = x0; x <= w; x += 2) {
+        const u = (x - x0) / (w - x0), ph = u * b.f * Math.PI * 2 - t * (1.2 + i * .35);
+        // main rhythm with a slow amplitude envelope and a little harmonic texture
+        const env = .75 + .25 * Math.sin(u * 2.2 * Math.PI - t * .4 + i);
+        const y = (Math.sin(ph) * env + .1 * Math.sin(ph * 2.3 + i)) / 1.1;
+        x === x0 ? ctx.moveTo(x, mid - y * amp) : ctx.lineTo(x, mid - y * amp);
+      }
+      ctx.stroke();
+    });
+  };
+  const loop = (ms) => {
+    if (visible) { t += Math.min(ms - last, 50) / 1000 * .6; draw(); }
+    last = ms; requestAnimationFrame(loop);
+  };
+  resize(); draw();
+  window.addEventListener('resize', () => { resize(); draw(); });
+  if (!still) {
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; }).observe(rhythms);
+    requestAnimationFrame((ms) => { last = ms; loop(ms); });
+  }
 }
 
 // Media filters
