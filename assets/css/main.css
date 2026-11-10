@@ -295,3 +295,6 @@ p { margin: 0 0 1em; }
 .init__logo-text { font-weight: 600; font-size: .95rem; text-align: center; color: var(--turquoise-ink); }
 .year-group[hidden] { display: none; }
 .news-grid--year { grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); }
+.site-foot__inst { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.site-foot__inst a { display: block; background: #fff; border-radius: 10px; padding: .6rem .9rem; }
+.site-foot__inst img { height: 2.6rem; width: auto; }
