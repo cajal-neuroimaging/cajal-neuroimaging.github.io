@@ -2,14 +2,24 @@
 
 pi:
   name: Guiomar Niso
+  photo: guiomar-niso.jpg
+  scholar: https://scholar.google.es/citations?user=xqxSCSkAAAAJ
+  orcid: https://orcid.org/0000-0001-5872-8924
+  bluesky: https://bsky.app/profile/guiomarniso.bsky.social
+  x: https://twitter.com/GuiomarNiso
   role: Principal Investigator, Tenured Scientist (CSIC)
   url: https://guiomar.github.io
 
 members:
   - name: Cristina Díaz Montilla
+    linkedin: https://www.linkedin.com/in/cristina-d%C3%ADaz-montilla
+    orcid: https://orcid.org/0000-0003-4622-0626
+    scholar: https://scholar.google.com/citations?user=sfTWsnAAAAAJ
+    x: https://twitter.com/cdiazmontilla
     role: Predoc in Neuroscience
     affiliation: Universidad Autónoma de Madrid (UAM)
   - name: Daniel Martin Diez
+    linkedin: https://www.linkedin.com/in/danielmartindiez04/
     role: BSc Biology
     affiliation: Universidad Complutense de Madrid (UCM)
   - name: Armin Taherifard
@@ -22,6 +32,7 @@ members:
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
   - name: Natalia López de la Cruz
+    linkedin: https://www.linkedin.com/in/natalia-lopez-de-la-cruz-ab1496330/
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
   - name: Xiomara Mendieta
@@ -30,6 +41,8 @@ members:
 
 alumni:
   - name: Marta Navarro Bernad
+    linkedin: https://www.linkedin.com/in/marta-n-0a0ab9274/
+    orcid: https://orcid.org/0009-0007-5089-6369
     role: MSc Neuroscience and Neuropsychology
     affiliation: Universidad Rey Juan Carlos (URJC)
   - name: Álvaro Mozas Robles
@@ -39,6 +52,8 @@ alumni:
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
   - name: Raúl García Luengo
+    linkedin: https://www.linkedin.com/in/raulgarcialuengo/
+    orcid: https://orcid.org/0009-0000-5514-9070
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
   - name: Beyzanur Demirkaya
@@ -46,24 +61,29 @@ alumni:
   - name: Fulya Ayvaz
     role: MSc Medicine
   - name: Vittoria Acciai
+    linkedin: https://www.linkedin.com/in/vittoria-acciai-a58007287/
     role: MSc Liberal Arts and Sciences, Cognitive Neuroscience
     affiliation: Tilburg University
   - name: Paula Sierra Martinez
     role: BSc Biology
     affiliation: Universidad Autónoma de Madrid (UAM)
   - name: Patricia Rupérez Ferrández
+    linkedin: https://www.linkedin.com/in/patricia-ruperez
+    orcid: https://orcid.org/0009-0004-8158-5916
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
   - name: Mercedes Martín del Campo
     role: BSc Psychology
     affiliation: Universidad Autónoma de Madrid (UAM)
   - name: Arturo Salas Hernández
+    orcid: https://orcid.org/0009-0006-0847-304X
     role: BSc Psychology
     affiliation: Universidad Nacional de Educación a Distancia (UNED)
   - name: Antonio Caulin Atiezar
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
   - name: Patricia García Cabrera
+    linkedin: https://www.linkedin.com/in/patricia-garcia-4211b4242/
     role: BSc Biomedicine
     affiliation: Universidad Francisco de Vitoria (UFV)
   - name: Oriol Niso Galán

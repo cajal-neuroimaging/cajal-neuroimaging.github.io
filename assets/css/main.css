@@ -269,10 +269,17 @@ p { margin: 0 0 1em; }
 .person__name { font-weight: 600; }
 .person__role { font-size: var(--step--1); color: var(--ink-soft); line-height: 1.4; }
 .people--alumni .person__avatar { background: var(--line) !important; }
-.research-line__icon { width: 5rem; margin-bottom: .6rem; }
+.research-line__icon { width: 100%; max-width: 13rem; margin-bottom: .8rem; }
 .research-line p { max-width: 62ch; margin: 0; }
 .block-title { font-size: var(--step-2); margin: 3rem 0 1rem; }
 .init--text { grid-template-columns: 1fr; }
 .chips { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .8rem !important; }
 .chips a { padding: .2rem .7rem; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); text-decoration: none; font-weight: 600; }
 .chips a:hover { border-color: var(--turquoise); }
+.person { grid-template-columns: 4.5rem minmax(0, 1fr); }
+.person__avatar { width: 4.5rem; height: 4.5rem; font-size: 1.6rem; }
+.people--pi .person { grid-template-columns: 7rem minmax(0, 1fr); align-items: center; }
+.people--pi .person__avatar { width: 7rem; height: 7rem; }
+.person__links { display: flex; flex-wrap: wrap; gap: .3rem; margin-top: .45rem !important; }
+.person__links a { font-size: .8rem; font-weight: 600; padding: .05rem .5rem; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; background: var(--surface); }
+.person__links a:hover { border-color: var(--turquoise); }

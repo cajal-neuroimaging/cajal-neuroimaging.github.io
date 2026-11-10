@@ -8,7 +8,7 @@ lede: We study the human brain with complementary neuroimaging techniques, follo
 {% for l in site.data.research.lines %}
 <section class="cv-section research-line">
   <div>
-    <img class="research-line__icon" src="{{ '/assets/img/research/icon-' | append: l.slug | append: '.png' | relative_url }}" alt="">
+    <img class="research-line__icon" src="{{ '/assets/img/research/' | append: l.slug | append: '.png' | relative_url }}" alt="">
     <h2>{{ l.title }}</h2>
   </div>
   <p>{{ l.text }}</p>
