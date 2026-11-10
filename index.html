@@ -51,6 +51,20 @@ slug: home
 <section class="section">
   <div class="wrap">
     <div class="section__head">
+      <h2>Open science</h2>
+      <a class="section__more" href="{{ '/initiatives/' | relative_url }}">All initiatives</a>
+    </div>
+    <ul class="logo-row">
+      {% for i in site.data.initiatives %}
+      <li><a href="{{ i.url }}" title="{{ i.name }}"><img src="{{ '/assets/img/logos/' | append: i.logo | relative_url }}" alt="{{ i.short }}" loading="lazy"></a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
       <h2>Latest news</h2>
       <a class="section__more" href="{{ '/news/' | relative_url }}">All news</a>
     </div>

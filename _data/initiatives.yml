@@ -1,0 +1,53 @@
+# Open science initiatives the group leads or contributes to. "logo" is a file in assets/img/logos/.
+# "role" describes Guiomar Niso's role.
+- name: The Brain Imaging Data Structure (BIDS)
+  short: BIDS
+  logo: bids.png
+  url: https://bids.neuroimaging.io/
+  role: Led MEG-BIDS; chaired the first elected Steering Group (2019–2023)
+  text: A community-led standard to organize, describe and share neuroimaging data. In 2023 BIDS received the International Open Science Prize of The Neuro.
+- name: "INDoS: Improving Neuroimaging Data for Sharing"
+  short: INDoS
+  logo: indos.png
+  url: https://indos-costaction.github.io/
+  role: Vice Chair
+  text: EU COST Action CA24161 (2025–2029) to make neuroimaging data findable, accessible, interoperable and reusable, through shared standards, tools, training and ethical guidelines.
+- name: "EEG101: Fundamentals of Open & Rigorous EEG Science"
+  short: EEG101
+  logo: eeg101.png
+  url: https://www.eeg101.eu/
+  role: Management Committee, Spain
+  text: EU COST Action CA24148 (2025–2029) building a European network for open, reproducible and inclusive EEG research.
+- name: brainlife.io
+  short: brainlife.io
+  logo: brainlife.png
+  url: https://brainlife.io/
+  role: Core team, Indiana University (2021–2023)
+  text: An open, decentralized cloud platform for reproducible neuroscience data analysis.
+- name: "NiPreps: NeuroImaging PREProcessing toolS"
+  short: NiPreps
+  logo: nipreps.png
+  url: https://www.nipreps.org/
+  role: Steering Committee
+  text: A framework of robust, reproducible preprocessing pipelines for neuroimaging data.
+- name: NeuroJSON
+  short: NeuroJSON
+  logo: neurojson.png
+  url: https://neurojson.org/
+  role: Scientific Steering Committee
+  text: An NIH-funded initiative to make neuroimaging data portable, searchable and reusable using JSON-based formats.
+- name: The Open MEG Archive (OMEGA)
+  short: OMEGA
+  logo: omega.png
+  url: https://omega.bic.mni.mcgill.ca
+  text: The first open data repository fully dedicated to magnetoencephalography (MEG).
+- name: HERMES
+  short: HERMES
+  logo: hermes.png
+  url: http://hermes.ctb.upm.es/
+  text: An open toolbox for the study of functional and effective brain connectivity.
+- name: "#EEGManyLabs and multi-analyst studies"
+  short: "#EEGManyLabs"
+  logo: eegmanylabs.png
+  url: https://eegmanylabs.org/
+  text: Large international collaborations on the replicability and analytical robustness of science, including #EEGManyLabs (2023 BNA Team Credibility Prize), EEGManyPipelines and Multi100 (published in Nature, 2026).

@@ -174,10 +174,10 @@ p { margin: 0 0 1em; }
 .init { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 1.4rem; padding-block: 1.6rem; border-top: 1px solid var(--line); }
 .init__logo { display: grid; place-items: center; aspect-ratio: 1; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: .8rem; }
 .init__logo img { max-height: 100%; object-fit: contain; }
-.init h2 { font-size: var(--step-1); }
+.init h2 { font-size: var(--step-1); margin-bottom: .4rem; }
 .init h2 a { color: var(--ink); text-decoration: none; }
 .init h2 a:hover { color: var(--turquoise-ink); text-decoration: underline; }
-.init__role { display: inline-block; margin: .5rem 0 .6rem; padding: .15rem .6rem; border-radius: 999px; background: color-mix(in srgb, var(--mint) 45%, white); font-size: var(--step--1); font-weight: 600; }
+.init__role { margin-top: .5rem !important; font-weight: 600; color: var(--ink) !important; }
 .init p { font-size: var(--step--1); color: var(--ink-soft); margin: 0; }
 
 /* media */

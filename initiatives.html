@@ -1,0 +1,19 @@
+---
+layout: page
+title: Initiatives
+slug: initiatives
+permalink: /initiatives/
+lede: Open science initiatives the group leads or contributes to.
+---
+<ul class="init-list">
+  {% for i in site.data.initiatives %}
+  <li class="init">
+    <a class="init__logo" href="{{ i.url }}" tabindex="-1" aria-hidden="true"><img src="{{ '/assets/img/logos/' | append: i.logo | relative_url }}" alt="" loading="lazy"></a>
+    <div>
+      <h2><a href="{{ i.url }}">{{ i.name }}</a></h2>
+      <p>{{ i.text }}</p>
+      {% if i.role %}<p class="init__role">Guiomar Niso: {{ i.role }}.</p>{% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ul>
