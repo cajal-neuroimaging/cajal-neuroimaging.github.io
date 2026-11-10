@@ -441,3 +441,15 @@ p { margin: 0 0 1em; }
 .ad-funding { font-size: .8rem; color: var(--ink-soft); margin-top: 2rem; }
 @media (max-width: 720px) { .ad-hero { grid-template-columns: 1fr; padding: 1.4rem; } .ad-hero__flyer { max-width: 14rem; } }
 .ad-contact .btn--fill { background: var(--turquoise); border-color: var(--turquoise); color: var(--ink); }
+
+.ad-timeline { list-style: none; margin: 1rem 0 1.2rem; padding: 0 0 0 1.8rem; position: relative; }
+.ad-timeline::before { content: ""; position: absolute; left: .45rem; top: .4rem; bottom: .4rem; width: 3px; border-radius: 2px;
+  background: linear-gradient(var(--turquoise), var(--yellow), var(--pink)); }
+.ad-timeline li { position: relative; padding: 0 0 1.3rem; }
+.ad-timeline li::before { content: ""; position: absolute; left: -1.8rem; top: .15rem; width: 1.1rem; height: 1.1rem; border-radius: 50%;
+  background: var(--surface); border: 3px solid var(--turquoise); }
+.ad-timeline li:nth-child(2)::before { border-color: #E8B923; }
+.ad-timeline li:nth-child(3)::before { border-color: var(--pink); }
+.ad-timeline__when { display: block; font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #006E75; }
+.ad-timeline strong { display: block; margin: .1rem 0 .2rem; color: var(--ink); }
+.ad-timeline p { margin: 0; }
