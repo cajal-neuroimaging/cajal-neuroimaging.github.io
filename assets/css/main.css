@@ -320,3 +320,12 @@ p { margin: 0 0 1em; }
 .wordmark--light { color: #fff; font-size: 1.35rem; }
 .wordmark--light span { color: var(--turquoise); }
 @media (max-width: 400px) { .wordmark { font-size: 1rem; } .brand .logo-mark { width: 2.6rem; } }
+
+/* team v3: cut-out portraits on palette-tinted squares */
+.person__avatar { background: color-mix(in srgb, var(--mint) 50%, white) !important; }
+.people li:nth-child(5n+2) .person__avatar { background: color-mix(in srgb, var(--yellow) 55%, white) !important; }
+.people li:nth-child(5n+3) .person__avatar { background: color-mix(in srgb, var(--salmon) 40%, white) !important; }
+.people li:nth-child(5n+4) .person__avatar { background: color-mix(in srgb, var(--pink) 32%, white) !important; }
+.people li:nth-child(5n+5) .person__avatar { background: color-mix(in srgb, var(--turquoise) 40%, white) !important; }
+.person__avatar img { object-fit: contain; object-position: bottom; }
+.people--alumni .person__avatar { background: color-mix(in srgb, var(--line) 70%, white) !important; }

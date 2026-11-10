@@ -12,7 +12,7 @@ pi:
 
 members:
   - name: Cristina Díaz Montilla
-    photo: cristina-diaz-montilla.jpg
+    photo: cristina-diaz-montilla.png
     linkedin: https://www.linkedin.com/in/cristina-d%C3%ADaz-montilla
     orcid: https://orcid.org/0000-0003-4622-0626
     scholar: https://scholar.google.com/citations?user=sfTWsnAAAAAJ
@@ -20,48 +20,48 @@ members:
     role: Predoc in Neuroscience
     affiliation: Universidad Autónoma de Madrid (UAM)
   - name: Daniel Martin Diez
-    photo: daniel-martin-diez.jpg
+    photo: daniel-martin-diez.png
     linkedin: https://www.linkedin.com/in/danielmartindiez04/
     role: BSc Biology
     affiliation: Universidad Complutense de Madrid (UCM)
   - name: Armin Taherifard
-    photo: armin-taherifard.jpg
+    photo: armin-taherifard.png
     role: MSc / BSc Electrical Engineering
     affiliation: University of Tehran
   - name: Quincy dos Santos Brandao
     role: MSc Biomedical Sciences
     affiliation: Erasmus, The Netherlands
   - name: León Sobrio García
-    photo: leon-sobrio-garcia.jpg
+    photo: leon-sobrio-garcia.png
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
   - name: Natalia López de la Cruz
-    photo: natalia-lopez-de-la-cruz.jpg
+    photo: natalia-lopez-de-la-cruz.png
     linkedin: https://www.linkedin.com/in/natalia-lopez-de-la-cruz-ab1496330/
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
   - name: Xiomara Mendieta
-    photo: xiomara-mendieta.jpg
+    photo: xiomara-mendieta.png
     role: MSc Neuroscience and Neuropsychology
     affiliation: Universidad Rey Juan Carlos (URJC)
 
 alumni:
   - name: Marta Navarro Bernad
-    photo: marta-navarro-bernad.jpg
+    photo: marta-navarro-bernad.png
     linkedin: https://www.linkedin.com/in/marta-n-0a0ab9274/
     orcid: https://orcid.org/0009-0007-5089-6369
     role: MSc Neuroscience and Neuropsychology
     affiliation: Universidad Rey Juan Carlos (URJC)
   - name: Álvaro Mozas Robles
-    photo: alvaro-mozas-robles.jpg
+    photo: alvaro-mozas-robles.png
     role: MSc Advanced Therapies in Biomedicine
     affiliation: Universidad Francisco de Vitoria (UFV)
   - name: Cristina Salinas Fernández
-    photo: cristina-salinas-fernandez.jpg
+    photo: cristina-salinas-fernandez.png
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
   - name: Raúl García Luengo
-    photo: raul-garcia-luengo.jpg
+    photo: raul-garcia-luengo.png
     linkedin: https://www.linkedin.com/in/raulgarcialuengo/
     orcid: https://orcid.org/0009-0000-5514-9070
     role: BSc Biomedical Engineering
@@ -69,7 +69,7 @@ alumni:
   - name: Beyzanur Demirkaya
     role: MSc Psychology
   - name: Fulya Ayvaz
-    photo: fulya-ayvaz.jpg
+    photo: fulya-ayvaz.png
     role: MSc Medicine
   - name: Vittoria Acciai
     linkedin: https://www.linkedin.com/in/vittoria-acciai-a58007287/
@@ -79,22 +79,22 @@ alumni:
     role: BSc Biology
     affiliation: Universidad Autónoma de Madrid (UAM)
   - name: Patricia Rupérez Ferrández
-    photo: patricia-ruperez-ferrandez.jpg
+    photo: patricia-ruperez-ferrandez.png
     linkedin: https://www.linkedin.com/in/patricia-ruperez
     orcid: https://orcid.org/0009-0004-8158-5916
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
   - name: Mercedes Martín del Campo
-    photo: mercedes-martin-del-campo.jpg
+    photo: mercedes-martin-del-campo.png
     role: BSc Psychology
     affiliation: Universidad Autónoma de Madrid (UAM)
   - name: Arturo Salas Hernández
-    photo: arturo-salas-hernandez.jpg
+    photo: arturo-salas-hernandez.png
     orcid: https://orcid.org/0009-0006-0847-304X
     role: BSc Psychology
     affiliation: Universidad Nacional de Educación a Distancia (UNED)
   - name: Antonio Caulin Atiezar
-    photo: antonio-caulin-atiezar.jpg
+    photo: antonio-caulin-atiezar.png
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
   - name: Patricia García Cabrera
@@ -108,6 +108,6 @@ alumni:
     role: BSc Psychology
     affiliation: Universidad Autónoma de Madrid (UAM)
   - name: Fiona Ye Rojo Acero
-    photo: fiona-ye-rojo-acero.jpg
+    photo: fiona-ye-rojo-acero.png
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
