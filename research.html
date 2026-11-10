@@ -1,0 +1,29 @@
+---
+layout: page
+title: Research
+slug: research
+permalink: /research/
+lede: We study the human brain with complementary neuroimaging techniques, following a multimodal and multidisciplinary approach.
+---
+{% for l in site.data.research.lines %}
+<section class="cv-section research-line">
+  <div>
+    <img class="research-line__icon" src="{{ '/assets/img/research/icon-' | append: l.slug | append: '.png' | relative_url }}" alt="">
+    <h2>{{ l.title }}</h2>
+  </div>
+  <p>{{ l.text }}</p>
+</section>
+{% endfor %}
+
+<h2 class="block-title">Resources</h2>
+<ul class="init-list">
+  {% for r in site.data.research.resources %}
+  <li class="init init--text">
+    <div>
+      <h2>{{ r.title }}</h2>
+      <p>{{ r.text }}</p>
+      <p class="chips">{% for k in r.links %}<a href="{{ k.url }}">{{ k.name }}</a>{% endfor %}</p>
+    </div>
+  </li>
+  {% endfor %}
+</ul>

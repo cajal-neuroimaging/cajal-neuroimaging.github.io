@@ -1,0 +1,77 @@
+# Team members. To add someone, copy a block. "photo" is optional (file in assets/img/team/).
+
+pi:
+  name: Guiomar Niso
+  role: Principal Investigator, Tenured Scientist (CSIC)
+  url: https://guiomar.github.io
+
+members:
+  - name: Cristina Díaz Montilla
+    role: Predoc in Neuroscience
+    affiliation: Universidad Autónoma de Madrid (UAM)
+  - name: Daniel Martin Diez
+    role: BSc Biology
+    affiliation: Universidad Complutense de Madrid (UCM)
+  - name: Armin Taherifard
+    role: MSc / BSc Electrical Engineering
+    affiliation: University of Tehran
+  - name: Quincy dos Santos Brandao
+    role: MSc Biomedical Sciences
+    affiliation: Erasmus, The Netherlands
+  - name: León Sobrio García
+    role: BSc Biomedical Engineering
+    affiliation: Universidad Carlos III de Madrid (UC3M)
+  - name: Natalia López de la Cruz
+    role: BSc Biomedical Engineering
+    affiliation: Universidad Carlos III de Madrid (UC3M)
+  - name: Xiomara Mendieta
+    role: MSc Neuroscience and Neuropsychology
+    affiliation: Universidad Rey Juan Carlos (URJC)
+
+alumni:
+  - name: Marta Navarro Bernad
+    role: MSc Neuroscience and Neuropsychology
+    affiliation: Universidad Rey Juan Carlos (URJC)
+  - name: Álvaro Mozas Robles
+    role: MSc Advanced Therapies in Biomedicine
+    affiliation: Universidad Francisco de Vitoria (UFV)
+  - name: Cristina Salinas Fernández
+    role: BSc Biomedical Engineering
+    affiliation: Universidad Carlos III de Madrid (UC3M)
+  - name: Raúl García Luengo
+    role: BSc Biomedical Engineering
+    affiliation: Universidad Carlos III de Madrid (UC3M)
+  - name: Beyzanur Demirkaya
+    role: MSc Psychology
+  - name: Fulya Ayvaz
+    role: MSc Medicine
+  - name: Vittoria Acciai
+    role: MSc Liberal Arts and Sciences, Cognitive Neuroscience
+    affiliation: Tilburg University
+  - name: Paula Sierra Martinez
+    role: BSc Biology
+    affiliation: Universidad Autónoma de Madrid (UAM)
+  - name: Patricia Rupérez Ferrández
+    role: BSc Biomedical Engineering
+    affiliation: Universidad Carlos III de Madrid (UC3M)
+  - name: Mercedes Martín del Campo
+    role: BSc Psychology
+    affiliation: Universidad Autónoma de Madrid (UAM)
+  - name: Arturo Salas Hernández
+    role: BSc Psychology
+    affiliation: Universidad Nacional de Educación a Distancia (UNED)
+  - name: Antonio Caulin Atiezar
+    role: BSc Biomedical Engineering
+    affiliation: Universidad Carlos III de Madrid (UC3M)
+  - name: Patricia García Cabrera
+    role: BSc Biomedicine
+    affiliation: Universidad Francisco de Vitoria (UFV)
+  - name: Oriol Niso Galán
+    role: BSc Telecommunications Engineering
+    affiliation: Universidad Autónoma de Madrid (UAM)
+  - name: Ruben Cruz Acevedo
+    role: BSc Psychology
+    affiliation: Universidad Autónoma de Madrid (UAM)
+  - name: Fiona Ye Rojo Acero
+    role: BSc Biomedical Engineering
+    affiliation: Universidad Carlos III de Madrid (UC3M)

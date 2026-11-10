@@ -1,0 +1,5 @@
+<li class="pub">
+  <p class="pub__title"><a href="https://doi.org/{{ pub.doi }}">{{ pub.title }}</a></p>
+  {% if pub.authors %}<p class="pub__authors">{{ pub.authors | replace: 'Niso, G.', '<strong>Niso, G.</strong>' }}</p>{% endif %}
+  <p class="pub__venue"><em>{{ pub.venue }}</em> ({{ pub.year }})</p>
+</li>

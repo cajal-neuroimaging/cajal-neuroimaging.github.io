@@ -1,0 +1,7 @@
+<li class="person">
+  <span class="person__avatar" aria-hidden="true">{% if p.photo %}<img src="{{ '/assets/img/team/' | append: p.photo | relative_url }}" alt="">{% else %}{{ p.name | slice: 0 }}{% endif %}</span>
+  <div>
+    <p class="person__name">{% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</p>
+    <p class="person__role">{{ p.role }}{% if p.affiliation %}<br>{{ p.affiliation }}{% endif %}</p>
+  </div>
+</li>

@@ -1,0 +1,61 @@
+---
+layout: default
+slug: home
+---
+<section class="hero hero--group">
+  <div class="wrap hero__grid">
+    <div>
+      <h1>Understanding the human brain</h1>
+      <p class="hero__role">The Neuroimaging Group at the <strong>Cajal Neuroscience Center</strong> of the Spanish National Research Council (CSIC) investigates the human brain and its functioning, in health and across neurological conditions.</p>
+      <div class="hero__actions">
+        <a class="btn btn--fill" href="{{ '/research/' | relative_url }}">Our research</a>
+        <a class="btn" href="{{ '/contact/' | relative_url }}">Join or collaborate</a>
+      </div>
+    </div>
+    <figure class="hero__team">
+      <img src="{{ '/assets/img/team-2024.jpg' | relative_url }}" alt="Members of the Neuroimaging Group in front of the Cajal Institute" width="1200" height="1600">
+    </figure>
+  </div>
+  {% include signal.html %}
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="about">
+      <div class="about__text">
+        <p>Our objective is to characterize the brain in healthy populations and to study the changes occurring across various neurological conditions. We lead open science initiatives by sharing software, data repositories and contributing to neuroimaging standards and good practices.</p>
+        <p>We use a range of neuroimaging techniques: electroencephalography (EEG), magnetoencephalography (MEG), magnetic resonance imaging (MRI), functional MRI (fMRI), tractography (DTI), positron emission tomography (PET) and near-infrared spectroscopy (NIRS).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <h2>Three research lines</h2>
+      <a class="section__more" href="{{ '/research/' | relative_url }}">More on our research</a>
+    </div>
+    <ul class="lines">
+      {% for l in site.data.research.lines %}
+      <li class="line line--{{ forloop.index }}">
+        <img src="{{ '/assets/img/research/' | append: l.slug | append: '.png' | relative_url }}" alt="" loading="lazy">
+        <h3>{{ l.title }}</h3>
+        <p>{{ l.short }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <h2>Latest news</h2>
+      <a class="section__more" href="{{ '/news/' | relative_url }}">All news</a>
+    </div>
+    <ul class="news-grid">
+      {% for post in site.posts limit: 4 %}{% include news-card.html %}{% endfor %}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+---
+layout: page
+title: News
+slug: news
+permalink: /news/
+---
+{% assign by_year = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
+{% for g in by_year %}
+<section class="year-group">
+  <h2 class="year-group__year">{{ g.name }}</h2>
+  <ul class="news-grid news-grid--list">
+    {% for post in g.items %}{% include news-card.html %}{% endfor %}
+  </ul>
+</section>
+{% endfor %}

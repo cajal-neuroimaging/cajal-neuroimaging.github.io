@@ -1,0 +1,25 @@
+---
+layout: page
+title: Team
+slug: team
+permalink: /team/
+lede: A multidisciplinary team of engineers, psychologists, biologists and neuroscientists committed to open and reproducible neuroimaging.
+---
+<section class="cv-section">
+  <h2>Principal Investigator</h2>
+  <ul class="people people--pi">
+    {% assign p = site.data.team.pi %}{% include person.html %}
+  </ul>
+</section>
+<section class="cv-section">
+  <h2>Members</h2>
+  <ul class="people">
+    {% for p in site.data.team.members %}{% include person.html %}{% endfor %}
+  </ul>
+</section>
+<section class="cv-section">
+  <h2>Alumni</h2>
+  <ul class="people people--alumni">
+    {% for p in site.data.team.alumni %}{% include person.html %}{% endfor %}
+  </ul>
+</section>

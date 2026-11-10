@@ -1,0 +1,53 @@
+# The three research lines, shown on the home and Research pages.
+
+lines:
+  - slug: healthy-brain
+    title: Healthy brain functioning
+    short: We characterize brain activity in healthy people, studying brain oscillations, synchronization and connectivity.
+    text: >-
+      One of our main objectives is to characterize brain activity in healthy people, studying oscillations,
+      synchronization between regions and connectivity, to better understand how the brain works and how it
+      communicates. Through specific studies we also try to identify the underlying oscillatory mechanisms that arise
+      in different cognitive processes. We study brain structure and activity using complementary neuroimaging
+      techniques, following a multimodal and multidisciplinary approach that allows us to integrate the different
+      results obtained.
+  - slug: clinical-applications
+    title: Clinical applications
+    short: We investigate how brain networks are altered in neurological conditions while evaluating the efficacy of targeted neurorehabilitation programs.
+    text: >-
+      The ultimate goal of our group is to improve people's lives, so we study how the activity characterized in a
+      healthy population is altered in different neurological conditions, such as aging, Alzheimer's disease,
+      epilepsy, chronic pain or blindness. We also evaluate specific neurorehabilitation programs that use motor,
+      cognitive, or neurofeedback interventions. We aim to find common elements to better understand the global
+      functioning of the brain.
+  - slug: open-neuroimaging
+    title: Open and reproducible neuroimaging
+    short: We lead international efforts to standardize brain imaging data, develop open-source software and establish global repositories.
+    text: >-
+      We lead and actively collaborate internationally to make neuroimaging more open and reproducible and provide
+      resources to this end.
+
+resources:
+  - title: Open software
+    text: We contribute to the development of tools such as Brainlife, a cloud platform for the safe and reproducible analysis of neuroscience data, Brainstorm and MNE-Python, collaborative applications for the analysis of brain recordings obtained from different modalities such as MEG, EEG, ECoG, iEEG and fNIRS, and HERMES, a tool for the analysis of functional brain connectivity.
+    links:
+      - { name: Brainlife, url: "https://brainlife.io/" }
+      - { name: Brainstorm, url: "https://neuroimage.usc.edu/brainstorm/" }
+      - { name: MNE-Python, url: "https://mne.tools/" }
+      - { name: HERMES, url: "http://hermes.ctb.upm.es/" }
+  - title: Open repositories
+    text: We created the first repository primarily dedicated to magnetoencephalography data, The Open MEG Archive (OMEGA), in collaboration with the Montreal Neurological Institute of McGill University. We also contribute various datasets to OpenNeuro.
+    links:
+      - { name: OMEGA, url: "https://omega.bic.mni.mcgill.ca" }
+      - { name: OpenNeuro, url: "https://openneuro.org/" }
+  - title: Open standards
+    text: We lead the international consortium for the development of the Brain Imaging Data Structure (BIDS), the first common standard for organizing, describing and sharing neuroimaging data. We develop extensions to accommodate new neuroimaging modalities and their derivatives.
+    links:
+      - { name: BIDS, url: "https://bids.neuroimaging.io/" }
+      - { name: ARTEM-IS, url: "https://doi.org/10.1111/psyp.70187" }
+  - title: Reproducibility
+    text: We participate in several projects that aim to replicate different scientific results.
+    links:
+      - { name: "#EEGManyLabs", url: "https://eegmanylabs.org/" }
+      - { name: EEGManyPipelines, url: "https://www.eegmanypipelines.org/" }
+      - { name: Multi100, url: "https://doi.org/10.1038/s41586-025-09844-9" }

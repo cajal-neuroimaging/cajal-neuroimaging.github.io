@@ -1,0 +1,98 @@
+# Group publications, newest first. "doi" or "url" links the title.
+
+- year: 2025
+  title: Investigating the analytical robustness of the social and behavioural sciences
+  venue: Nature, 652(8108), 135–142
+  doi: 10.1038/s41586-025-09844-9
+- year: 2025
+  title: MRS-BIDS, an extension to the Brain Imaging Data Structure for magnetic resonance spectroscopy
+  venue: Scientific Data, 12(1), 1384
+  doi: 10.1038/s41597-025-05543-2
+- year: 2025
+  authors: Luke R., Oostenveld R., Cockx H., Niso, G., Shader M.J., …, Pollonini L.
+  title: "NIRS-BIDS: Brain Imaging Data Structure Extended to Near-Infrared Spectroscopy"
+  venue: Scientific Data, 12(1), 159
+  doi: 10.1038/s41597-024-04136-9
+- year: 2024
+  title: Large language models surpass human experts in predicting neuroscience results
+  venue: Nature Human Behaviour
+  doi: 10.1038/s41562-024-02046-9
+- year: 2024
+  title: One hundred years of EEG for brain and behaviour research
+  venue: Nature Human Behaviour
+  doi: 10.1038/s41562-024-01941-5
+- year: 2024
+  title: "brainlife.io: a decentralized and open-source cloud platform to support neuroscience research"
+  venue: Nature Methods, 21(5), 809–813
+  doi: 10.1038/s41592-024-02237-2
+- year: 2024
+  title: The past, present, and future of the Brain Imaging Data Structure (BIDS)
+  venue: Imaging Neuroscience, 2, 1–19
+  doi: 10.1162/imag_a_00103
+- year: 2024
+  authors: Levitas, D., Hayashi, S., Vinci-Booher, S., Heinsfeld, A., Bhatia, D., Lee, N., Galassi, A., Niso, G. & Pestilli, F.
+  title: "ezBIDS: Guided standardization of neuroimaging data interoperable with major data archives and platforms"
+  venue: Scientific Data, 11(1), 179
+  doi: 10.1038/s41597-024-02959-0
+- year: 2023
+  authors: Niso, G., Romero E., Moreau, J.T., Araujo A. & Krol, L.
+  title: "Wireless EEG: A Survey of Systems and Studies"
+  venue: NeuroImage, 119774
+  doi: 10.1016/j.neuroimage.2022.119774
+- year: 2023
+  title: Proceedings of the OHBM Brainhack 2021
+  venue: Aperture Neuro, 3, 1–20
+  doi: 10.52294/258801b4-a9a9-4d30-a468-c43646391211
+- year: 2022
+  title: "Open and reproducible neuroimaging: from study inception to publication"
+  venue: NeuroImage, 119623
+  doi: 10.1016/j.neuroimage.2022.119623
+- year: 2022
+  title: EEG ERP preregistration template
+  venue: MetaArXiv
+  doi: 10.31222/osf.io/4nvpt
+- year: 2022
+  title: "Microscopy-BIDS: an extension to the Brain Imaging Data Structure for Microscopy Data"
+  venue: Frontiers in Neuroscience, 377
+  doi: 10.3389/fnins.2022.871228
+- year: 2021
+  title: "#EEGManyLabs: Investigating the replicability of influential EEG experiments"
+  venue: Cortex, 144, 213–229
+  doi: 10.1016/j.cortex.2021.03.013
+- year: 2021
+  title: Centering inclusivity in the design of online conferences. An OHBM–Open Science perspective
+  venue: GigaScience, 10(8), giab051
+  doi: 10.1093/gigascience/giab051
+- year: 2021
+  authors: Niso, G., Tjepkema-Cloostermans, M. C., Lenders, M. W., & de Vos, C. C.
+  title: Modulation of the Somatosensory Evoked Potential by Attention and Spinal Cord Stimulation
+  venue: Frontiers in Neurology, 1311
+  doi: 10.3389/fneur.2021.694310
+- year: 2019
+  authors: Tadel F., Bock E., Niso, G., Mosher J.C., Cousineau, M., Pantazis D., Leahy R.M., Baillet S.
+  title: "MEG/EEG group analysis: the Brainstorm workflow"
+  venue: Frontiers in Neuroscience, 13, 76
+  doi: 10.3389/fnins.2019.00076
+- year: 2019
+  authors: Müller F. / Niso, G., Samiee S., Ptito M., Baillet S., Kupers R.
+  title: A thalamocortical pathway for fast rerouting of tactile information to occipital cortex in congenital blindness
+  venue: Nature Communications, 10(1), 5154
+  doi: 10.1038/s41467-019-13173-7
+- year: 2019
+  authors: Xifra-Porxas A., Niso, G., Larivière S., Kassinopoulos M., Baillet S., Mitsis G.D., Boudrias M.H.
+  title: Older adults exhibit a more pronounced modulation of beta oscillations when performing sustained and dynamic handgrips
+  venue: NeuroImage, 201, 116037
+  doi: 10.1016/j.neuroimage.2019.116037
+- year: 2019
+  title: Visual and kinesthetic modes affect motor imagery classification in untrained subjects
+  venue: Scientific Reports, 9(1), 9838
+  doi: 10.1038/s41598-019-46310-9
+- year: 2019
+  authors: Larivière S., Xifra-Porxas A., Kassinopoulos M., Niso, G., Baillet S., Mitsis G.D., Boudrias M.H.
+  title: Functional and effective reorganization of the aging brain during unimanual and bimanual hand movements
+  venue: Human Brain Mapping, 40(10), 3027–3040
+  doi: 10.1002/hbm.24578
+- year: 2019
+  title: Brainstorm pipeline analysis of resting-state data from the Open MEG Archive
+  venue: Frontiers in Neuroscience, 13, 284
+  doi: 10.3389/fnins.2019.00284

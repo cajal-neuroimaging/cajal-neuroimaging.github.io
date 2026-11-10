@@ -1,0 +1,42 @@
+title: Neuroimaging Group
+description: >-
+  The Neuroimaging Group at the Cajal Neuroscience Center (CSIC) studies the
+  human brain in health and disease and leads open science initiatives.
+url: "https://cajal-neuroimaging.github.io"
+baseurl: ""
+lang: en
+
+group:
+  pi: Guiomar Niso
+  pi_url: https://guiomar.github.io
+  email: guiomar.niso (at) cajal.csic.es
+  phone: +34 915 854 750 (ext. 439 759)
+  address: Cajal Neuroscience Center, CSIC. Avda. León 1, 28804 Alcalá de Henares, Madrid, Spain
+  lab: L026
+  github: https://github.com/cajal-neuroimaging
+  institute: https://cajal.csic.es/en/neuroimaging
+
+nav:
+  - title: Research
+    url: /research/
+  - title: Team
+    url: /team/
+  - title: Publications
+    url: /publications/
+  - title: Projects
+    url: /projects/
+  - title: News
+    url: /news/
+  - title: Contact
+    url: /contact/
+
+# Each news item gets its own page named by date, e.g. /news/2024-12-23-nombramiento-guiomar-niso/
+permalink: /news/:year-:month-:day-:title/
+
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - tools/
