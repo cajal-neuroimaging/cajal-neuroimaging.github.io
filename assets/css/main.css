@@ -356,3 +356,18 @@ p { margin: 0 0 1em; }
 .people--alumni .person__links a { font-size: .72rem; }
 .people--alumni li .person__avatar { background: color-mix(in srgb, var(--line) 80%, white) !important; color: var(--ink-soft); }
 .site-foot__pi { margin-top: .35rem; }
+
+/* team v5: filters under the PI; alumni as small cards with a coloured line */
+.team-filters { margin: 2rem 0 0; }
+[data-group][hidden] { display: none; }
+.people--alumni { grid-template-columns: repeat(auto-fill, minmax(16.5rem, 1fr)) !important; gap: 1rem !important; }
+.people--alumni .person { grid-template-columns: 6rem minmax(0, 1fr); gap: 1rem; padding: .9rem; background: var(--surface);
+  border: 1px solid var(--line); border-left: 4px solid var(--salmon); border-radius: 14px; }
+.people--alumni .person:nth-child(3n+2) { border-left-color: var(--pink); }
+.people--alumni .person:nth-child(3n+3) { border-left-color: var(--yellow); }
+.people--alumni .person__avatar { width: 6rem; height: 6rem; max-width: 6rem; font-size: 1.8rem; }
+.people--alumni .person__name { font-size: 1rem; }
+.people--alumni .person__role { font-size: .85rem; }
+.people--alumni { grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr)) !important; }
+.people--alumni .person { grid-template-columns: 5.5rem minmax(0, 1fr); align-items: start; }
+.people--alumni .person__avatar { width: 5.5rem; height: 5.5rem; max-width: 5.5rem; }

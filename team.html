@@ -11,13 +11,18 @@ lede: A multidisciplinary team of engineers, psychologists, biologists and neuro
     {% assign p = site.data.team.pi %}{% include person.html %}
   </ul>
 </section>
-<section class="cv-section">
+<div class="filters team-filters" role="group" aria-label="Show">
+  <button type="button" data-show="all" aria-pressed="true">Everyone</button>
+  <button type="button" data-show="members" aria-pressed="false">Group members</button>
+  <button type="button" data-show="alumni" aria-pressed="false">Alumni</button>
+</div>
+<section class="cv-section" data-group="members">
   <h2>Group members</h2>
   <ul class="people">
     {% for p in site.data.team.members %}{% include person.html %}{% endfor %}
   </ul>
 </section>
-<section class="cv-section">
+<section class="cv-section" data-group="alumni">
   <h2>Alumni</h2>
   <ul class="people people--alumni">
     {% for p in site.data.team.alumni %}{% include person.html %}{% endfor %}

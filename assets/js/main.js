@@ -68,3 +68,12 @@ if (feed) {
     });
   }));
 }
+
+// Team page: show everyone, current members or alumni
+const teamBtns = document.querySelectorAll('.team-filters button');
+teamBtns.forEach((btn) => btn.addEventListener('click', () => {
+  teamBtns.forEach((b) => b.setAttribute('aria-pressed', b === btn));
+  document.querySelectorAll('[data-group]').forEach((sec) => {
+    sec.hidden = btn.dataset.show !== 'all' && sec.dataset.group !== btn.dataset.show;
+  });
+}));
