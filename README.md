@@ -35,3 +35,7 @@ Text of the news. Links can be pasted as <https://example.org>.
 Drafts carry the line `published: false` in the header: they are kept in the repository but not shown on the website. Delete that line to publish them.
 
 To add a team photo, upload it to `assets/img/team/` and add `photo: file-name.jpg` to that person in `_data/team.yml`.
+
+### Team photos
+
+`assets/img/team/originals/` keeps the original photos. `assets/img/team/<name>.png` are the cut-out portraits (transparent background, same framing) used on the website; the coloured square behind each one is set in `assets/css/main.css` (search for "team v3"), so colours can be changed without touching the images.
