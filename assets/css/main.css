@@ -390,3 +390,4 @@ p { margin: 0 0 1em; }
 .people .person[class*="person--"] .person__avatar { background: color-mix(in srgb, var(--cat) 38%, white) !important; }
 .team-filters { margin: 2.5rem 0 0 !important; }
 .team-legend { margin: 1rem 0 2.5rem !important; }
+.person__years { font-weight: 600; color: var(--ink); }
