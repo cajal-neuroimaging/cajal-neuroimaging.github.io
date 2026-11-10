@@ -312,3 +312,11 @@ p { margin: 0 0 1em; }
 .people--alumni .person__avatar { max-width: 8.5rem; font-size: 2.2rem; }
 @media (prefers-reduced-motion: reduce) { .person__avatar img { transition: none; } }
 @media (max-width: 520px) { .people--pi .person { grid-template-columns: 1fr; } }
+
+/* ---------- group identity: logo and wordmark ---------- */
+.brand .logo-mark { width: 3.1rem; height: auto; flex-shrink: 0; }
+.wordmark { font-family: "Plus Jakarta Sans", var(--display); font-weight: 800; font-size: 1.15rem; letter-spacing: -0.01em; color: #12333B; line-height: 1; }
+.wordmark span { color: #00838A; }
+.wordmark--light { color: #fff; font-size: 1.35rem; }
+.wordmark--light span { color: var(--turquoise); }
+@media (max-width: 400px) { .wordmark { font-size: 1rem; } .brand .logo-mark { width: 2.6rem; } }
