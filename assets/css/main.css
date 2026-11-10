@@ -355,3 +355,4 @@ p { margin: 0 0 1em; }
 .people--alumni .person__links { margin-top: .3rem !important; }
 .people--alumni .person__links a { font-size: .72rem; }
 .people--alumni li .person__avatar { background: color-mix(in srgb, var(--line) 80%, white) !important; color: var(--ink-soft); }
+.site-foot__pi { margin-top: .35rem; }
