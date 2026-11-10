@@ -1,6 +1,7 @@
 ---
-title: "Empieza Arturo"
+title: "Arturo Salas Hernández se incorpora al grupo"
 date: 2024-12-02
+image: /assets/img/news/2024-12-02-arturo.jpg
 ---
 
-Arturo, estudiante del último curso del Grado en Psicología (UNED), elijo realizar mi estancia de prácticas curriculares finales en este grupo por mi gran interés en la investigación en Neurociencia, en general, y en Neuroimagen, en particular. Totalmente convencido y comprometido con los valores de la ciencia abierta, quiero aprender todo lo que pueda sobre las prácticas más adecuadas al respecto.
+Arturo Salas Hernández, estudiante del último curso del Grado en Psicología de la UNED, se incorpora al grupo para hacer sus prácticas curriculares. Le interesa la neuroimagen y quiere formarse en buenas prácticas de ciencia abierta.
