@@ -114,6 +114,7 @@ if (rhythms) {
       });
     };
     // a fine network along the sulci, and small coloured points linked along the gyral crowns
+    const grow = (px, py) => (mouse ? 1 + 2.2 * Math.exp(-((px - mouse[0]) ** 2 + (py - mouse[1]) ** 2) / 2600) : 1);
     const PAL = ['#00C2CB', '#7FE0D4', '#E8B923', '#FF9A76', '#FF5D8F'].map(rgb);
     const drawNet = () => {
       if (!data || !data.nodes) return;
@@ -126,7 +127,7 @@ if (rhythms) {
           const [bi, near] = data.dotBand[k], a = act[bi], v = near * (.25 + .75 * a);
           if (v < .04) return;
           const [px, py] = P(x, y), tw = .7 + .3 * Math.sin(t * 2.2 + k * .7);
-          ctx.fillStyle = rgba(bands[bi].c, Math.min(1, (.25 + v) * tw)); ctx.beginPath(); ctx.arc(px, py, (.6 + v * 2.2) * tw, 0, 6.29); ctx.fill();
+          const gm = grow(px, py); ctx.fillStyle = rgba(bands[bi].c, Math.min(1, (.25 + v) * tw * (gm > 1.05 ? 1.4 : 1))); ctx.beginPath(); ctx.arc(px, py, (.6 + v * 2.2) * tw * gm, 0, 6.29); ctx.fill();
         });
       }
       if (data.gyri) {
@@ -137,7 +138,7 @@ if (rhythms) {
         });
         data.gyri.forEach(([x, y], k) => {
           const [px, py] = P(x, y), tw = .55 + .45 * Math.sin(t * 1.7 + k * 1.3);
-          ctx.fillStyle = rgba(PAL[data.gyriCol[k]], .7 * tw); ctx.beginPath(); ctx.arc(px, py, .9 + .5 * tw, 0, 6.29); ctx.fill();
+          ctx.fillStyle = rgba(PAL[data.gyriCol[k]], .7 * tw); ctx.beginPath(); ctx.arc(px, py, (.9 + .5 * tw) * grow(px, py), 0, 6.29); ctx.fill();
         });
       }
       const heat = data.nodes.map(([x, y]) => {
@@ -154,7 +155,7 @@ if (rhythms) {
       data.nodes.forEach(([x, y], k) => {
         const [px, py] = P(x, y), [v, c] = heat[k], tw = .75 + .25 * Math.sin(t * 2 + k);
         ctx.fillStyle = v > .2 ? rgba(c, (.45 + v * .5) * tw) : rgba(INK, .4 * tw);
-        ctx.beginPath(); ctx.arc(px, py, 1 + v * 1.4, 0, 6.29); ctx.fill();
+        ctx.beginPath(); ctx.arc(px, py, (1 + v * 1.4) * grow(px, py), 0, 6.29); ctx.fill();
       });
     };
 
@@ -173,11 +174,6 @@ if (rhythms) {
         lctx.fillStyle = g; lctx.beginPath(); lctx.arc(x, y, r, 0, 6.29); lctx.fill();
       }
     });
-    if (mouse) {
-      const [mx, my] = [(mouse[0] - ox) / S, (mouse[1] - oy) / S], g = lctx.createRadialGradient(mx, my, 0, mx, my, 120);
-      g.addColorStop(0, 'rgba(0,194,203,.7)'); g.addColorStop(1, 'rgba(0,194,203,0)');
-      lctx.fillStyle = g; lctx.beginPath(); lctx.arc(mx, my, 120, 0, 6.29); lctx.fill();
-    }
     lctx.globalCompositeOperation = 'destination-in'; lctx.drawImage(brain, 0, 0, BW, BH);
     ctx.save(); ctx.globalCompositeOperation = 'multiply'; ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.drawImage(layer, ox * dpr, oy * dpr); ctx.restore();
