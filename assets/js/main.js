@@ -103,14 +103,28 @@ if (rhythms) {
       g.addColorStop(0, rgba(color, alpha * .6)); g.addColorStop(.08, rgba(color, alpha)); g.addColorStop(.9, rgba(color, alpha)); g.addColorStop(1, rgba(color, 0));
       ctx.strokeStyle = g; ctx.lineWidth = width; ctx.lineJoin = 'round'; ctx.lineCap = 'round'; ctx.stroke();
     };
+    const travellers = (arr, ly, amp, color, i) => {
+      const N = arr.length / 2, sp = w - xs;
+      for (let q = 0; q < 4; q++) {
+        const u = (t * .045 + q / 4 + i * .11) % 1, x = xs + u * sp;
+        const y = ly - Math.tanh(at(arr, off - u * N) * 1.15) * amp * Math.min(1, u * 9);
+        const fade = Math.sin(Math.PI * u), g = ctx.createRadialGradient(x, y, 0, x, y, 6);
+        g.addColorStop(0, rgba(color, .9 * fade)); g.addColorStop(1, rgba(color, 0));
+        ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, 6, 0, 6.29); ctx.fill();
+        ctx.fillStyle = `rgba(255,255,255,${.9 * fade})`; ctx.beginPath(); ctx.arc(x, y, 1.4, 0, 6.29); ctx.fill();
+      }
+    };
     const drawTraces = () => {
       if (!data) return;
       // the full EEG is linked to the brain as a whole (its upper posterior contour)
       link(P(760, 78), eegY, INK, .35);
       data.eeg.slice().reverse().forEach((arr, k, all) => { const main = k === all.length - 1; laneTrace(arr, eegY, unit * .74, INK, main ? 1.6 : .6, main ? .95 : .3); });
+      travellers(data.eeg[0], eegY, unit * .74, INK, 5);
       bands.forEach((b, i) => {
         link(P(...b.src), laneY(i), b.c, .5);
-        data.bands[i].slice().reverse().forEach((arr, k, all) => { const main = k === all.length - 1; laneTrace(arr, laneY(i), unit * .4 * [1.9, 1.25, 1, 1, 1][i], b.c, main ? 1.5 : .6, main ? .95 : .35); });
+        const amp = unit * .4 * [1.9, 1.25, 1, 1, 1][i];
+        data.bands[i].slice().reverse().forEach((arr, k, all) => { const main = k === all.length - 1; laneTrace(arr, laneY(i), amp, b.c, main ? 1.5 : .6, main ? .95 : .35); });
+        travellers(data.bands[i][0], laneY(i), amp, b.c, i);
       });
     };
     // a fine network along the sulci, and small coloured points linked along the gyral crowns
