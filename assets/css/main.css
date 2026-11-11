@@ -473,3 +473,17 @@ p { margin: 0 0 1em; }
 
 .rhythms { background: radial-gradient(120% 140% at 12% 50%, color-mix(in srgb, var(--turquoise) 9%, var(--surface)), var(--surface) 60%) !important; }
 .rhythms__canvas { height: clamp(240px, 26vw, 340px) !important; }
+
+/* alumni cards: photo beside name and studies; "now" and links use the full width below */
+.people--alumni .person { grid-template-columns: 5.5rem minmax(0, 1fr) !important; grid-auto-rows: auto; row-gap: 0 !important; align-items: start; }
+.people--alumni .person > div { display: contents; }
+.people--alumni .person__avatar { grid-column: 1; grid-row: 1 / span 2; }
+.people--alumni .person__name { grid-column: 2; grid-row: 1; margin: .1rem 0 0 !important; }
+.people--alumni .person__role { grid-column: 2; grid-row: 2; margin: .2rem 0 0 !important; }
+.people--alumni .person__now, .people--alumni .person__links { grid-column: 1 / -1; }
+.people--alumni .person__now { margin: .7rem 0 0 !important; padding-top: .6rem; border-top: 1px solid var(--line); font-size: .85rem; }
+.people--alumni .person__links { margin: .5rem 0 0 !important; }
+.people--alumni .person__now + .person__links { margin-top: .35rem !important; }
+.people--alumni .person__role + .person__links { padding-top: .55rem; border-top: 1px solid var(--line); margin-top: .7rem !important; }
+.people--alumni .person { grid-template-rows: auto 1fr; }
+.people--alumni .person__role { align-self: start; }
