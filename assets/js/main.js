@@ -28,7 +28,7 @@ if (rhythms) {
   const gauss = () => (rnd() + rnd() + rnd() - 1.5) / 1.5;
   const mk = (f) => Array.from({ length: 4 }, () => ({ f: f * (.82 + rnd() * .36), ph: rnd() * 6.28, a: .6 + rnd() * .4, sp: .7 + rnd() * .6 }));
   const bands = [
-    { src: [88, 300],  f: 2.2, c: rgb('#00A9B2'), w: 1 },    // delta, frontal
+    { src: [100, 432],  f: 2.2, c: rgb('#00A9B2'), w: 1 },    // delta, frontal
     { src: [300, 150],  f: 4.5, c: rgb('#2FB5A8'), w: .7 },   // theta, frontal midline
     { src: [922, 358], f: 8.5, c: rgb('#E0A800'), w: .85 },  // alpha, occipital
     { src: [520, 100],  f: 17,  c: rgb('#FF7F50'), w: .32 },  // beta, sensorimotor
@@ -94,10 +94,14 @@ if (rhythms) {
     const laneTrace = (arr, ly, amp, color, width, alpha) => {
       const N = arr.length / 2, sp = w - xs;
       ctx.beginPath();
-      for (let x = xs; x <= w + 2; x += 1.5) {
-        const u = (x - xs) / sp, taper = Math.min(1, u * 9);
-        const y = ly - Math.tanh(at(arr, off - u * N) * 1.15) * amp * taper;
-        x === xs ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      // step through whole samples and slide them, so the waveform keeps its shape while it moves
+      const n = arr.length, j0 = Math.floor(off);
+      for (let j = j0 + 1, first = true; j >= j0 - N - 1; j--) {
+        const u = (off - j) / N, x = xs + u * sp;
+        if (x < xs) continue;
+        const v = arr[((j % n) + n) % n] / data.scale, y = ly - Math.tanh(v * 1.15) * amp * Math.min(1, u * 9);
+        first ? (ctx.moveTo(x, y), first = false) : ctx.lineTo(x, y);
+        if (x > w + 2) break;
       }
       const g = ctx.createLinearGradient(xs, 0, w, 0);
       g.addColorStop(0, rgba(color, alpha * .6)); g.addColorStop(.08, rgba(color, alpha)); g.addColorStop(.9, rgba(color, alpha)); g.addColorStop(1, rgba(color, 0));
