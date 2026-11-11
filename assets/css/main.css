@@ -489,3 +489,5 @@ p { margin: 0 0 1em; }
 .people--alumni .person__role { align-self: start; }
 .person__funding { font-size: .8rem; font-weight: 600; color: #B8285A; margin: .3rem 0 0 !important; }
 .people--alumni .person__funding { grid-column: 2; }
+.person__funding { color: var(--ink-soft) !important; font-weight: 400 !important; font-style: italic; }
+.rhythms__canvas { height: clamp(260px, 28vw, 380px) !important; }
