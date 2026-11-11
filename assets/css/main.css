@@ -504,3 +504,4 @@ p { margin: 0 0 1em; }
 
 /* Home animation sits on the page background, no band */
 .rhythms { background: none !important; border: 0 !important; }
+.rhythms__canvas { height: clamp(250px, 26vw, 350px) !important; }

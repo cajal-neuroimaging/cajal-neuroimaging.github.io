@@ -23,16 +23,16 @@ if (rhythms) {
   let data = null;
   fetch(rhythms.dataset.signals).then((r) => r.json()).then((j) => { data = j; draw(); }).catch(() => {});
   const at = (arr, pos) => { const n = arr.length, i = Math.floor(pos), f = pos - i, a = arr[((i % n) + n) % n], b = arr[(((i + 1) % n) + n) % n]; return (a + (b - a) * f) / data.scale; };
-  const BW = 1008, BH = 699;
+  const BW = 1004, BH = 694;
   let seed = 5; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
   const gauss = () => (rnd() + rnd() + rnd() - 1.5) / 1.5;
   const mk = (f) => Array.from({ length: 4 }, () => ({ f: f * (.82 + rnd() * .36), ph: rnd() * 6.28, a: .6 + rnd() * .4, sp: .7 + rnd() * .6 }));
   const bands = [
-    { lane: 3, src: [164, 346],  f: 2.2, c: rgb('#00A9B2'), w: 1 },    // delta, frontal
-    { lane: 1, src: [300, 150],  f: 4.5, c: rgb('#2FB5A8'), w: .7 },   // theta, frontal midline
-    { lane: 2, src: [922, 358], f: 8.5, c: rgb('#E0A800'), w: .85 },  // alpha, occipital
-    { lane: 0, src: [520, 100],  f: 17,  c: rgb('#FF7F50'), w: .32 },  // beta, sensorimotor
-    { lane: 4, src: [464, 562], f: 34,  c: rgb('#FF4F86'), w: .16 },  // gamma, temporal
+    { src: [164, 346],  f: 2.2, c: rgb('#00A9B2'), w: 1 },    // delta, frontal
+    { src: [300, 150],  f: 4.5, c: rgb('#2FB5A8'), w: .7 },   // theta, frontal midline
+    { src: [922, 358], f: 8.5, c: rgb('#E0A800'), w: .85 },  // alpha, occipital
+    { src: [520, 100],  f: 17,  c: rgb('#FF7F50'), w: .32 },  // beta, sensorimotor
+    { src: [464, 562], f: 34,  c: rgb('#FF4F86'), w: .16 },  // gamma, temporal
   ].map((b) => ({ ...b, comp: mk(b.f), strands: Array.from({ length: 4 }, (_, k) => ({ dph: k ? (k * .55 + gauss() * .25) * (k % 2 ? 1 : -1) : 0, sc: k ? .55 + rnd() * .35 : 1, dy: k ? gauss() * 4 : 0 })) }));
   const eegStrands = Array.from({ length: 5 }, (_, k) => ({ dph: k ? (k * .3 + gauss() * .2) * (k % 2 ? 1 : -1) : 0, sc: k ? .6 + rnd() * .3 : 1, dy: k ? gauss() * 5 : 0, n: Array.from({ length: 5 }, () => ({ f: 40 + rnd() * 60, ph: rnd() * 6.28, sp: 2 + rnd() * 2 })) }));
   const val = (comp, u, t, speed, dph = 0) => {
@@ -46,7 +46,7 @@ if (rhythms) {
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     w = rhythms.clientWidth; h = rhythms.clientHeight;
     rhythms.width = w * dpr; rhythms.height = h * dpr;
-    S = Math.min((h * .82) / BH, (w * .38) / BW);
+    S = Math.min((h * .78) / BH, (w * .34) / BW);
     ox = Math.max(w * .035, 10); oy = (h - BH * S) / 2;
     layer = document.createElement('canvas'); layer.width = Math.ceil(BW * S * dpr); layer.height = Math.ceil(BH * S * dpr);
     lctx = layer.getContext('2d');
@@ -85,26 +85,53 @@ if (rhythms) {
       });
       return { pts: out, curve: out[60].s };
     };
-    const strokeRoute = (rt, arr, amp, color, width, alpha, src) => {
-      const N = arr.length / 2, sc = N / span;
+    const xs = xb + Math.max(26, w * .03);
+    const link = (from, ly, color, alpha) => {
+      ctx.beginPath(); ctx.moveTo(...from);
+      ctx.bezierCurveTo(from[0] + (xs - from[0]) * .55, from[1], xs - (xs - from[0]) * .3, ly, xs, ly);
+      ctx.strokeStyle = rgba(color, alpha); ctx.lineWidth = .7; ctx.stroke();
+    };
+    const laneTrace = (arr, ly, amp, color, width, alpha) => {
+      const N = arr.length / 2, sp = w - xs;
       ctx.beginPath();
-      rt.pts.forEach((p, k) => {
-        const taper = Math.min(1, Math.max(0, p.s / rt.curve)) ** 1.5;
-        const v = Math.tanh(at(arr, off - p.s * sc)) * amp * taper;
-        const x = p.x - p.nx * v, y = p.y - p.ny * v;
-        k ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
-      });
-      const g = ctx.createLinearGradient(src[0], 0, w, 0), k0 = Math.max(.01, Math.min(.9, (xb - src[0]) / (w - src[0])));
-      g.addColorStop(0, rgba(color, alpha * .55)); g.addColorStop(k0, rgba(color, alpha)); g.addColorStop(.92, rgba(color, alpha)); g.addColorStop(1, rgba(color, 0));
+      for (let x = xs; x <= w + 2; x += 1.5) {
+        const u = (x - xs) / sp, taper = Math.min(1, u * 9);
+        const y = ly - Math.tanh(at(arr, off - u * N)) * amp * taper;
+        x === xs ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+      }
+      const g = ctx.createLinearGradient(xs, 0, w, 0);
+      g.addColorStop(0, rgba(color, alpha * .6)); g.addColorStop(.08, rgba(color, alpha)); g.addColorStop(.9, rgba(color, alpha)); g.addColorStop(1, rgba(color, 0));
       ctx.strokeStyle = g; ctx.lineWidth = width; ctx.lineJoin = 'round'; ctx.lineCap = 'round'; ctx.stroke();
     };
-    const routes = bands.map((b) => route(P(...b.src), laneY(b.lane)));
     const drawTraces = () => {
       if (!data) return;
-      data.eeg.slice().reverse().forEach((arr, k, all) => { const main = k === all.length - 1; strokeTrace(arr, eegY, unit * .74, INK, main ? 1.6 : .6, main ? .95 : .3); });
-      bands.forEach((b, i) => data.bands[i].slice().reverse().forEach((arr, k, all) => {
-        const main = k === all.length - 1; strokeRoute(routes[i], arr, unit * .4, b.c, main ? 1.5 : .6, main ? .95 : .35, P(...b.src));
-      }));
+      // the full EEG is linked to the brain as a whole (its upper posterior contour)
+      link(P(760, 78), eegY, INK, .35);
+      data.eeg.slice().reverse().forEach((arr, k, all) => { const main = k === all.length - 1; laneTrace(arr, eegY, unit * .74, INK, main ? 1.6 : .6, main ? .95 : .3); });
+      bands.forEach((b, i) => {
+        link(P(...b.src), laneY(i), b.c, .5);
+        data.bands[i].slice().reverse().forEach((arr, k, all) => { const main = k === all.length - 1; laneTrace(arr, laneY(i), unit * .4, b.c, main ? 1.5 : .6, main ? .95 : .35); });
+      });
+    };
+    // a fine network along the sulci
+    const drawNet = () => {
+      if (!data || !data.nodes) return;
+      const heat = data.nodes.map(([x, y]) => {
+        let v = 0, c = INK;
+        bands.forEach((b, i) => { const k = act[i] * Math.exp(-((x - b.src[0]) ** 2 + (y - b.src[1]) ** 2) / 26000); if (k > v) { v = k; c = b.c; } });
+        return [v, c];
+      });
+      ctx.lineWidth = .5;
+      data.edges.forEach(([i, j]) => {
+        const a = P(...data.nodes[i]), c = P(...data.nodes[j]), v = Math.min(heat[i][0], heat[j][0]);
+        ctx.strokeStyle = v > .2 ? rgba(heat[i][1], .15 + v * .4) : rgba(INK, .17);
+        ctx.beginPath(); ctx.moveTo(...a); ctx.lineTo(...c); ctx.stroke();
+      });
+      data.nodes.forEach(([x, y], k) => {
+        const [px, py] = P(x, y), [v, c] = heat[k], tw = .75 + .25 * Math.sin(t * 2 + k);
+        ctx.fillStyle = v > .2 ? rgba(c, (.45 + v * .5) * tw) : rgba(INK, .4 * tw);
+        ctx.beginPath(); ctx.arc(px, py, 1 + v * 1.4, 0, 6.29); ctx.fill();
+      });
     };
 
     if (!brain.complete || !brain.naturalWidth) { drawTraces(); return; }
@@ -133,9 +160,10 @@ if (rhythms) {
     ctx.save(); ctx.globalAlpha = .35; ctx.globalCompositeOperation = 'screen'; ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.drawImage(layer, ox * dpr, oy * dpr); ctx.restore();
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    drawNet();
     drawTraces();
     bands.forEach((b, i) => {
-      const src = P(...b.src), pr = 2.5 + act[i] * 3;
+      const src = P(...b.src), pr = 2 + act[i] * 2.5;
       ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(...src, pr + 1.8, 0, 6.29); ctx.fill();
       ctx.fillStyle = rgba(b.c, 1); ctx.beginPath(); ctx.arc(...src, pr, 0, 6.29); ctx.fill();
     });
