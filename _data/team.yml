@@ -78,11 +78,15 @@ alumni:
   - name: Julia Reina
     type: intern
     years: '2025'
-  - name: Nicolás Martínez
-    type: msc
+  - name: Nicolás Martínez Martínez
+    type: Msc
     years: '2025'
     role: MSc Advanced Therapies in Biomedicine
     affiliation: Universidad Francisco de Vitoria (UFV)
+    orcid: https://orcid.org/0009-0000-5330-9368
+    linkedin: https://www.linkedin.com/in/nicolas-martinez-mart%C3%ADnez-11a7101b4/
+    github: https://github.com/nicomm2002
+    now: PhD stuendt, Universidad Politecnica de Madrid.
   - name: Lucía Escribano Marín
     type: intern
     years: '2025'
