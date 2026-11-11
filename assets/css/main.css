@@ -501,3 +501,6 @@ p { margin: 0 0 1em; }
 /* Home animation: light version */
 .rhythms { background: radial-gradient(80% 120% at 20% 50%, #FFFFFF 0%, #F2FAF9 55%, #EAF6F5 100%) !important; border-block: 1px solid var(--line) !important; }
 .rhythms::after { display: none; }
+
+/* Home animation sits on the page background, no band */
+.rhythms { background: none !important; border: 0 !important; }
