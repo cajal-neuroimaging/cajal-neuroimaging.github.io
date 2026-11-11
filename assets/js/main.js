@@ -28,7 +28,7 @@ if (rhythms) {
   const gauss = () => (rnd() + rnd() + rnd() - 1.5) / 1.5;
   const mk = (f) => Array.from({ length: 4 }, () => ({ f: f * (.82 + rnd() * .36), ph: rnd() * 6.28, a: .6 + rnd() * .4, sp: .7 + rnd() * .6 }));
   const bands = [
-    { src: [164, 346],  f: 2.2, c: rgb('#00A9B2'), w: 1 },    // delta, frontal
+    { src: [88, 300],  f: 2.2, c: rgb('#00A9B2'), w: 1 },    // delta, frontal
     { src: [300, 150],  f: 4.5, c: rgb('#2FB5A8'), w: .7 },   // theta, frontal midline
     { src: [922, 358], f: 8.5, c: rgb('#E0A800'), w: .85 },  // alpha, occipital
     { src: [520, 100],  f: 17,  c: rgb('#FF7F50'), w: .32 },  // beta, sensorimotor
