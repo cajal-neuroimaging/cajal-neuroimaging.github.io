@@ -491,3 +491,9 @@ p { margin: 0 0 1em; }
 .people--alumni .person__funding { grid-column: 2; }
 .person__funding { color: var(--ink-soft) !important; font-weight: 400 !important; font-style: italic; }
 .rhythms__canvas { height: clamp(260px, 28vw, 380px) !important; }
+
+/* Home: dark luminous band for the brain animation */
+.rhythms { border: 0 !important; background: radial-gradient(90% 130% at 18% 50%, #123B44 0%, #0B2329 45%, #071519 100%) !important; overflow: hidden; }
+.rhythms::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(90deg, transparent 70%, rgba(7,21,25,.6)), radial-gradient(120% 90% at 50% 120%, rgba(0,194,203,.08), transparent 60%); }
+.rhythms__canvas { height: clamp(300px, 32vw, 440px) !important; }
