@@ -470,3 +470,6 @@ p { margin: 0 0 1em; }
 .rhythms__labels { position: absolute; inset: 0 auto 0 var(--gutter); list-style: none; margin: 0; padding: 0; pointer-events: none; }
 .rhythms__labels li { position: absolute; top: calc((var(--i) + .5) * 20%); transform: translateY(-50%); font-size: .72rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-soft); white-space: nowrap; }
 .rhythms__labels b { font: 600 1rem var(--display); color: var(--ink); margin-right: .3rem; text-transform: none; letter-spacing: 0; }
+
+.rhythms { background: radial-gradient(120% 140% at 12% 50%, color-mix(in srgb, var(--turquoise) 9%, var(--surface)), var(--surface) 60%) !important; }
+.rhythms__canvas { height: clamp(240px, 26vw, 340px) !important; }
