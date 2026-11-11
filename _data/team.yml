@@ -41,15 +41,6 @@ members:
     photo: leon-sobrio-garcia.png
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
-  - name: Natalia López de la Cruz
-    type: bsc
-    years: '2025'
-    photo: natalia-lopez-de-la-cruz.png
-    role: BSc Biomedical Engineering
-    affiliation: Universidad Carlos III de Madrid (UC3M)
-    linkedin: https://www.linkedin.com/in/natalia-lopez-de-la-cruz-ab1496330/
-    github: https://github.com/nattloopez
-    now: MSc student, Hochschule Luzern
   - name: Xiomara Mendieta
     type: intern
     photo: xiomara-mendieta.png
@@ -69,6 +60,15 @@ members:
     type: intern
 
 alumni:
+  - name: Natalia López de la Cruz
+    type: bsc
+    years: '2025'
+    photo: natalia-lopez-de-la-cruz.png
+    role: BSc Biomedical Engineering
+    affiliation: Universidad Carlos III de Madrid (UC3M)
+    linkedin: https://www.linkedin.com/in/natalia-lopez-de-la-cruz-ab1496330/
+    github: https://github.com/nattloopez
+    now: MSc student, Hochschule Luzern
   - name: René Andrade
     type: intern
     years: '2025'
@@ -79,14 +79,14 @@ alumni:
     type: intern
     years: '2025'
   - name: Nicolás Martínez Martínez
-    type: Msc
+    type: msc
     years: '2025'
     role: MSc Advanced Therapies in Biomedicine
     affiliation: Universidad Francisco de Vitoria (UFV)
     orcid: https://orcid.org/0009-0000-5330-9368
     linkedin: https://www.linkedin.com/in/nicolas-martinez-mart%C3%ADnez-11a7101b4/
     github: https://github.com/nicomm2002
-    now: PhD stuendt, Universidad Politecnica de Madrid.
+    now: PhD student, Universidad Politécnica de Madrid (UPM)
   - name: Lucía Escribano Marín
     type: intern
     years: '2025'
