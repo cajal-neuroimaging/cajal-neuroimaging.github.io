@@ -487,3 +487,5 @@ p { margin: 0 0 1em; }
 .people--alumni .person__role + .person__links { padding-top: .55rem; border-top: 1px solid var(--line); margin-top: .7rem !important; }
 .people--alumni .person { grid-template-rows: auto 1fr; }
 .people--alumni .person__role { align-self: start; }
+.person__funding { font-size: .8rem; font-weight: 600; color: #B8285A; margin: .3rem 0 0 !important; }
+.people--alumni .person__funding { grid-column: 2; }

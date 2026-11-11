@@ -18,6 +18,7 @@ members:
     years: 2024 – present
     photo: cristina-diaz-montilla.png
     role: PhD Programme in Neuroscience
+    funding: PIPF predoctoral contract
     affiliation: Universidad Autónoma de Madrid (UAM)
     linkedin: https://www.linkedin.com/in/cristina-d%C3%ADaz-montilla
     orcid: https://orcid.org/0000-0003-4622-0626
@@ -49,7 +50,8 @@ members:
   - name: Adriana Brande
     type: intern
     years: '2025'
-    role: BSc Psychology. JAE Intro fellow (CSIC)
+    role: BSc Psychology
+    funding: JAE Intro fellowship (CSIC)
     affiliation: Universidad Complutense de Madrid (UCM)
   - name: Irem Koçak
     type: intl
@@ -103,7 +105,8 @@ alumni:
     type: msc
     years: '2024'
     photo: marta-navarro-bernad.png
-    role: MSc Cognitive Neuroscience and Neuropsychology. JAE Intro fellow (CSIC)
+    role: MSc Cognitive Neuroscience and Neuropsychology
+    funding: JAE Intro fellowship (CSIC)
     affiliation: Universidad Rey Juan Carlos (URJC)
     linkedin: https://www.linkedin.com/in/marta-n-0a0ab9274/
     orcid: https://orcid.org/0009-0007-5089-6369
