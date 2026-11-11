@@ -497,3 +497,7 @@ p { margin: 0 0 1em; }
 .rhythms::after { content: ""; position: absolute; inset: 0; pointer-events: none;
   background: linear-gradient(90deg, transparent 70%, rgba(7,21,25,.6)), radial-gradient(120% 90% at 50% 120%, rgba(0,194,203,.08), transparent 60%); }
 .rhythms__canvas { height: clamp(300px, 32vw, 440px) !important; }
+
+/* Home animation: light version */
+.rhythms { background: radial-gradient(80% 120% at 20% 50%, #FFFFFF 0%, #F2FAF9 55%, #EAF6F5 100%) !important; border-block: 1px solid var(--line) !important; }
+.rhythms::after { display: none; }

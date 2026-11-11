@@ -9,11 +9,12 @@ if (toggle && nav) {
 }
 
 // Draw the brain-rhythm traces once, unless the visitor prefers less motion
-// Home: a luminous brain whose regions emit the five rhythms (no text; colours follow the logo)
+// Home: a brain made of particles; its regions drive the five rhythms and the EEG they add up to
 const rhythms = document.querySelector('.rhythms__canvas');
 if (rhythms) {
   const ctx = rhythms.getContext('2d');
   const still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const INK = [18, 51, 59];
   const rgb = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
   const rgba = (c, a) => `rgba(${c[0]},${c[1]},${c[2]},${a})`;
   const D = {
@@ -22,31 +23,42 @@ if (rhythms) {
     stem: 'M282 425C300 470 330 506 358 540C366 549 384 549 390 538C380 510 356 470 336 425Z',
   };
   const P2 = Object.fromEntries(Object.entries(D).map(([k, d]) => [k, new Path2D(d)]));
-  const bands = [
-    { src: [120, 215], f: 2.2, c: rgb('#00C2CB') },  // delta, frontal
-    { src: [215, 105], f: 4.5, c: rgb('#7FE0D4') },  // theta, frontal midline
-    { src: [548, 290], f: 8,   c: rgb('#FFE38A') },  // alpha, occipital
-    { src: [345, 92],  f: 16,  c: rgb('#FF9A76') },  // beta, sensorimotor
-    { src: [235, 392], f: 32,  c: rgb('#FF5D8F') },  // gamma, temporal
-  ];
-  // particles: dense fill plus a fine line of dots along each contour
   let seed = 5; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+  // each rhythm is a small bundle of nearby frequencies with slowly drifting amplitude, so it never looks like a pure sine
+  const mk = (f) => Array.from({ length: 4 }, () => ({ f: f * (.82 + rnd() * .36), ph: rnd() * 6.28, a: .6 + rnd() * .4, sp: .7 + rnd() * .6 }));
+  const bands = [
+    { src: [120, 215], f: 2.2, c: rgb('#00A9B2'), w: 1 },    // delta, frontal
+    { src: [215, 105], f: 4.5, c: rgb('#39BFB2'), w: .7 },   // theta, frontal midline
+    { src: [548, 290], f: 8.5, c: rgb('#E0A800'), w: .8 },   // alpha, occipital
+    { src: [345, 92],  f: 17,  c: rgb('#FF8A5C'), w: .32 },  // beta, sensorimotor
+    { src: [235, 392], f: 34,  c: rgb('#FF5D8F'), w: .16 },  // gamma, temporal
+  ].map((b) => ({ ...b, comp: mk(b.f) }));
+  const noise = Array.from({ length: 6 }, () => ({ f: 40 + rnd() * 50, ph: rnd() * 6.28, a: .05 + rnd() * .05, sp: 2 + rnd() * 2 }));
+  const val = (comp, u, t, speed) => {
+    let v = 0, n = 0;
+    comp.forEach((k) => { v += k.a * Math.sin(u * k.f * 6.283 - t * speed * k.sp + k.ph) * (.7 + .3 * Math.sin(u * 2.3 + t * .3 * k.sp + k.ph)); n += k.a; });
+    return Math.max(-1.25, Math.min(1.25, v / n * 2.3));
+  };
+
+  // particles: dense fill plus a single dotted contour per structure
   const probe = document.createElement('canvas').getContext('2d');
-  const inside = (x, y) => ['cerebrum', 'cerebellum', 'stem'].some((k) => probe.isPointInPath(P2[k], x, y));
+  const inAny = (x, y) => ['cerebrum', 'cerebellum', 'stem'].some((k) => probe.isPointInPath(P2[k], x, y));
   const pts = [];
-  for (let k = 0; k < 60000 && pts.length < 1500; k++) {
+  for (let k = 0; k < 60000 && pts.length < 1300; k++) {
     const x = rnd() * 600, y = 50 + rnd() * 500;
-    if (inside(x, y)) pts.push({ x, y, r: .6 + rnd() * 1.1, ph: rnd() * 6.28, z: rnd() });
+    if (inAny(x, y)) pts.push({ x, y, r: .6 + rnd() * 1, ph: rnd() * 6.28, z: rnd() });
   }
   const svgNS = 'http://www.w3.org/2000/svg';
-  Object.values(D).forEach((d) => {
+  const covers = { cerebrum: [], cerebellum: ['cerebrum'], stem: ['cerebrum', 'cerebellum'] };
+  Object.entries(D).forEach(([name, d]) => {
     const el = document.createElementNS(svgNS, 'path'); el.setAttribute('d', d);
     const L = el.getTotalLength();
-    for (let l = 0; l < L; l += 5) { const q = el.getPointAtLength(l); if (d !== D.cerebrum && probe.isPointInPath(P2.cerebrum, q.x, q.y)) continue; pts.push({ x: q.x, y: q.y, r: .9, ph: rnd() * 6.28, z: 1, edge: true }); }
+    for (let l = 0; l < L; l += 4.5) {
+      const q = el.getPointAtLength(l);
+      if (covers[name].some((k) => probe.isPointInPath(P2[k], q.x, q.y))) continue;
+      pts.push({ x: q.x, y: q.y, r: .85, ph: rnd() * 6.28, z: 1, edge: true });
+    }
   });
-  const hubs = pts.filter((p, i) => !p.edge && i % 6 === 0);
-  const links = [];
-  hubs.forEach((p, i) => hubs.forEach((q, j) => { if (j > i && Math.hypot(p.x - q.x, p.y - q.y) < 46) links.push([p, q]); }));
 
   let w = 0, h = 0, t = 0, visible = true, last = 0, S = 1, ox = 0, oy = 0, dpr = 1, mouse = null;
   const resize = () => {
@@ -54,100 +66,83 @@ if (rhythms) {
     w = rhythms.clientWidth; h = rhythms.clientHeight;
     rhythms.width = w * dpr; rhythms.height = h * dpr;
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    S = Math.min((h * .86) / 500, (w * .38) / 600);
+    S = Math.min((h * .86) / 500, (w * .36) / 600);
     ox = Math.max(w * .05, 14); oy = (h - 500 * S) / 2 - 48 * S;
   };
   const P = (x, y) => [ox + x * S, oy + y * S];
-  const bez = (p0, p1, p2, p3, n) => Array.from({ length: n + 1 }, (_, k) => {
-    const u = k / n, m = 1 - u;
-    return [0, 1].map((d) => m*m*m*p0[d] + 3*m*m*u*p1[d] + 3*m*u*u*p2[d] + u*u*u*p3[d]);
-  });
   const line = (arr) => { ctx.beginPath(); arr.forEach((p, k) => (k ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]))); };
 
   const draw = () => {
-    ctx.globalCompositeOperation = 'source-over';
     ctx.clearRect(0, 0, w, h);
-    const breathe = 1 + .006 * Math.sin(t * .8);
     const act = bands.map((b, i) => .5 + .5 * Math.sin(t * (.5 + i * .17) + i * 2.1));
-    const right = P(600, 0)[0], xs = right + Math.max(50, w * .07), lane = h / (bands.length + .3);
+    const xb = P(600, 0)[0], x0 = xb - 30, lanes = bands.length + 1, lane = h / (lanes + .2);
     const mx = mouse && (mouse[0] - ox) / S, my = mouse && (mouse[1] - oy) / S;
 
-    // links between hubs (very faint)
-    ctx.lineWidth = .6;
-    links.forEach(([p, q]) => {
-      const a = P(p.x, p.y), c = P(q.x, q.y);
-      ctx.strokeStyle = 'rgba(180,235,235,.06)'; ctx.beginPath(); ctx.moveTo(...a); ctx.lineTo(...c); ctx.stroke();
+    // traces run from behind the brain to the right edge; they fade in as they leave it
+    const trace = (ly, amp, fn, color, width, alpha) => {
+      const arr = []; const span = w - x0;
+      for (let x = x0; x <= w + 2; x += 1.5) arr.push([x, ly - fn((x - x0) / span) * amp]);
+      const g = ctx.createLinearGradient(x0, 0, w, 0), k = (xb - x0) / span;
+      g.addColorStop(0, rgba(color, 0)); g.addColorStop(Math.min(90 / span, .3), rgba(color, alpha));
+      g.addColorStop(.9, rgba(color, alpha)); g.addColorStop(1, rgba(color, 0));
+      ctx.strokeStyle = g; ctx.lineWidth = width; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
+      line(arr); ctx.stroke();
+      return arr;
+    };
+    // the full EEG: all rhythms summed with a little broadband noise
+    const eegAmp = lane * .55;
+    trace(lane * .62, eegAmp, (u) => {
+      let v = 0; bands.forEach((b, i) => { v += b.w * val(b.comp, u, t, 1.2 + i * .45); });
+      noise.forEach((k) => { v += k.a * 3 * Math.sin(u * k.f * 6.283 - t * k.sp + k.ph); });
+      return v / 2.2;
+    }, INK, 1.4, .85);
+    bands.forEach((b, i) => {
+      const ly = lane * (i + 1.62), amp = lane * .4 * (1 - i * .06);
+      const arr = trace(ly, amp, (u) => val(b.comp, u, t, 1.2 + i * .45) * (.75 + .25 * act[i]), b.c, 1.6, .9);
+      // a soft glint travelling along each rhythm
+      const u = (t * .05 + i * .17) % 1, p = arr[Math.floor((.25 + u * .7) * (arr.length - 1))];
+      const pg = ctx.createRadialGradient(p[0], p[1], 0, p[0], p[1], 8);
+      pg.addColorStop(0, rgba(b.c, .55 * Math.sin(u * Math.PI))); pg.addColorStop(1, rgba(b.c, 0));
+      ctx.fillStyle = pg; ctx.beginPath(); ctx.arc(p[0], p[1], 8, 0, 6.29); ctx.fill();
     });
 
-    ctx.globalCompositeOperation = 'lighter';
-    // blooms of activity
+    // brain body on top of the start of the traces
+    ctx.save(); ctx.translate(ox, oy); ctx.scale(S, S);
+    const fill = ctx.createRadialGradient(260, 220, 20, 300, 300, 360);
+    fill.addColorStop(0, 'rgba(255,255,255,.96)'); fill.addColorStop(1, 'rgba(236,248,246,.94)');
+    ctx.shadowColor = 'rgba(18,51,59,.12)'; ctx.shadowBlur = 40 * S; ctx.shadowOffsetY = 14 * S;
+    ctx.fillStyle = fill; ctx.fill(P2.stem); ctx.fill(P2.cerebellum); ctx.fill(P2.cerebrum);
+    ctx.restore();
+
+    // regional activity
     bands.forEach((b, i) => {
-      const [x, y] = P(...b.src), r = 120 * S * (.7 + act[i] * .5);
+      const [x, y] = P(...b.src), r = 110 * S * (.7 + act[i] * .5);
       const g = ctx.createRadialGradient(x, y, 0, x, y, r);
-      g.addColorStop(0, rgba(b.c, .34 * act[i] + .06)); g.addColorStop(.45, rgba(b.c, .1 * act[i])); g.addColorStop(1, rgba(b.c, 0));
+      g.addColorStop(0, rgba(b.c, .3 * act[i] + .06)); g.addColorStop(.5, rgba(b.c, .08 * act[i])); g.addColorStop(1, rgba(b.c, 0));
       ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y, r, 0, 6.29); ctx.fill();
     });
 
-    // particles, tinted and lifted near active regions and under the pointer
+    // particles
     pts.forEach((p) => {
-      let col = [200, 236, 238], v = 0;
+      let col = INK, v = 0;
       bands.forEach((b, i) => {
-        const d2 = (p.x - b.src[0]) ** 2 + (p.y - b.src[1]) ** 2, k = act[i] * Math.exp(-d2 / 7000);
+        const k = act[i] * Math.exp(-((p.x - b.src[0]) ** 2 + (p.y - b.src[1]) ** 2) / 7000);
         if (k > v) { v = k; col = b.c; }
       });
-      if (mouse) { const dm = Math.exp(-((p.x - mx) ** 2 + (p.y - my) ** 2) / 3000); v = Math.max(v, dm * .9); }
-      const tw = .55 + .45 * Math.sin(t * 1.6 + p.ph);
-      const a = (p.edge ? .5 : .14 + p.z * .2) * tw + v * .8;
-      const [x, y] = P(p.x * breathe + (1 - breathe) * 300, p.y * breathe + (1 - breathe) * 300);
-      const r = (p.r + v * 1.6) * Math.max(S * 1.7, .7);
-      ctx.fillStyle = rgba(v > .08 ? col : [200, 236, 238], Math.min(a, 1));
+      if (mouse) v = Math.max(v, .9 * Math.exp(-((p.x - mx) ** 2 + (p.y - my) ** 2) / 3000));
+      const tw = .6 + .4 * Math.sin(t * 1.6 + p.ph);
+      const a = (p.edge ? .42 : .1 + p.z * .16) * tw + v * .75;
+      const [x, y] = P(p.x, p.y), r = (p.r + v * 1.5) * Math.max(S * 1.7, .7);
+      ctx.fillStyle = rgba(v > .08 ? col : INK, Math.min(a, 1));
       ctx.beginPath(); ctx.arc(x, y, r, 0, 6.29); ctx.fill();
     });
-
-    // rhythms: a stream of light from each region, then a ribbon of three strands
+    // sources
     bands.forEach((b, i) => {
-      const src = P(...b.src), ly = lane * (i + .65);
-      const exit = [right + 6, P(0, 140 + i * 60)[1]];
-      const inner = bez(src, [src[0] + (exit[0] - src[0]) * .5, src[1]], [exit[0] - 50 * S, exit[1]], exit, 40);
-      const outer = bez(exit, [exit[0] + (xs - exit[0]) * .6, exit[1]], [xs - (xs - exit[0]) * .4, ly], [xs, ly], 30);
-      // particle stream inside the brain
-      for (let q = 0; q < 14; q++) {
-        const u = (t * .12 + q / 14 + i * .07) % 1, p = inner[Math.floor(u * (inner.length - 1))];
-        ctx.fillStyle = rgba(b.c, .7 * Math.sin(u * Math.PI));
-        ctx.beginPath(); ctx.arc(p[0], p[1], 1.6, 0, 6.29); ctx.fill();
-      }
-      const amp = lane * .38 * (1 - i * .08), span = w - xs;
-      for (let strand = 0; strand < 3; strand++) {
-        const wave = [];
-        for (let x = xs; x <= w + 2; x += 1.5) {
-          const u = (x - xs) / span, grow = Math.min(1, u * 5);
-          const ph = u * b.f * 6.283 - t * (1.2 + i * .45) + strand * .35;
-          const env = .78 + .22 * Math.sin(u * 5 - t * .35 + i + strand);
-          wave.push([x, ly - Math.sin(ph) * amp * grow * env * (1 - strand * .12)]);
-        }
-        const g = ctx.createLinearGradient(exit[0], 0, w, 0);
-        const a0 = [.85, .32, .16][strand];
-        g.addColorStop(0, rgba(b.c, a0 * .6)); g.addColorStop(.1, rgba(b.c, a0)); g.addColorStop(.75, rgba(b.c, a0 * .9)); g.addColorStop(1, rgba(b.c, 0));
-        ctx.strokeStyle = g; ctx.lineWidth = [1.6, 1, .8][strand]; ctx.lineJoin = 'round'; ctx.lineCap = 'round';
-        if (strand === 0) { ctx.shadowColor = rgba(b.c, .8); ctx.shadowBlur = 10; }
-        line(strand === 0 ? outer.concat(wave) : wave); ctx.stroke();
-        ctx.shadowBlur = 0;
-        if (strand === 0) {
-          for (let q = 0; q < 3; q++) {
-            const u = (t * .06 + q / 3 + i * .13) % 1, p = wave[Math.floor(u * (wave.length - 1))], fade = Math.sin(u * Math.PI);
-            const pg = ctx.createRadialGradient(p[0], p[1], 0, p[0], p[1], 9);
-            pg.addColorStop(0, rgba(b.c, fade)); pg.addColorStop(1, rgba(b.c, 0));
-            ctx.fillStyle = pg; ctx.beginPath(); ctx.arc(p[0], p[1], 9, 0, 6.29); ctx.fill();
-          }
-        }
-      }
-      // pulsing source
-      const pr = (4 + act[i] * 4) * Math.max(S * 1.6, .8);
-      const sg = ctx.createRadialGradient(...src, 0, ...src, pr * 3);
-      sg.addColorStop(0, 'rgba(255,255,255,.95)'); sg.addColorStop(.25, rgba(b.c, .9)); sg.addColorStop(1, rgba(b.c, 0));
-      ctx.fillStyle = sg; ctx.beginPath(); ctx.arc(...src, pr * 3, 0, 6.29); ctx.fill();
+      const src = P(...b.src), pr = (3 + act[i] * 3) * Math.max(S * 1.6, .8);
+      const sg = ctx.createRadialGradient(...src, 0, ...src, pr * 2.6);
+      sg.addColorStop(0, 'rgba(255,255,255,1)'); sg.addColorStop(.3, rgba(b.c, 1)); sg.addColorStop(1, rgba(b.c, 0));
+      ctx.fillStyle = sg; ctx.beginPath(); ctx.arc(...src, pr * 2.6, 0, 6.29); ctx.fill();
     });
-    ctx.globalCompositeOperation = 'source-over';
   };
   const loop = (ms) => {
     if (visible) { t += Math.min(ms - last, 50) / 1000 * .5; draw(); }
