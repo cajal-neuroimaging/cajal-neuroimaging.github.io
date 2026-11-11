@@ -96,7 +96,7 @@ if (rhythms) {
       ctx.beginPath();
       for (let x = xs; x <= w + 2; x += 1.5) {
         const u = (x - xs) / sp, taper = Math.min(1, u * 9);
-        const y = ly - Math.tanh(at(arr, off - u * N)) * amp * taper;
+        const y = ly - Math.tanh(at(arr, off - u * N) * (amp > unit * .5 ? 1.6 : 1)) / (amp > unit * .5 ? 1.25 : 1) * Math.min(amp, unit * .5) * taper;
         x === xs ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
       }
       const g = ctx.createLinearGradient(xs, 0, w, 0);
@@ -110,12 +110,24 @@ if (rhythms) {
       data.eeg.slice().reverse().forEach((arr, k, all) => { const main = k === all.length - 1; laneTrace(arr, eegY, unit * .74, INK, main ? 1.6 : .6, main ? .95 : .3); });
       bands.forEach((b, i) => {
         link(P(...b.src), laneY(i), b.c, .5);
-        data.bands[i].slice().reverse().forEach((arr, k, all) => { const main = k === all.length - 1; laneTrace(arr, laneY(i), unit * .4, b.c, main ? 1.5 : .6, main ? .95 : .35); });
+        data.bands[i].slice().reverse().forEach((arr, k, all) => { const main = k === all.length - 1; laneTrace(arr, laneY(i), unit * .4 * [2.2, 1.4, 1, 1, 1][i], b.c, main ? 1.5 : .6, main ? .95 : .35); });
       });
     };
-    // a fine network along the sulci
+    // a fine network along the sulci, and small coloured points linked along the gyral crowns
+    const PAL = ['#00C2CB', '#7FE0D4', '#E8B923', '#FF9A76', '#FF5D8F'].map(rgb);
     const drawNet = () => {
       if (!data || !data.nodes) return;
+      if (data.gyri) {
+        ctx.lineWidth = .45;
+        data.gyriEdges.forEach(([i, j]) => {
+          const a = P(...data.gyri[i]), c = P(...data.gyri[j]);
+          ctx.strokeStyle = rgba(PAL[data.gyriCol[i]], .22); ctx.beginPath(); ctx.moveTo(...a); ctx.lineTo(...c); ctx.stroke();
+        });
+        data.gyri.forEach(([x, y], k) => {
+          const [px, py] = P(x, y), tw = .55 + .45 * Math.sin(t * 1.7 + k * 1.3);
+          ctx.fillStyle = rgba(PAL[data.gyriCol[k]], .7 * tw); ctx.beginPath(); ctx.arc(px, py, .9 + .5 * tw, 0, 6.29); ctx.fill();
+        });
+      }
       const heat = data.nodes.map(([x, y]) => {
         let v = 0, c = INK;
         bands.forEach((b, i) => { const k = act[i] * Math.exp(-((x - b.src[0]) ** 2 + (y - b.src[1]) ** 2) / 26000); if (k > v) { v = k; c = b.c; } });
