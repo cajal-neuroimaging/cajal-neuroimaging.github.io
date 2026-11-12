@@ -15,6 +15,7 @@ lede: A multidisciplinary team of engineers, psychologists, biologists and neuro
   <button type="button" data-show="all" aria-pressed="true">Everyone</button>
   <button type="button" data-show="members" aria-pressed="false">Group members</button>
   <button type="button" data-show="alumni" aria-pressed="false">Alumni</button>
+  <button type="button" data-show="collaborators" aria-pressed="false">Key collaborators</button>
 </div>
 <ul class="team-legend" aria-label="Colour key">
   <li class="person--phd">PhD</li>
@@ -33,5 +34,11 @@ lede: A multidisciplinary team of engineers, psychologists, biologists and neuro
   <h2>Alumni</h2>
   <ul class="people people--alumni">
     {% for p in site.data.team.alumni %}{% include person.html %}{% endfor %}
+  </ul>
+</section>
+<section class="cv-section" data-group="collaborators">
+  <h2>Key collaborators</h2>
+  <ul class="people people--alumni people--collab">
+    {% for p in site.data.team.collaborators %}{% include person.html %}{% endfor %}
   </ul>
 </section>

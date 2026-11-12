@@ -213,3 +213,37 @@ alumni:
     years: '2018'
     role: MSc Neuroengineering
     affiliation: Technical University of Munich, Germany
+
+# Key collaborators. Add photo: file.jpg (in assets/img/team/) when they send one.
+collaborators:
+  - name: Sylvain Baillet
+    role: Director, CRCHUM, and Professor of Neuroscience
+    affiliation: Université de Montréal and McGill University, Canada
+    url: https://www.chumontreal.qc.ca/en/crchum/chercheurs/sylvain-baillet
+  - name: Jochem Rieger
+    role: Professor of Psychology, Applied Neurocognitive Psychology
+    affiliation: University of Oldenburg, Germany
+    url: https://uol.de/en/applied-neurocognitive-psychology
+  - name: Franco Pestilli
+    role: Professor of Psychology
+    affiliation: The University of Texas at Austin, USA
+    url: https://pestillilab.github.io
+  - name: Aina Puce
+    role: Eleanor Cox Riggs Professor Emerita, Psychological and Brain Sciences
+    affiliation: Indiana University, USA
+    url: https://psych.indiana.edu/news-events/news/2026/aina-puce-retirement.html
+  - name: Maximilien Chaumon
+    role: Researcher, MEG-EEG core facility (CENIR)
+    affiliation: Paris Brain Institute (ICM), France
+  - name: Nathalie George
+    role: CNRS Research Director, Scientific Director of CENIR MEG-EEG
+    affiliation: Paris Brain Institute (ICM), France
+    url: https://parisbraininstitute.org/collaborators/nathalie-george
+  - name: Almudena Capilla
+    role: Associate Professor (Profesora Titular), Biological and Health Psychology
+    affiliation: Universidad Autónoma de Madrid, Spain
+    url: https://necog-uam.com/
+  - name: Oscar Esteban
+    role: Group leader, Axon Lab
+    affiliation: Lausanne University Hospital (CHUV) and University of Lausanne, Switzerland
+    url: https://www.axonlab.org/

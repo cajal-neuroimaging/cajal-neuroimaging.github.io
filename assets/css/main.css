@@ -505,3 +505,7 @@ p { margin: 0 0 1em; }
 /* Home animation sits on the page background, no band */
 .rhythms { background: none !important; border: 0 !important; }
 .rhythms__canvas { height: clamp(250px, 26vw, 350px) !important; }
+
+/* key collaborators: ink edge, initials on a soft palette gradient */
+.people--collab .person, .people--collab .person:nth-child(n) { border-left: 5px solid var(--ink) !important; }
+.people--collab .person__avatar { background: linear-gradient(135deg, #00C2CB, #7FE0D4 55%, #FFE38A) !important; color: var(--ink); font-weight: 700; letter-spacing: .02em; }
