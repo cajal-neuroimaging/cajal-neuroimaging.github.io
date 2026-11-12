@@ -11,6 +11,9 @@ pi:
   x: https://twitter.com/GuiomarNiso
   role: Principal Investigator, Tenured Scientist (CSIC)
   url: https://guiomar.github.io
+  bio:
+    - Guiomar Niso is the Head of the Neuroimaging Group at the Cajal Neuroscience Center at the Spanish National Research Council (CNC-CSIC) and Vice President of the Young Academy of Spain.
+    - She investigates human neurophysiology to advance the understanding of brain dynamics, aiming to enhance clinical applications and improve people’s lives.
 
 members:
   - name: Cristina Díaz Montilla
@@ -217,41 +220,67 @@ alumni:
 # Key collaborators. Add photo: file.jpg (in assets/img/team/) when they send one.
 collaborators:
   - name: Sylvain Baillet
-    photo: sylvain-baillet.jpg
+    photo: sylvain-baillet.png
     role: Director, CRCHUM, and Professor of Neuroscience
     affiliation: Université de Montréal and McGill University, Canada
     url: https://www.chumontreal.qc.ca/en/crchum/chercheurs/sylvain-baillet
+    scholar: https://scholar.google.com/citations?user=5GTopjMAAAAJ
+    github: https://github.com/sbaillet
+    linkedin: https://www.linkedin.com/in/sylvain-baillet-61193720
+    bluesky: https://bsky.app/profile/sylvainbaillet.bsky.social
+    x: https://twitter.com/sylvain_baillet
   - name: Jochem Rieger
-    photo: jochem-rieger.jpg
+    photo: jochem-rieger.png
     role: Professor of Psychology, Applied Neurocognitive Psychology
     affiliation: University of Oldenburg, Germany
     url: https://uol.de/en/applied-neurocognitive-psychology
+    orcid: https://orcid.org/0000-0003-0955-2306
+    scholar: https://scholar.google.com/citations?user=ctPYGzgAAAAJ
+    github: https://github.com/ANCPLabOldenburg
   - name: Franco Pestilli
-    photo: franco-pestilli.jpg
+    photo: franco-pestilli.png
     role: Professor of Psychology
     affiliation: The University of Texas at Austin, USA
     url: https://pestillilab.github.io
+    orcid: https://orcid.org/0000-0002-2469-0494
+    scholar: https://scholar.google.com/citations?user=gh_KorwAAAAJ
+    github: https://github.com/francopestilli
+    x: https://twitter.com/furranko
   - name: Aina Puce
-    photo: aina-puce.jpg
+    photo: aina-puce.png
     role: Eleanor Cox Riggs Professor Emerita, Psychological and Brain Sciences
     affiliation: Indiana University, USA
     url: https://psych.indiana.edu/news-events/news/2026/aina-puce-retirement.html
+    scholar: https://scholar.google.com/citations?user=F5KjJe0AAAAJ
+    github: https://github.com/ainapuce
+    linkedin: https://www.linkedin.com/in/aina-puce-598b08b
+    x: https://twitter.com/aina_puce
   - name: Maximilien Chaumon
-    photo: maximilien-chaumon.jpg
+    photo: maximilien-chaumon.png
     role: CNRS Researcher
     affiliation: Paris Brain Institute (ICM), France
+    orcid: https://orcid.org/0000-0001-9664-8861
+    scholar: https://scholar.google.com/citations?user=C81NXEkAAAAJ
+    github: https://github.com/dnacombo
   - name: Nathalie George
-    photo: nathalie-george.jpg
+    photo: nathalie-george.png
     role: CNRS Research Director, Scientific Director of CENIR MEG-EEG
     affiliation: Paris Brain Institute (ICM), France
     url: https://parisbraininstitute.org/collaborators/nathalie-george
+    orcid: https://orcid.org/0000-0002-1556-973X
+    scholar: https://scholar.google.com/citations?user=x5NORzMAAAAJ
   - name: Almudena Capilla
-    photo: almudena-capilla.jpg
+    photo: almudena-capilla.png
     role: Associate Professor (Profesora Titular), Biological and Health Psychology
     affiliation: Universidad Autónoma de Madrid, Spain
     url: https://necog-uam.com/
+    orcid: https://orcid.org/0000-0002-4181-4284
+    scholar: https://scholar.google.com/citations?user=8hHNBEAAAAAJ
   - name: Oscar Esteban
-    photo: oscar-esteban.jpg
-    role: Group leader, Axon Lab
-    affiliation: Lausanne University Hospital (CHUV) and University of Lausanne, Switzerland
+    photo: oscar-esteban.png
+    role: Associate Professor, AxonLab
+    affiliation: School of Engineering, HES-SO Valais-Wallis, Switzerland
     url: https://www.axonlab.org/
+    orcid: https://orcid.org/0000-0001-8435-6191
+    scholar: https://scholar.google.com/citations?user=sipSQH8AAAAJ
+    github: https://github.com/oesteban

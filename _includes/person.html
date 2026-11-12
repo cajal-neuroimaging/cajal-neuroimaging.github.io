@@ -3,6 +3,8 @@
   <div>
     <p class="person__name">{% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</p>
     <p class="person__role">{% if p.role %}{{ p.role }}{% endif %}{% if p.affiliation %}{% if p.role %}<br>{% endif %}{{ p.affiliation }}{% endif %}{% if p.years %}{% if p.role or p.affiliation %}<br>{% endif %}<span class="person__years">{{ p.years }}</span>{% endif %}</p>
+    {% for b in p.bio %}<p class="person__bio">{{ b }}</p>{% endfor %}
+    {% if p.bio and p.url %}<p class="person__cta"><a class="btn btn--fill person__site" href="{{ p.url }}">Personal website <span aria-hidden="true">→</span></a></p>{% endif %}
     {% if p.funding %}<p class="person__funding">{{ p.funding }}</p>{% endif %}
     {% if p.now %}<p class="person__now">Now: {{ p.now }}</p>{% endif %}
     {% if p.linkedin or p.orcid or p.scholar or p.github or p.x or p.bluesky %}
