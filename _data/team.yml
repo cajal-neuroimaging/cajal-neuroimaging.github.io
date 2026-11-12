@@ -44,6 +44,7 @@ members:
     affiliation: Universidad Carlos III de Madrid (UC3M)
   - name: Xiomara Mendieta
     type: intern
+    years: '2026'
     photo: xiomara-mendieta.png
     role: MSc Neuroscience and Neuropsychology
     affiliation: Universidad Rey Juan Carlos (URJC)
@@ -60,6 +61,9 @@ members:
     affiliation: Türkiye
   - name: Carlota Juárez
     type: intern
+    years: '2026'
+    role: BSc Biomedical Engineering
+    affiliation: Universidad Politécnica de Madrid (UPM)
 
 alumni:
   - name: Natalia López de la Cruz
