@@ -40,16 +40,19 @@
   short: OMEGA
   logo: omega.png
   url: https://omega.bic.mni.mcgill.ca
+  role: Led its set-up, first public release and data descriptor (NeuroImage, 2016)
   text: The first open data repository fully dedicated to magnetoencephalography (MEG).
 - name: HERMES
   short: HERMES
   logo: hermes.png
   url: http://hermes.ctb.upm.es/
+  role: Project lead and main developer
   text: An open toolbox for the study of functional and effective brain connectivity.
 - name: "#EEGManyLabs and multi-analyst studies"
   short: "#EEGManyLabs"
   logo: eegmanylabs.png
   url: https://eegmanylabs.org/
+  role: Core team member and study lead
   text: Large international collaborations on the replicability and analytical robustness of science, including #EEGManyLabs (2023 BNA Team Credibility Prize), EEGManyPipelines and Multi100 (published in Nature, 2026).
 - name: Brainstorm
   short: Brainstorm
