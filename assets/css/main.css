@@ -509,3 +509,14 @@ p { margin: 0 0 1em; }
 /* key collaborators: ink edge, initials on a soft palette gradient */
 .people--collab .person, .people--collab .person:nth-child(n) { border-left: 5px solid var(--ink) !important; }
 .people--collab .person__avatar { background: linear-gradient(135deg, #00C2CB, #7FE0D4 55%, #FFE38A) !important; color: var(--ink); font-weight: 700; letter-spacing: .02em; }
+
+/* social links as small logos */
+.person__links { display: flex !important; flex-wrap: wrap; gap: .45rem; align-items: center; }
+.person__links a.person__icon { display: inline-grid; place-items: center; width: 1.6rem; height: 1.6rem; border-radius: 8px; color: var(--ink-soft); background: color-mix(in srgb, var(--ink) 6%, transparent); text-decoration: none; transition: color .15s, background .15s, transform .15s; }
+.person__links a.person__icon::after { content: none !important; }
+.person__links a.person__icon svg { width: .95rem; height: .95rem; fill: currentColor; }
+.person__links a.person__icon:hover { transform: translateY(-1px); color: #fff; background: var(--ink); }
+.person__icon--linkedin:hover { background: #0A66C2 !important; }
+.person__icon--orcid:hover { background: #A6CE39 !important; }
+.person__icon--scholar:hover { background: #4285F4 !important; }
+.person__icon--bluesky:hover { background: #1185FE !important; }

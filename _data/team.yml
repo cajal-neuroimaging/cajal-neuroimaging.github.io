@@ -217,33 +217,40 @@ alumni:
 # Key collaborators. Add photo: file.jpg (in assets/img/team/) when they send one.
 collaborators:
   - name: Sylvain Baillet
+    photo: sylvain-baillet.jpg
     role: Director, CRCHUM, and Professor of Neuroscience
     affiliation: Université de Montréal and McGill University, Canada
     url: https://www.chumontreal.qc.ca/en/crchum/chercheurs/sylvain-baillet
   - name: Jochem Rieger
+    photo: jochem-rieger.jpg
     role: Professor of Psychology, Applied Neurocognitive Psychology
     affiliation: University of Oldenburg, Germany
     url: https://uol.de/en/applied-neurocognitive-psychology
   - name: Franco Pestilli
+    photo: franco-pestilli.jpg
     role: Professor of Psychology
     affiliation: The University of Texas at Austin, USA
     url: https://pestillilab.github.io
   - name: Aina Puce
+    photo: aina-puce.jpg
     role: Eleanor Cox Riggs Professor Emerita, Psychological and Brain Sciences
     affiliation: Indiana University, USA
     url: https://psych.indiana.edu/news-events/news/2026/aina-puce-retirement.html
   - name: Maximilien Chaumon
-    role: Researcher, MEG-EEG core facility (CENIR)
+    role: CNRS Researcher
     affiliation: Paris Brain Institute (ICM), France
   - name: Nathalie George
+    photo: nathalie-george.jpg
     role: CNRS Research Director, Scientific Director of CENIR MEG-EEG
     affiliation: Paris Brain Institute (ICM), France
     url: https://parisbraininstitute.org/collaborators/nathalie-george
   - name: Almudena Capilla
+    photo: almudena-capilla.jpg
     role: Associate Professor (Profesora Titular), Biological and Health Psychology
     affiliation: Universidad Autónoma de Madrid, Spain
     url: https://necog-uam.com/
   - name: Oscar Esteban
+    photo: oscar-esteban.jpg
     role: Group leader, Axon Lab
     affiliation: Lausanne University Hospital (CHUV) and University of Lausanne, Switzerland
     url: https://www.axonlab.org/
