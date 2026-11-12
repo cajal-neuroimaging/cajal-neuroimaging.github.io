@@ -528,3 +528,7 @@ p { margin: 0 0 1em; }
 .person__cta { margin: 1rem 0 .2rem !important; }
 .person__cta .btn { padding: .5rem 1.1rem; font-size: .9rem; }
 .person__cta .btn::after { content: none !important; }
+.person__links a.person__site { margin-left: auto; background: var(--ink) !important; color: #fff !important; border: 2px solid var(--ink) !important; font-weight: 600; text-decoration: none; padding: .45rem 1rem; font-size: .88rem; border-radius: 999px; line-height: 1.2; }
+.person__links a.person__site::after { content: none !important; }
+.people--pi .person__links { margin-top: 1rem !important; }
+.person__links a.person__site:hover { background: var(--turquoise-ink) !important; border-color: var(--turquoise-ink) !important; }
