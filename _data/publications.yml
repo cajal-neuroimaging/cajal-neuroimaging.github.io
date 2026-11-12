@@ -1,6 +1,11 @@
 # Group publications, newest first.
 # Fields: authors, year, title, venue, doi (optional), preprint + preprint_url (optional), resource (optional).
 
+- authors: Bertazzoli, G., Shevtsov, O., Bulgari, M., ... Niso, G., ... & Rogasch, N. C.
+  year: 2026
+  title: 'NIBS-BIDS: an extension to the brain imaging data structure for non-invasive brain stimulation'
+  preprint: 'Preprint (2026): Zenodo'
+  preprint_url: https://doi.org/10.5281/zenodo.19322568
 - authors: Parra‐Díaz, P., Valls‐Carbó, A., Niso, G., ... & Delgado, R. T.
   year: 2026
   title: 'Interictal electric source imaging with open‐source software and routine low‐density electroencephalography: A systematic comparison of four inverse methods in drug‐resistant epilepsy'
@@ -48,6 +53,11 @@
   doi: 10.1038/s41562-024-02046-9
   preprint: Preprint (2024)
   preprint_url: https://arxiv.org/abs/2403.03230
+- authors: Chino Vilca, B. N., de Frutos-Lucas, J., Antón-Toro, L. F., ... Niso, G., & Maestú, F.
+  year: 2024
+  title: M/EEG Hallmarks of Healthy and Pathological Aging
+  venue: Book chapter, Springer
+  doi: 10.1007/978-3-031-72219-6_42
 - authors: Mushtaq, F., Welke, D., Gallagher, A., ... Niso, G., ... & Valdes-Sosa, P.
   year: 2024
   title: One hundred years of EEG for brain and behaviour research
