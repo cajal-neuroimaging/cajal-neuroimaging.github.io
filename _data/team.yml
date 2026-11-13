@@ -52,12 +52,6 @@ members:
     photo: xiomara-mendieta.png
     role: MSc Neuroscience and Neuropsychology
     affiliation: Universidad Rey Juan Carlos (URJC)
-  - name: Adriana Brande
-    type: intern
-    years: '2025'
-    role: BSc Psychology
-    funding: JAE Intro fellowship (CSIC)
-    affiliation: Universidad Complutense de Madrid (UCM)
   - name: Irem Koçak
     type: intl
     years: '2026'
@@ -66,7 +60,7 @@ members:
   - name: Carlota Juárez
     type: intern
     years: '2026'
-    photo: carlota-juarez-alonso.jpg
+    photo: carlota-juarez-alonso.png
     role: BSc Biomedical Engineering
     affiliation: Universidad Politécnica de Madrid (UPM)
     linkedin: https://www.linkedin.com/in/carlota-juárez-alonso-051b4a38a/
@@ -74,6 +68,17 @@ members:
     now: BSc Thesis student at CTB-UPM
 
 alumni:
+  - name: Adriana Brande
+    type: intern
+    years: '2025'
+    photo: adriana-brande.png
+    role: BSc Psychology
+    funding: JAE Intro fellowship (CSIC)
+    affiliation: Universidad Complutense de Madrid (UCM)
+    now: MSc Cognitive Neuroscience and Neuropsychology (URJC). Research Intern at the Centre for Cognitive and Computational Neuroscience (C3N-UCM)
+    linkedin: https://www.linkedin.com/in/adriana-gabriela-brande-s%C3%A1nchez-7809ab332/
+    orcid: https://orcid.org/0009-0001-1465-8159
+    github: https://github.com/abrande-neuro
   - name: Natalia López de la Cruz
     type: bsc
     years: '2025'
