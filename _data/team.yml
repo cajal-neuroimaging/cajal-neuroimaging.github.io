@@ -30,19 +30,19 @@ members:
     x: https://twitter.com/cdiazmontilla
   - name: Daniel Martin Diez
     type: bsc
-    years: '2025'
+    years: 2025 – 2026
     photo: daniel-martin-diez.png
     role: BSc Biology
     affiliation: Universidad Complutense de Madrid (UCM)
     linkedin: https://www.linkedin.com/in/danielmartindiez04/
   - name: Quincy dos Santos Brandao
     type: msc
-    years: '2025'
+    years: 2025 – 2026
     role: MSc thesis (Erasmus+)
     affiliation: Amsterdam, The Netherlands
   - name: León Sobrio García
     type: bsc
-    years: '2025'
+    years: 2025 – 2026
     photo: leon-sobrio-garcia.png
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
@@ -69,6 +69,15 @@ alumni:
     linkedin: https://www.linkedin.com/in/carlota-juárez-alonso-051b4a38a/
     github: https://github.com/carlota-juarez
     now: BSc Thesis student at CTB-UPM
+  - name: Natalia López de la Cruz
+    type: bsc
+    years: 2025 – 2026
+    photo: natalia-lopez-de-la-cruz.png
+    role: BSc Biomedical Engineering
+    affiliation: Universidad Carlos III de Madrid (UC3M)
+    linkedin: https://www.linkedin.com/in/natalia-lopez-de-la-cruz-ab1496330/
+    github: https://github.com/nattloopez
+    now: MSc student, Hochschule Luzern
   - name: Adriana Brande
     type: intern
     years: '2025'
@@ -80,15 +89,6 @@ alumni:
     linkedin: https://www.linkedin.com/in/adriana-gabriela-brande-s%C3%A1nchez-7809ab332/
     orcid: https://orcid.org/0009-0001-1465-8159
     github: https://github.com/abrande-neuro
-  - name: Natalia López de la Cruz
-    type: bsc
-    years: '2025'
-    photo: natalia-lopez-de-la-cruz.png
-    role: BSc Biomedical Engineering
-    affiliation: Universidad Carlos III de Madrid (UC3M)
-    linkedin: https://www.linkedin.com/in/natalia-lopez-de-la-cruz-ab1496330/
-    github: https://github.com/nattloopez
-    now: MSc student, Hochschule Luzern
   - name: René Andrade
     type: intern
     years: '2025'
@@ -121,7 +121,7 @@ alumni:
     orcid: https://orcid.org/0009-0006-0847-304X
   - name: Marta Navarro Bernad
     type: msc
-    years: '2024'
+    years: 2024 – 2025
     photo: marta-navarro-bernad-2026.png
     role: MSc Cognitive Neuroscience and Neuropsychology
     funding: JAE Intro fellowship (CSIC)
@@ -130,19 +130,19 @@ alumni:
     orcid: https://orcid.org/0009-0007-5089-6369
   - name: Álvaro Mozas Robles
     type: msc
-    years: '2024'
+    years: 2024 – 2025
     photo: alvaro-mozas-robles.png
     role: MSc Advanced Therapies in Biomedicine
     affiliation: Universidad Francisco de Vitoria (UFV)
   - name: Cristina Salinas Fernández
     type: bsc
-    years: '2024'
+    years: 2024 – 2025
     photo: cristina-salinas-fernandez.png
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
   - name: Raúl García Luengo
     type: bsc
-    years: '2024'
+    years: 2024 – 2025
     photo: raul-garcia-luengo.png
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
