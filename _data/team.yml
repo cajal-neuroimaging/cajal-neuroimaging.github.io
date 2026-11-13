@@ -55,7 +55,8 @@ members:
   - name: Irem Koçak
     type: intl
     years: '2026'
-    role: MSc Psychology (Erasmus+)
+    role: MSc Psychology
+    funding: Erasmus+ grant
     affiliation: Türkiye
 
 alumni:
@@ -150,13 +151,15 @@ alumni:
   - name: Beyzanur Demirkaya
     type: intl
     years: '2024'
-    role: MSc Neuroscience (Erasmus+)
+    role: MSc Neuroscience
+    funding: Erasmus+ grant
     affiliation: Türkiye
   - name: Fulya Ayvaz
     type: intl
     years: '2024'
     photo: fulya-ayvaz.png
-    role: MSc Neuroscience (Erasmus+)
+    role: MSc Neuroscience
+    funding: Erasmus+ grant
     affiliation: Türkiye
   - name: Vittoria Acciai
     type: intl
