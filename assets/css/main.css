@@ -532,3 +532,5 @@ p { margin: 0 0 1em; }
 .person__links a.person__site::after { content: none !important; }
 .people--pi .person__links { margin-top: 1rem !important; }
 .person__links a.person__site:hover { background: var(--turquoise-ink) !important; border-color: var(--turquoise-ink) !important; }
+.person__role .person__funding { display: inline; font-size: inherit; margin: 0 !important; font-weight: 400 !important; font-style: italic; color: var(--ink-soft) !important; }
+.person__sep { color: var(--ink-soft); }

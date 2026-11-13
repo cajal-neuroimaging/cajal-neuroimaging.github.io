@@ -2,9 +2,8 @@
   <span class="person__avatar" aria-hidden="true">{% if p.photo %}<img src="{{ '/assets/img/team/' | append: p.photo | relative_url }}" alt="" loading="lazy">{% else %}{% assign nm = p.name | split: " " %}{{ nm.first | slice: 0 }}{{ nm.last | slice: 0 }}{% endif %}</span>
   <div>
     <p class="person__name">{% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</p>
-    <p class="person__role">{% if p.role %}{{ p.role }}{% endif %}{% if p.affiliation %}{% if p.role %}<br>{% endif %}{{ p.affiliation }}{% endif %}{% if p.years %}{% if p.role or p.affiliation %}<br>{% endif %}<span class="person__years">{{ p.years }}</span>{% endif %}</p>
+    <p class="person__role">{% if p.role %}{{ p.role }}{% endif %}{% if p.affiliation %}{% if p.role %}<br>{% endif %}{{ p.affiliation }}{% endif %}{% if p.years %}{% if p.role or p.affiliation %}<br>{% endif %}<span class="person__years">{{ p.years }}</span>{% endif %}{% if p.funding %}{% if p.years %} <span class="person__sep">·</span> {% elsif p.role or p.affiliation %}<br>{% endif %}<span class="person__funding">{{ p.funding }}</span>{% endif %}</p>
     {% for b in p.bio %}<p class="person__bio">{{ b }}</p>{% endfor %}
-    {% if p.funding %}<p class="person__funding">{{ p.funding }}</p>{% endif %}
     {% if p.now %}<p class="person__now">Now: {{ p.now }}</p>{% endif %}
     {% if p.linkedin or p.orcid or p.scholar or p.github or p.x or p.bluesky %}
     <p class="person__links">

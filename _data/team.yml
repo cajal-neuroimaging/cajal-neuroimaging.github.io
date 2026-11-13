@@ -57,6 +57,8 @@ members:
     years: '2026'
     role: MSc Psychology (Erasmus+)
     affiliation: Türkiye
+
+alumni:
   - name: Carlota Juárez
     type: intern
     years: '2026'
@@ -66,8 +68,6 @@ members:
     linkedin: https://www.linkedin.com/in/carlota-juárez-alonso-051b4a38a/
     github: https://github.com/carlota-juarez
     now: BSc Thesis student at CTB-UPM
-
-alumni:
   - name: Adriana Brande
     type: intern
     years: '2025'
@@ -75,7 +75,7 @@ alumni:
     role: BSc Psychology
     funding: JAE Intro fellowship (CSIC)
     affiliation: Universidad Complutense de Madrid (UCM)
-    now: MSc Cognitive Neuroscience and Neuropsychology (URJC). Research Intern at the Centre for Cognitive and Computational Neuroscience (C3N-UCM)
+    now: MSc Cognitive Neuroscience and Neuropsychology (URJC)
     linkedin: https://www.linkedin.com/in/adriana-gabriela-brande-s%C3%A1nchez-7809ab332/
     orcid: https://orcid.org/0009-0001-1465-8159
     github: https://github.com/abrande-neuro
