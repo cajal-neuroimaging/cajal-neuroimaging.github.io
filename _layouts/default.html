@@ -28,5 +28,7 @@
   </main>
   {% include footer.html %}
   <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+  <script>window.goatcounter = { path: function (p) { return location.host + p } }</script>
+  <script data-goatcounter="https://guiomar.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
