@@ -66,8 +66,12 @@ members:
   - name: Carlota Juárez
     type: intern
     years: '2026'
+    photo: carlota-juarez-alonso.jpg
     role: BSc Biomedical Engineering
     affiliation: Universidad Politécnica de Madrid (UPM)
+    linkedin: https://www.linkedin.com/in/carlota-juárez-alonso-051b4a38a/
+    github: https://github.com/carlota-juarez
+    now: BSc Thesis student at CTB-UPM
 
 alumni:
   - name: Natalia López de la Cruz
