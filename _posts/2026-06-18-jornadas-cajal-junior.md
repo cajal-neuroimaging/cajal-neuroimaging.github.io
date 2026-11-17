@@ -1,5 +1,6 @@
 ---
 title: "Jornadas Cajal Junior 2026: marcadores EEG en el continuo del alzhéimer"
+kind: talks
 date: 2026-06-18
 image: /assets/img/news/2026-06-18-cajal-junior.jpg
 ---

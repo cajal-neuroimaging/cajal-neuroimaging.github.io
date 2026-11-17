@@ -1,5 +1,6 @@
 ---
 title: "IV jornada «Los Caminos de la Investigación» en Santiago de Compostela"
+kind: talks
 date: 2024-10-25
 image: /assets/img/news/2024-10-25-caminos-investigacion.jpg
 ---

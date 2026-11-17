@@ -1,5 +1,6 @@
 ---
 title: "Seminario de EEG en el Grado en Neurociencia de la UC3M"
+kind: talks
 date: 2026-02-24
 image: /assets/img/news/2026-02-24-seminario-uc3m.jpg
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Cinco pósteres del grupo en el XIII Cajal Xmas Meeting"
+kind: talks
 date: 2025-12-17
 image: /assets/img/news/2025-12-17-cajalxmas.jpg
 date_label: "17–18 December 2025"

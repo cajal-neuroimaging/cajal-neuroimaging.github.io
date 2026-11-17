@@ -3,21 +3,22 @@ layout: page
 title: News
 slug: news
 permalink: /news/
-lede: Group news, and press, TV and radio appearances.
+lede: Group news, conferences and talks, and press, TV and radio appearances.
 ---
 <div class="filters" role="group" aria-label="Filter by type">
   <button type="button" data-filter="all" aria-pressed="true">All</button>
   <button type="button" data-filter="news" aria-pressed="false">Group news</button>
+  <button type="button" data-filter="talks" aria-pressed="false">Conferences and talks</button>
   <button type="button" data-filter="press" aria-pressed="false">Press</button>
   <button type="button" data-filter="tv" aria-pressed="false">TV</button>
   <button type="button" data-filter="radio" aria-pressed="false">Radio and podcasts</button>
 </div>
 <ul class="news-grid news-grid--list" id="feed">
   {% for post in site.posts %}
-  <li class="news-card" data-type="news" data-date="{{ post.date | date: '%Y-%m-%d' }}">
+  <li class="news-card{% if post.kind == 'talks' %} news-card--talks{% endif %}" data-type="{{ post.kind | default: 'news' }}" data-date="{{ post.date | date: '%Y-%m-%d' }}">
     <a class="news-card__link" href="{{ post.url | relative_url }}">
       <div class="news-card__thumb">{% if post.image %}<img src="{{ post.image | relative_url }}" alt="" loading="lazy">{% endif %}</div>
-      <p class="news-card__kind">Group news</p>
+      <p class="news-card__kind">{% if post.kind == 'talks' %}Conferences and talks{% else %}Group news{% endif %}</p>
       <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{% if post.date_label %}{{ post.date_label }}{% else %}{{ post.date | date: "%-d %B %Y" }}{% endif %}</time>
       <h3>{{ post.title }}</h3>
     </a>

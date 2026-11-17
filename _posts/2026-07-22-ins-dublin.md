@@ -1,5 +1,6 @@
 ---
 title: "Póster en el INS 2026 Mid-Year Meeting (Dublín)"
+kind: talks
 date: 2026-07-22
 image: /assets/img/news/2026-07-22-ins-dublin.jpg
 ---

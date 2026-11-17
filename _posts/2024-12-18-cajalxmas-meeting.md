@@ -1,5 +1,6 @@
 ---
 title: "Tres pósteres del grupo en el XII Cajal Xmas Meeting"
+kind: talks
 date: 2024-12-18
 image: /assets/img/news/2024-12-18-cajalxmas.jpg
 date_label: "18–19 December 2024"

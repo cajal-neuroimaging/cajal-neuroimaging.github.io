@@ -1,5 +1,6 @@
 ---
 title: "Beca CNC para el curso «Marcos filosóficos para la neurociencia del siglo XXI»"
+kind: talks
 date: 2026-06-29
 image: /assets/img/news/2026-06-29-uimp-santander.jpg
 ---

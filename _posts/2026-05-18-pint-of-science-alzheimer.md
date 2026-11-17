@@ -1,5 +1,6 @@
 ---
 title: "Pint of Science 2026 × CSIC: ¿Se puede tener alzhéimer y no manifestarlo?"
+kind: talks
 date: 2026-05-18
 image: /assets/img/news/2026-05-18-pint-of-science.jpg
 ---

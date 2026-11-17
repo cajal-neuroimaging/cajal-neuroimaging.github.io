@@ -1,5 +1,6 @@
 ---
 title: "Neuroderechos en el Congreso de los Diputados"
+kind: talks
 date: 2026-04-23
 image: /assets/img/news/2026-04-23-neuroderechos.jpg
 ---
