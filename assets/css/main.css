@@ -535,3 +535,10 @@ p { margin: 0 0 1em; }
 .person__role .person__funding { display: inline; font-size: inherit; margin: 0 !important; font-weight: 400 !important; font-style: italic; color: var(--ink-soft) !important; }
 .person__sep { color: var(--ink-soft); }
 .news-card--talks .news-card__thumb { border-top-color: var(--yellow); }
+/* news filters: colour key */
+.filters button[data-filter]:not([data-filter=all])::before { content: ""; display: inline-block; width: .7em; height: .7em; border-radius: 50%; margin-right: .45em; vertical-align: -.05em; background: var(--dot); }
+.filters button[data-filter=news] { --dot: var(--mint); }
+.filters button[data-filter=talks] { --dot: var(--yellow); }
+.filters button[data-filter=press] { --dot: var(--turquoise); }
+.filters button[data-filter=tv] { --dot: var(--salmon); }
+.filters button[data-filter=radio] { --dot: var(--pink); }
