@@ -35,17 +35,23 @@ members:
     role: BSc Biology
     affiliation: Universidad Complutense de Madrid (UCM)
     linkedin: https://www.linkedin.com/in/danielmartindiez04/
-  - name: Quincy dos Santos Brandao
-    type: msc
-    years: 2025 – 2026
-    role: MSc thesis (Erasmus+)
-    affiliation: Amsterdam, The Netherlands
   - name: León Sobrio García
     type: bsc
     years: 2025 – 2026
     photo: leon-sobrio-garcia.png
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
+
+alumni:
+  - name: Carlota Juárez
+    type: intern
+    years: '2026'
+    photo: carlota-juarez-alonso.png
+    role: BSc Biomedical Engineering
+    affiliation: Universidad Politécnica de Madrid (UPM)
+    linkedin: https://www.linkedin.com/in/carlota-juárez-alonso-051b4a38a/
+    github: https://github.com/carlota-juarez
+    now: BSc Thesis student at CTB-UPM
   - name: Xiomara Mendieta
     type: intern
     years: '2026'
@@ -58,17 +64,6 @@ members:
     role: MSc Psychology
     funding: Erasmus+ grant
     affiliation: Türkiye
-
-alumni:
-  - name: Carlota Juárez
-    type: intern
-    years: '2026'
-    photo: carlota-juarez-alonso.png
-    role: BSc Biomedical Engineering
-    affiliation: Universidad Politécnica de Madrid (UPM)
-    linkedin: https://www.linkedin.com/in/carlota-juárez-alonso-051b4a38a/
-    github: https://github.com/carlota-juarez
-    now: BSc Thesis student at CTB-UPM
   - name: Natalia López de la Cruz
     type: bsc
     years: 2025 – 2026
@@ -89,6 +84,11 @@ alumni:
     linkedin: https://www.linkedin.com/in/adriana-gabriela-brande-s%C3%A1nchez-7809ab332/
     orcid: https://orcid.org/0009-0001-1465-8159
     github: https://github.com/abrande-neuro
+  - name: Quincy dos Santos Brandao
+    type: msc
+    years: 2025 – 2026
+    role: MSc thesis (Erasmus+)
+    affiliation: Amsterdam, The Netherlands
   - name: René Andrade
     type: intern
     years: '2025'
