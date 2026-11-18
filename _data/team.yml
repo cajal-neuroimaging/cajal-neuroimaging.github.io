@@ -97,7 +97,7 @@ alumni:
     type: intern
     years: '2025'
   - name: Nicolás Martínez Martínez
-    type: intern
+    type: msc
     years: '2025'
     role: MSc Advanced Therapies in Biomedicine
     affiliation: Universidad Francisco de Vitoria (UFV)
@@ -201,10 +201,6 @@ alumni:
     years: '2024'
     role: BSc Telecommunications Engineering
     affiliation: Universidad Autónoma de Madrid (UAM)
-  - name: Rodrigo Quispe Ávila
-    type: bsc
-    years: '2024'
-    role: BSc Informatics
   - name: Rubén Cruz Acevedo
     type: intern
     years: '2024'
@@ -306,9 +302,13 @@ collaborators:
     scholar: https://scholar.google.com/citations?user=sipSQH8AAAAJ
     github: https://github.com/oesteban
   - name: Antonio Gil-Nagel
+    photo: antonio-gil-nagel.png
     role: Director, Epilepsy Program, Department of Neurology
     affiliation: Hospital Ruber Internacional, Madrid, Spain
     url: https://www.quironsalud.com/ruber-internacional/en/medical-staff/antonio-gil-nagel-rein
+    orcid: https://orcid.org/0000-0003-4515-0793
+    scholar: https://scholar.google.com/citations?user=1VEplxgAAAAJ
+    linkedin: https://es.linkedin.com/in/antonio-gil-nagel-rein-19510495
   - name: Rafael Toledano
     role: Neurologist, Epilepsy Program
     affiliation: Hospital Ruber Internacional and Hospital Universitario Ramón y Cajal, Madrid, Spain
