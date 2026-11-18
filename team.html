@@ -28,6 +28,15 @@ lede: A multidisciplinary team of engineers, psychologists, biologists and neuro
   <h2>Group members</h2>
   <ul class="people">
     {% for p in site.data.team.members %}{% include person.html %}{% endfor %}
+    <li class="person person--you">
+      <a class="person__avatar" href="{{ site.join_form }}" aria-hidden="true" tabindex="-1">?</a>
+      <div>
+        <h3><a href="{{ site.join_form }}">You?</a></h3>
+        <p class="person__role">Bachelor's or Master's thesis, PhD or postdoc</p>
+        <p class="person__now">We are always happy to hear from motivated people interested in human brain dynamics and open science.</p>
+        <p class="person__cta"><a class="btn btn--fill" href="{{ site.join_form }}">Apply to join</a></p>
+      </div>
+    </li>
   </ul>
 </section>
 <section class="cv-section" data-group="alumni">

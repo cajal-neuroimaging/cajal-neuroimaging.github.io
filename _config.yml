@@ -16,6 +16,8 @@ group:
   github: https://github.com/cajal-neuroimaging
   institute: https://cajal.csic.es/en/neuroimaging
 
+join_form: "https://docs.google.com/forms/d/e/1FAIpQLSceKKY-ypcvY_vZE0HgTCU1Uwi0YmWXvuCz2bhvwEI7lr-h7Q/viewform"
+
 nav:
   - title: Research
     url: /research/
