@@ -481,7 +481,7 @@ p { margin: 0 0 1em; }
 .people--alumni .person__name { grid-column: 2; grid-row: 1; margin: .1rem 0 0 !important; }
 .people--alumni .person__role { grid-column: 2; grid-row: 2; margin: .2rem 0 0 !important; }
 .people--alumni .person__now, .people--alumni .person__links { grid-column: 1 / -1; }
-.people--alumni .person__now { margin: .7rem 0 0 !important; padding-top: .6rem; border-top: 1px solid var(--line); font-size: .85rem; }
+.people--alumni .person__now { margin: .5rem 0 0 !important; font-size: .85rem; }
 .people--alumni .person__links { margin: .5rem 0 0 !important; }
 .people--alumni .person__now + .person__links { margin-top: .35rem !important; }
 .people--alumni .person__role + .person__links { padding-top: .55rem; border-top: 1px solid var(--line); margin-top: .7rem !important; }
