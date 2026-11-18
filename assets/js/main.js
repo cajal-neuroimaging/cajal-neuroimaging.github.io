@@ -284,3 +284,16 @@ teamBtns.forEach((btn) => btn.addEventListener('click', () => {
     sec.hidden = btn.dataset.show !== 'all' && sec.dataset.group !== btn.dataset.show;
   });
 }));
+
+// External links and documents open in a new tab
+document.querySelectorAll('a[href]').forEach((a) => {
+  const href = a.getAttribute('href');
+  if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+  let url;
+  try { url = new URL(href, location.href); } catch (e) { return; }
+  const isFile = /\.(pdf|jpe?g|png|zip|docx?|pptx?)$/i.test(url.pathname);
+  if (url.origin !== location.origin || isFile) {
+    a.target = '_blank';
+    a.rel = 'noopener';
+  }
+});
