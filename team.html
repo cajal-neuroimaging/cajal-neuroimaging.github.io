@@ -29,11 +29,11 @@ lede: A multidisciplinary team of engineers, psychologists, biologists and neuro
   <ul class="people">
     {% for p in site.data.team.members %}{% include person.html %}{% endfor %}
     <li class="person person--you">
-      <a class="person__avatar" href="{{ site.join_form }}" aria-hidden="true" tabindex="-1">?</a>
+      <a class="person__avatar" href="{{ site.join_form }}" aria-hidden="true" tabindex="-1"><img src="{{ '/assets/img/logo.svg' | relative_url }}" alt=""></a>
       <div>
-        <h3><a href="{{ site.join_form }}">You?</a></h3>
-        <p class="person__role">Bachelor's or Master's thesis, PhD or postdoc</p>
-        <p class="person__now">We are always happy to hear from motivated people interested in human brain dynamics and open science.</p>
+        <p class="person__name"><a href="{{ site.join_form }}">This could be you!</a></p>
+        <p class="person__role">TFG, TFM, PhD or postdoc<br><span class="person__years">Open applications</span></p>
+        <p class="person__now">Curious about the human brain? Come and explore it with us.</p>
         <p class="person__cta"><a class="btn btn--fill" href="{{ site.join_form }}">Apply to join</a></p>
       </div>
     </li>

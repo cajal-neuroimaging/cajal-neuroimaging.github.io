@@ -547,8 +547,11 @@ p { margin: 0 0 1em; }
 .site-nav .site-nav__join a:hover { background: var(--turquoise-ink); color: #fff; }
 .btn--join { background: var(--yellow); border-color: var(--yellow); color: var(--ink); font-weight: 600; }
 .btn--join:hover { background: var(--salmon); border-color: var(--salmon); color: var(--ink); }
-.person--you { border: 2px dashed var(--turquoise) !important; background: transparent !important; }
-.person--you .person__avatar { background: #fff !important; border: 2px dashed var(--turquoise); color: var(--turquoise-ink); font-size: 2rem; font-weight: 700; text-decoration: none; filter: none !important; }
-.person--you h3 a { color: var(--ink); text-decoration: none; }
+.people li.person--you .person__avatar { background: color-mix(in srgb, var(--turquoise) 22%, white) !important; text-decoration: none; }
+.person--you .person__avatar img { width: 72%; height: auto; object-fit: contain; filter: none !important; transition: transform .25s; }
+.person--you:hover .person__avatar img { transform: scale(1.06) rotate(-3deg); }
+.person--you .person__name a { color: var(--ink); text-decoration: none; }
+.person--you .person__now { color: var(--turquoise-ink); }
 .person--you .person__cta { margin: .7rem 0 0 !important; }
 .person--you .person__cta .btn { padding: .4rem 1rem; font-size: .88rem; }
+.people .person.person--you { --cat: var(--turquoise); }
