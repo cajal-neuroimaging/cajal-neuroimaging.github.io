@@ -85,13 +85,11 @@ alumni:
     orcid: https://orcid.org/0009-0001-1465-8159
     github: https://github.com/abrande-neuro
   - name: Quincy dos Santos Brandao
-    type: msc
+    type: intl
     years: 2025 – 2026
-    role: MSc thesis (Erasmus+)
+    role: Erasmus+ internship
+    funding: Erasmus+ grant
     affiliation: Amsterdam, The Netherlands
-  - name: René Andrade
-    type: intern
-    years: '2025'
   - name: Juan Ponce
     type: intern
     years: '2025'
@@ -99,7 +97,7 @@ alumni:
     type: intern
     years: '2025'
   - name: Nicolás Martínez Martínez
-    type: msc
+    type: intern
     years: '2025'
     role: MSc Advanced Therapies in Biomedicine
     affiliation: Universidad Francisco de Vitoria (UFV)
@@ -114,7 +112,7 @@ alumni:
     affiliation: Universidad de Cantabria (UC)
   - name: Arturo Salas Hernández
     type: intern
-    years: '2025'
+    years: 2024 – 2025
     photo: arturo-salas-hernandez.png
     role: BSc Psychology
     affiliation: Universidad Nacional de Educación a Distancia (UNED)
@@ -128,12 +126,6 @@ alumni:
     affiliation: Universidad Rey Juan Carlos (URJC)
     linkedin: https://www.linkedin.com/in/marta-n-0a0ab9274/
     orcid: https://orcid.org/0009-0007-5089-6369
-  - name: Álvaro Mozas Robles
-    type: msc
-    years: 2024 – 2025
-    photo: alvaro-mozas-robles.png
-    role: MSc Advanced Therapies in Biomedicine
-    affiliation: Universidad Francisco de Vitoria (UFV)
   - name: Cristina Salinas Fernández
     type: bsc
     years: 2024 – 2025
@@ -148,38 +140,44 @@ alumni:
     affiliation: Universidad Carlos III de Madrid (UC3M)
     linkedin: https://www.linkedin.com/in/raulgarcialuengo/
     orcid: https://orcid.org/0009-0000-5514-9070
+  - name: Patricia Rupérez Ferrández
+    type: intern
+    years: 2024 – 2025
+    photo: patricia-ruperez-ferrandez.png
+    role: BSc Biomedical Engineering
+    affiliation: Universidad Carlos III de Madrid (UC3M)
+    linkedin: https://www.linkedin.com/in/patricia-ruperez
+    orcid: https://orcid.org/0009-0004-8158-5916
+  - name: Álvaro Mozas Robles
+    type: msc
+    years: '2024'
+    photo: alvaro-mozas-robles.png
+    role: MSc Advanced Therapies in Biomedicine
+    affiliation: Universidad Francisco de Vitoria (UFV)
   - name: Beyzanur Demirkaya
     type: intl
     years: '2024'
     role: MSc Neuroscience
     funding: Erasmus+ grant
-    affiliation: Türkiye
+    affiliation: Üsküdar University, Türkiye
   - name: Fulya Ayvaz
     type: intl
     years: '2024'
     photo: fulya-ayvaz.png
-    role: MSc Neuroscience
+    role: BSc Medicine
     funding: Erasmus+ grant
     affiliation: Türkiye
   - name: Vittoria Acciai
     type: intl
     years: '2024'
-    role: MSc Liberal Arts and Sciences, Cognitive Neuroscience
-    affiliation: Tilburg University
+    role: MSc Biomedical Research
+    affiliation: NOVA Medical School, Lisbon, Portugal
     linkedin: https://www.linkedin.com/in/vittoria-acciai-a58007287/
   - name: Paula Sierra Martínez
     type: intern
     years: '2024'
     role: BSc Biology
     affiliation: Universidad Autónoma de Madrid (UAM)
-  - name: Patricia Rupérez Ferrández
-    type: intern
-    years: '2024'
-    photo: patricia-ruperez-ferrandez.png
-    role: BSc Biomedical Engineering
-    affiliation: Universidad Carlos III de Madrid (UC3M)
-    linkedin: https://www.linkedin.com/in/patricia-ruperez
-    orcid: https://orcid.org/0009-0004-8158-5916
   - name: Mercedes Martín del Campo
     type: intern
     years: '2024'
@@ -203,6 +201,10 @@ alumni:
     years: '2024'
     role: BSc Telecommunications Engineering
     affiliation: Universidad Autónoma de Madrid (UAM)
+  - name: Rodrigo Quispe Ávila
+    type: bsc
+    years: '2024'
+    role: BSc Informatics
   - name: Rubén Cruz Acevedo
     type: intern
     years: '2024'
@@ -214,6 +216,12 @@ alumni:
     photo: fiona-ye-rojo-acero.png
     role: BSc Biomedical Engineering
     affiliation: Universidad Carlos III de Madrid (UC3M)
+  - name: René Andrade Rey
+    type: intern
+    years: '2024'
+    role: BSc Medicine
+    affiliation: Universidad de Alcalá (UAH)
+    orcid: https://orcid.org/0000-0001-5627-579X
   - name: María Rubio Cobos
     type: msc
     years: '2021'
