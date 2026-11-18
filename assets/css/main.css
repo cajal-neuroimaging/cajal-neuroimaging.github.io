@@ -555,3 +555,4 @@ p { margin: 0 0 1em; }
 .person--you .person__cta { margin: .7rem 0 0 !important; }
 .person--you .person__cta .btn { padding: .4rem 1rem; font-size: .88rem; }
 .people .person.person--you { --cat: var(--turquoise); }
+.contact-join { margin-top: .7rem; display: inline-block; }
