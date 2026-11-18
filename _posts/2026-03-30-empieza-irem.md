@@ -1,6 +1,6 @@
 ---
 title: "Irem Koçak se incorpora al grupo"
-date: 2026-04-01
+date: 2026-03-30
 image: /assets/img/news/2026-04-01-irem.jpg
 ---
 
